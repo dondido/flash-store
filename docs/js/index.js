@@ -3,8 +3,10 @@ const response = await fetch(`${pathname}/manifest.json`);
 const { url, controls } = await response.json();
 window.RufflePlayer = window.RufflePlayer || {};
 const ruffle = window.RufflePlayer.newest();
-console.log(url, controls);
 const player = ruffle.createPlayer();
+player.config = {
+    contextMenu: 'rightClickOnly'
+};
 const container = document.getElementById('container');
 container.appendChild(player);
 player.load(`${pathname}/${url}`);
