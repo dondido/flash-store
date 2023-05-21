@@ -1,0 +1,69 @@
+body {
+	background-color: dimgray;
+    margin: 0;
+}
+#container {
+    max-width: 100vw;
+    width: 100%;
+    aspect-ratio: 55/40;
+    max-height: 100vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    inset: 0;
+    margin: auto;
+}
+ruffle-player {
+    width: 100%;
+    height: 100%;
+    &:before {
+        content: "";
+		width: 100vw;
+		height: 100vh;
+        top: 0;
+        left: 0;
+		display: block;
+		position: fixed; 
+    }
+}
+.joystick {
+	--x: 65;
+	--y: 65;
+    pointer-events: none;
+	position: absolute;
+	left: calc(20px);
+	bottom: 20px;
+	margin: auto;
+	width: 130px;
+	height: 130px;
+	border: 1px solid green;
+	background-color: rgba(255, 255, 255, 0.5);
+	&.focus {
+		background: yellow;
+		&:before {
+			transition: transform 0.1s;
+		}
+	}
+	&:before {
+		content: "";
+		width: 50px;
+		height: 50px;
+		background-color: red;
+		display: block;
+		position: absolute;
+		transform: translate(calc(-50% + clamp(0px, 1px * var(--x), 130px)), calc(-50% + clamp(0px, 1px * var(--y), 130px)));
+		transition: transform 0.4s;
+	}
+}
+.button {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+}
