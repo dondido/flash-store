@@ -78,6 +78,9 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         return dir;
     }
+    #down = () => this.dispatchEvent(new CustomEvent('joystickdown'))
+    #move = () => this.dispatchEvent(new CustomEvent('joystickmove'))
+    #up = () => this.dispatchEvent(new CustomEvent('joystickup'))
     #setXY(x, y) {
         this.#element.style.setProperty('--x', `${x}px`);
         this.#element.style.setProperty('--y', `${y}px`);
@@ -90,7 +93,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         const dxr = dx - this.#r;
         const dyr = dy - this.#r;
         const hypot = Math.hypot(dxr, dyr);
-        this.#crow = { dx, dy, dxr, dyr, hypot };
+        return { dx, dy, dxr, dyr, hypot };
     }
     #log({
         degree = 0,
@@ -123,7 +126,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
     #r = 0
     #element = null
     #rect = null
-    #crow = null
     constructor() {
         super();
         let output = {};
@@ -148,17 +150,16 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         document.addEventListener('pointerdown', this.#start);
     }
     #start = (event) => {
+        let crow;
         const { clientX, clientY } = event;
         const attachEvents = () => {
-            document.removeEventListener('pointerdown', this.#start);
-            document.addEventListener('pointermove', this.#move);
-            document.addEventListener('pointerup', this.#up);
-            this.pointerId = event.pointerId;
             this.#element.part.add('active');
-            this.#bind();
-            this.dispatchEvent(new CustomEvent('joystickdown'));
+            this.#element.setPointerCapture(event.pointerId);
+            this.#bind(event, crow, this.#down);
+            this.#element.onpointermove = this.#bind;
+            this.#element.onpointerup = this.#end;
         };
-        if (this.pointerId) {
+        if (this.#element.part.contains('active')) {
             return;
         }
         this.#rect = this.#element.getBoundingClientRect();
@@ -172,25 +173,16 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
                     this.#element.style.left = `${clientX - left - this.#r}px`;
                     this.#element.style.top = `${clientY - top - this.#r}px`;
                 }
-                this.#calcCrow(event);
+                crow = this.#calcCrow(event);
                 return attachEvents();
             }
-            this.#calcCrow(event);
+            crow = this.#calcCrow(event);
             if (crow.hypot <= this.#r || this.dataset.shape) {
                 attachEvents();
             }
         }
     }
-    #move = (event) => {
-        if (this.pointerId !== event.pointerId) {
-            return;
-        }
-        this.#calcCrow(event);
-        this.#bind();
-        this.dispatchEvent(new CustomEvent('joystickmove'));
-    }
-    #bind = () => {
-        const { dx, dy, dxr, dyr, hypot } = this.#crow;
+    #bind = (event, { dx, dy, dxr, dyr, hypot } = this.#calcCrow(event), cb = this.#move) => {
         const r = this.#r;
         const angle = Math.atan2(dyr, dxr);
         let degree = angle * 180 / Math.PI;
@@ -215,15 +207,13 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             force: hypot / r,
         });
         this.#setXY(x, y);
+        cb();
     };
-    #up = () => {
-        document.addEventListener('pointerdown', this.#start);
-        document.removeEventListener('pointermove', this.#move);
-        document.removeEventListener('pointerup', this.#up);
-        this.pointerId = null;
+    #end = () => {
         this.#element.part.remove('active');
         this.#log({ release: this.dataset.direction });
         this.#setXY(this.#r, this.#r);
-        this.dispatchEvent(new CustomEvent('joystickup'));
+        this.#element.onpointerup = this.#element.onpointermove = null;
+        this.#up();
     };
 });

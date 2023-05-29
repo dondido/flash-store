@@ -5,6 +5,9 @@
         {
             "joystick": {
                 "element": "",
+                "dataset": {
+                    "mode": "fixed"
+                },
                 "mappings": {
                     "n": "ArrowUp",
                     "e": "ArrowRight",

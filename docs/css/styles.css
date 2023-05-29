@@ -85,7 +85,4 @@ ruffle-player {
 }
 virtual-joystick {
     pointer-events: none;
-	position: absolute;
-	left: 40px;
-    bottom: 30px;
 }

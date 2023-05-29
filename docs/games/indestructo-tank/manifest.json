@@ -1,0 +1,19 @@
+{
+    "url": "indestructo-tank.swf",
+    "title": "Indestructo Tank",
+    "controls": [
+        {
+            "joystick": {
+                "element": "",
+                "dataset": {
+                    "mode": "fixed",
+                    "lock": "y"
+                },
+                "mappings": {
+                    "e": "ArrowRight",
+                    "w": "ArrowLeft"
+                }
+            } 
+        }
+    ]
+}

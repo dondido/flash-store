@@ -14,35 +14,24 @@ container.appendChild(player);
 player.load(`${pathname}/${url}`);
 controls.forEach(async ({ joystick, button }) => {
     if (joystick) {
-        /* const Joystick = await import('./joystick.js');
-        console.log(990)
-        const j = new Joystick.default({
-            down: () => {console.log(111, j)},
-            move: () => {console.log(112, j)},
-            up: () => {console.log(113, j)},
-        }); */
-        // const vj = document.createElement('virtual-joystick');
-        // document.body.appendChild(vj);
-        //document.body.innerHTML += '<virtual-joystick></virtual-joystick>';
-        const { mappings } = joystick;
+        const { mappings, dataset } = joystick;
         const mapKeydown = direction => triggerKeydownEvent({ code: mappings[direction] });
         const mapKeyup = direction => triggerKeyupEvent({ code: mappings[direction] });
-        document.querySelector('.controls').insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
+        document.body.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
         const $joystick = document.querySelector('virtual-joystick');
         $joystick.addEventListener('joystickdown', () => {
-            console.log(333, $joystick.dataset.capture.toString())
             $joystick.dataset.capture.split('').forEach(mapKeydown);
         });
         $joystick.addEventListener('joystickmove', () => {
-            if($joystick.dataset.capture || $joystick.dataset.release) {
-                //console.log(334, $joystick.dataset.release, $joystick.dataset.capture);
-            }
             $joystick.dataset.release.split('').forEach(mapKeyup);
             $joystick.dataset.capture.split('').forEach(mapKeydown);
         });
         $joystick.addEventListener('joystickup', () => {
-            // console.log(335, $joystick.dataset.release.toString());
-            $joystick.dataset.release.split('').forEach(mapKeyup)});
+            $joystick.dataset.release.split('').forEach(mapKeyup);
+        });
+        if (dataset) {
+            Object.assign($joystick.dataset, dataset);
+        }
     }
     if (button) {
         const Button = await import('./button.js');
