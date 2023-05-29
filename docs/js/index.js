@@ -1,7 +1,8 @@
 const { pathname } = window.location;
 const response = await fetch(`${pathname}/manifest.json`);
-const { url, controls } = await response.json();
+const { url, controls, aspectRatio } = await response.json();
 window.RufflePlayer = window.RufflePlayer || {};
+document.getElementById('container').style.aspectRatio = aspectRatio;
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 player.config = {

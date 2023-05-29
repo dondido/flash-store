@@ -1,6 +1,7 @@
 {
     "url": "the-skull-kid.swf",
     "title": "The Skull Kid",
+    "aspectRatio": "55/40",
     "controls": [
         {
             "joystick": {

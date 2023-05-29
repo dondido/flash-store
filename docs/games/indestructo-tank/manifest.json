@@ -1,6 +1,7 @@
 {
     "url": "indestructo-tank.swf",
     "title": "Indestructo Tank",
+    "aspectRatio": "60/50",
     "controls": [
         {
             "joystick": {
