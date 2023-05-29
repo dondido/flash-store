@@ -1,28 +1,20 @@
 {
     "url": "the-skull-kid.swf",
+    "title": "The Skull Kid",
     "controls": [
         {
             "joystick": {
-                "cssText": "bottom: 10px; left: 10px;",
-                "mappings": [
-                    {
-                        "code": "ArrowUp"
-                    },
-                    {
-                        "code": "ArrowRight"
-                    },
-                    {
-                        "code": "ArrowDown"
-                    },
-                    {
-                        "code": "ArrowLeft"
-                    }
-                ]
+                "element": "",
+                "mappings": {
+                    "n": "ArrowUp",
+                    "e": "ArrowRight",
+                    "s": "ArrowDown",
+                    "w": "ArrowLeft"
+                }
             } 
         },
         {
             "button": {
-                "cssText": "bottom: 10px; right: 52px;",
                 "label": "Sp",
                 "mappings": [{
                     "code": "Space"

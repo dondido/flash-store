@@ -1,70 +1,68 @@
-const insertStylesheet = (href) => {
-    if (document.querySelector(`[${href}]`)) {
-        return;
-    }
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = href;
-    document.head.appendChild(link);
-};
-let events = [];
-const getЕvents = (mappings, degree) => {
-    const [top, right = {}, bottom = {}, left = {}] = mappings;
-    const keys = [[left], [left, top], [top], [top, right], [right], [right, bottom], [bottom]];
+const getDir = (degree) => {
+    const dirs = ['ne', 'n', 'nw', 'w', 'sw', 's', 'sw'];
     const acute = 45;
-    let treshold = -22.5;
-    for (let events of keys) {
+    let treshold = 22.5;
+    for (let dir of dirs) {
         if (degree >= treshold && degree < (treshold += acute)) {
-            return events;
+            return dir;
         }
     }
-    return [bottom, left];
+    return 'w';
 };
-const getUniqueEvents = function(event) {
-    return this.events.every(({ code }) => code !== event.code);
-};
-const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
-const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
-export default ({ cssText, mappings }) => {
-    const joystick = document.createElement('div');
-    joystick.className = 'joystick';
-    const { style } = joystick;
-    if (cssText) {
-        style.cssText = cssText;
+const createElement = () => {
+    const element = document.createElement('div');
+    element.className = 'joystick';
+    return element;
+}
+export default function({
+    element = createElement(),
+    parent = document.body,
+    down = () => {},
+    move = () => {},
+    up = () => {},
+}) {
+    this.dir = '';
+    this.degree = 0;
+    if (element.parentElement === null) {
+        typeof element === 'string' ? parent.innerHTML += element : parent.appendChild(element);
     }
-    document.body.appendChild(joystick);
-    const { x, y, top, right, bottom, left } = joystick.getBoundingClientRect();
-    const end = () => {
-        joystick.classList.remove('focus');
-        style.setProperty('--x', 65);
-        style.setProperty('--y', 65);
-        joystick.onpointerup = null;
-        joystick.onpointermove = null;
-        events.forEach(triggerKeyupEvent);
-        events = [];
+    const r = + getComputedStyle(element).getPropertyValue('--r');
+    const setXY = (x, y) => {
+        element.style.setProperty('--x', x);
+        element.style.setProperty('--y', y);
     };
-    const move = ({ clientX, clientY }) => {
-        const dx = clientX - x;
-        const dy = clientY - y;
-        const degree = Math.atan2(dy - 65, dx- 65) * 180 / Math.PI + 180;
-        const newEvents = getЕvents(mappings, degree);
-        style.setProperty('--x', dx);
-        style.setProperty('--y', dy);
-        events.filter(getUniqueEvents, { events: newEvents })?.forEach(triggerKeyupEvent);
-        newEvents.filter(getUniqueEvents, { events })?.forEach(triggerKeydownEvent);
-        events = newEvents;
+    const end = () => {
+        element.classList.remove('focus');
+        setXY(r, r);
+        element.onpointerup = element.onpointermove = null;
+        this.dir = '';
+        up();
+    };
+    const bind = ({ clientX, clientY }, cb = move) => {
+        const dx = clientX - element.offsetLeft;
+        const dy = clientY - element.offsetTop;
+        const dxr = dx - r;
+        const dyr = dy - r;
+        const angle = Math.atan2(dyr, dxr);
+        const hypot = Math.hypot(dxr, dyr);
+        const degree = angle * 180 / Math.PI;
+        this.degree = (degree > 0 ? 360 : 0) - degree;
+        hypot > r ? setXY(r * Math.cos(angle) + r, r * Math.sin(angle) + r) : setXY(dx, dy);
+        this.dir = getDir(this.degree);
+        cb();
     };
     const start = (event) => {
         const { clientX, clientY } = event;
-        if (clientX >= left && clientX <= right && clientY >= top && clientY <= bottom) {
-            joystick.classList.add('focus');
-            move(event);
-            joystick.setPointerCapture(event.pointerId);
-            joystick.onpointermove = move;
-            joystick.onpointerup = end;
+        const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = element;
+        if (clientX >= x && clientX <= x + w && clientY >= y && clientY <= y + h) {
+            element.classList.add('focus');
+            bind(event, down);
+            element.setPointerCapture(event.pointerId);
+            element.onpointermove = bind;
+            element.onpointerup = end;
         }
     };
-    joystick.onpointerdown = start;
-    document.addEventListener('pointerdown', start);
-}
+    console.log(1111);
+
+    // document.addEventListener('pointerdown', start);
+};

@@ -28,41 +28,64 @@ ruffle-player {
     }
 }
 .joystick {
-	--x: 65;
-	--y: 65;
+	--r: 65;
+	--x: var(--r);
+	--y: var(--r);
     pointer-events: none;
 	position: absolute;
 	left: calc(20px);
-	bottom: 20px;
-	margin: auto;
-	width: 130px;
-	height: 130px;
-	border: 1px solid green;
-	background-color: rgba(255, 255, 255, 0.5);
+	width: calc(var(--r) * 2px);
+	height: calc(var(--r) * 2px);
+	border: 1px solid gray;
+	background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: background-color 0.2s;
 	&.focus {
-		background: yellow;
-		&:before {
-			transition: transform 0.1s;
+    	background-color: rgba(255, 255, 255, 0.6);
+		&:after {
+            background-color: rgba(255, 255, 255, 0.8);
+			transition: transform 0.1s, background-color 0.2s;
 		}
 	}
-	&:before {
-		content: "";
+    &:after,
+    &:before {
+        content: "";
+        border-radius: 50%;
 		width: 50px;
 		height: 50px;
-		background-color: red;
 		display: block;
 		position: absolute;
-		transform: translate(calc(-50% + clamp(0px, 1px * var(--x), 130px)), calc(-50% + clamp(0px, 1px * var(--y), 130px)));
-		transition: transform 0.4s;
+    }
+	&:after {
+        border: 1px solid gray;
+		background-color: rgba(255, 255, 255, 0.5);
+		transform: translate(calc(-50% + 1px * var(--x)), calc(-50% + 1px * var(--y)));
+		transition: transform 0.4s, background-color 0.2s;
 	}
+    &:before {
+        border: 1px solid rgb(139, 139, 139);
+		transform: translate(calc(-50% + var(--r) * 1px), calc(-50% + var(--r) * 1px));
+    }
 }
 .button {
     position: absolute;
     pointer-events: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 42px;
-    height: 42px;
+    color: ghostwhite;
+    border: 1px solid gray;
+	background-color: rgba(255, 255, 255, 0.3);
+    min-width: 50px;
     border-radius: 50%;
     text-align: center;
-    line-height: 42px;
+    line-height: 50px;
+    bottom: 60px;
+    right: 60px;
+    &.focus {
+    	background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+virtual-joystick {
+    pointer-events: none;
+	position: absolute;
+	left: 40px;
+    bottom: 30px;
 }
