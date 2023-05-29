@@ -150,7 +150,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
     #start = (event) => {
         const { clientX, clientY } = event;
         const attachEvents = () => {
-            document.removeEventListener('pointerdown', this.#start);
             document.addEventListener('pointermove', this.#move);
             document.addEventListener('pointerup', this.#up);
             this.pointerId = event.pointerId;
@@ -158,7 +157,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             this.#bind();
             this.dispatchEvent(new CustomEvent('joystickdown'));
         };
-        if (this.pointerId) {
+        if (this.pointerId && this.dataset.mode !== 'fixed') {
             return;
         }
         this.#rect = this.#element.getBoundingClientRect();
@@ -217,7 +216,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         this.#setXY(x, y);
     };
     #up = () => {
-        document.addEventListener('pointerdown', this.#start);
         document.removeEventListener('pointermove', this.#move);
         document.removeEventListener('pointerup', this.#up);
         this.pointerId = null;
