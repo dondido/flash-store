@@ -223,14 +223,14 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             y = r * Math.sin(angle) + r;
         }
         degree = (degree > 0 ? 360 : 0) - degree;
-        const direction = VirtualJoystick.#getDir(degree);
-        this.#pointers[event.pointerId] = direction;
-        document.getElementById('log').textContent = `1: ${JSON.stringify(this.#pointers)}${VirtualJoystick.#reduceDir(this.#pointers) ?? direction}`;
+        this.#pointers[event.pointerId] = VirtualJoystick.#getDir(degree);
+        const direction = VirtualJoystick.#reduceDir(this.#pointers) ?? this.#pointers[event.pointerId];
+        document.getElementById('log').textContent = `2: ${JSON.stringify(this.#pointers)}${VirtualJoystick.#reduceDir(this.#pointers) ?? direction}`;
         console.log(111, this.#pointers, VirtualJoystick.#reduceDir(this.#pointers) ?? direction)
         this.#log({
             hypot,
             degree,
-            direction: VirtualJoystick.#reduceDir(this.#pointers) ?? direction,
+            direction,
             capture: VirtualJoystick.#getUniqueDir(this.dataset.direction, direction),
             release: VirtualJoystick.#getUniqueDir(direction, this.dataset.direction),
             x: x + this.#rect.left,
