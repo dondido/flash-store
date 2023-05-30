@@ -169,12 +169,12 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
     }
     connectedCallback() {
         document.addEventListener('pointerdown', this.#start);
+        document.addEventListener('pointermove', this.#move);
+        document.addEventListener('pointerup', this.#up);
     }
     #start = (event) => {
         const { clientX, clientY } = event;
         const attachEvents = () => {
-            document.addEventListener('pointermove', this.#move);
-            document.addEventListener('pointerup', this.#up);
             this.#pointers[event.pointerId] = '';
             this.#element.part.add('active');
             this.#bind(event);
@@ -225,7 +225,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         degree = (degree > 0 ? 360 : 0) - degree;
         const direction = VirtualJoystick.#getDir(degree);
         this.#pointers[event.pointerId] = direction;
-        document.getElementById('log').textContent = `${JSON.stringify(this.#pointers)}${VirtualJoystick.#reduceDir(this.#pointers) ?? direction}`;
+        document.getElementById('log').textContent = `1: ${JSON.stringify(this.#pointers)}${VirtualJoystick.#reduceDir(this.#pointers) ?? direction}`;
         console.log(111, this.#pointers, VirtualJoystick.#reduceDir(this.#pointers) ?? direction)
         this.#log({
             hypot,
@@ -245,8 +245,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         if (event.pointerId in this.#pointers === false) {
             return;
         }
-        document.removeEventListener('pointermove', this.#move);
-        document.removeEventListener('pointerup', this.#up);
         delete this.#pointers[event.pointerId];
         this.#element.part.remove('active');
         this.#log({ release: this.dataset.direction });
