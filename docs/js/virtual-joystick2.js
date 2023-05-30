@@ -78,28 +78,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         return dir;
     }
-    static #reduceDir = (pointers) => {
-        const values = Object.values(pointers);
-        if (values.length === 1) {
-            return;
-        }
-        const { n, e, s, w } = values.join('').split('').reduce((acc, char) => {
-            acc[char] +=1;
-            return acc;
-        }, { n: 0, e: 0, s: 0, w: 0 });
-        let direction = ''
-        if (n > s) {
-            direction = 'n';
-        } else if (s > n) {
-            direction = 's';
-        }
-        if (w > e) {
-            direction += 'w';
-        } else if (e > w) {
-            direction += 'e';
-        }
-        return direction;
-    }
     #setXY(x, y) {
         this.#element.style.setProperty('--x', `${x}px`);
         this.#element.style.setProperty('--y', `${y}px`);
@@ -146,7 +124,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
     #element = null
     #rect = null
     #crow = null
-    #pointers = {}
     constructor() {
         super();
         let output = {};
@@ -175,12 +152,12 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         const attachEvents = () => {
             document.addEventListener('pointermove', this.#move);
             document.addEventListener('pointerup', this.#up);
-            this.#pointers[event.pointerId] = '';
+            this.pointerId = event.pointerId;
             this.#element.part.add('active');
-            this.#bind(event);
+            this.#bind();
             this.dispatchEvent(new CustomEvent('joystickdown'));
         };
-        if (this.#pointers && this.dataset.mode !== 'fixed') {
+        if (this.pointerId) {
             return;
         }
         this.#rect = this.#element.getBoundingClientRect();
@@ -198,20 +175,20 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
                 return attachEvents();
             }
             this.#calcCrow(event);
-            if (this.#crow.hypot <= this.#r || this.dataset.shape) {
+            if (crow.hypot <= this.#r || this.dataset.shape) {
                 attachEvents();
             }
         }
     }
     #move = (event) => {
-        if (event.pointerId in this.#pointers === false) {
+        if (this.pointerId !== event.pointerId) {
             return;
         }
         this.#calcCrow(event);
-        this.#bind(event);
+        this.#bind();
         this.dispatchEvent(new CustomEvent('joystickmove'));
     }
-    #bind = (event) => {
+    #bind = () => {
         const { dx, dy, dxr, dyr, hypot } = this.#crow;
         const r = this.#r;
         const angle = Math.atan2(dyr, dxr);
@@ -224,11 +201,10 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         degree = (degree > 0 ? 360 : 0) - degree;
         const direction = VirtualJoystick.#getDir(degree);
-        this.#pointers[event.pointerId] = direction;
         this.#log({
             hypot,
             degree,
-            direction: VirtualJoystick.#reduceDir(this.#pointers) || direction,
+            direction,
             capture: VirtualJoystick.#getUniqueDir(this.dataset.direction, direction),
             release: VirtualJoystick.#getUniqueDir(direction, this.dataset.direction),
             x: x + this.#rect.left,
@@ -239,13 +215,10 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         });
         this.#setXY(x, y);
     };
-    #up = (event) => {
-        if (event.pointerId in this.#pointers === false) {
-            return;
-        }
+    #up = () => {
         document.removeEventListener('pointermove', this.#move);
         document.removeEventListener('pointerup', this.#up);
-        delete this.#pointers[event.pointerId];
+        this.pointerId = null;
         this.#element.part.remove('active');
         this.#log({ release: this.dataset.direction });
         this.#setXY(this.#r, this.#r);
