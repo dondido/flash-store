@@ -1,5 +1,6 @@
 const { pathname } = window.location;
-const response = await fetch(`${pathname}/manifest.json`);
+await navigator.serviceWorker.register('./sw.js');
+const response = await fetch(`${pathname}game.json`);
 const { url, controls, aspectRatio } = await response.json();
 window.RufflePlayer = window.RufflePlayer || {};
 document.getElementById('container').style.aspectRatio = aspectRatio;
