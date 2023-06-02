@@ -15,7 +15,7 @@
         {
             "type": "button",
             "label": "SP",
-            "mappings": ["Space"]
+            "mappings": [{ "code": "Space" }]
         }
     ]
 }

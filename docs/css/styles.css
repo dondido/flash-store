@@ -3,8 +3,8 @@ body {
     margin: 0;
 }
 #container {
-    max-width: 100vw;
-    max-height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     position: absolute;
     align-items: center;
@@ -12,6 +12,11 @@ body {
     overflow: hidden;
     inset: 0;
     margin: auto;
+}
+@media (orientation: portrait) {
+    #container {
+        margin-top: 70px;
+    }
 }
 ruffle-player {
     width: 100%;
@@ -69,15 +74,15 @@ ruffle-player {
 .button {
     position: absolute;
     pointer-events: none;
-    color: darkslategrey;
+    color: #303030;
     border: 1px solid gray;
 	background-color: rgba(255, 255, 255, 0.3);
     min-width: 50px;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-    bottom: 60px;
-    right: 60px;
+    bottom: 40px;
+    right: 40px;
     &.focus {
     	background-color: rgba(255, 255, 255, 0.6);
     }

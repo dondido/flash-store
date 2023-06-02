@@ -1,5 +1,5 @@
-const triggerKeydownEvent = code => window.dispatchEvent(new KeyboardEvent('keydown', { code }));
-const triggerKeyupEvent = code => window.dispatchEvent(new KeyboardEvent('keyup', { code }));
+const triggerKeydownEvent = e => window.dispatchEvent(new KeyboardEvent('keydown', e));
+const triggerKeyupEvent = e => window.dispatchEvent(new KeyboardEvent('keyup', e));
 export default ({ mappings, label }) => {
     const button = document.createElement('div');
     button.className = `button button-${label.toLowerCase()}`;
@@ -19,6 +19,5 @@ export default ({ mappings, label }) => {
             button.onpointerup = end;
         }
     };
-    console.log(111, button.className)
-    button.onpointerdown = start;
+    document.addEventListener('pointerdown', start);
 }

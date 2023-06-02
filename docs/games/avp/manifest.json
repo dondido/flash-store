@@ -18,17 +18,17 @@
         {
             "type": "button",
             "label": "A",
-            "mappings": ["KeyA"]
+            "mappings": [{ "key": "a" }]
         },
         {
             "type": "button",
             "label": "S",
-            "mappings": ["KeyS"]
+            "mappings": [{ "key": "s" }]
         },
         {
             "type": "button",
             "label": "D",
-            "mappings": ["KeyD"]
+            "mappings": [{ "key": "d" }]
         }
     
     ]
