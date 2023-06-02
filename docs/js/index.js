@@ -13,9 +13,10 @@ const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('key
 const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
 container.appendChild(player);
 player.load(`${pathname}/${url}`);
-controls.forEach(async ({ joystick, button }) => {
-    if (joystick) {
-        const { mappings, dataset } = joystick;
+controls.forEach(async (control) => {
+    const { type } = control;
+    if ('joystick' === type) {
+        const { mappings, dataset } = control;
         const mapKeydown = direction => triggerKeydownEvent({ code: mappings[direction] });
         const mapKeyup = direction => triggerKeyupEvent({ code: mappings[direction] });
         document.body.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
@@ -34,8 +35,8 @@ controls.forEach(async ({ joystick, button }) => {
             Object.assign($joystick.dataset, dataset);
         }
     }
-    if (button) {
+    if ('button' === type) {
         const Button = await import('./button.js');
-        Button.default(button);
+        Button.default(control);
     }
 });

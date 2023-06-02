@@ -78,28 +78,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         return dir;
     }
-    static #reduceDir = (pointers) => {
-        const values = Object.values(pointers);
-        if (values.length === 1) {
-            return;
-        }
-        const { n, e, s, w } = values.join('').split('').reduce((acc, char) => {
-            acc[char] +=1;
-            return acc;
-        }, { n: 0, e: 0, s: 0, w: 0 });
-        let direction = ''
-        if (n > s) {
-            direction = 'n';
-        } else if (s > n) {
-            direction = 's';
-        }
-        if (w > e) {
-            direction += 'w';
-        } else if (e > w) {
-            direction += 'e';
-        }
-        return direction;
-    }
     #setXY(x, y) {
         this.#element.style.setProperty('--x', `${x}px`);
         this.#element.style.setProperty('--y', `${y}px`);
@@ -178,6 +156,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             this.#pointers.push(event.pointerId);
             this.#element.part.add('active');
             this.#bind(event);
+            this.dataset.release && this.dispatchEvent(new CustomEvent('joystickup'));
             this.dispatchEvent(new CustomEvent('joystickdown'));
         };
         if (this.#pointers.length && this.dataset.mode !== 'fixed') {
@@ -187,9 +166,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         if (this.#isInside(event)) {
             if (this.dataset.mode) {
                 if (this.dataset.mode !== 'fixed') {
-                    if (this.dataset.mode === 'semi') {
-                        this.#element.part.remove('dynamic');
-                    }
+                    this.dataset.mode === 'semi' && this.#element.part.remove('dynamic');
                     const { top, left } = this.getBoundingClientRect();
                     this.#element.style.left = `${clientX - left - this.#r}px`;
                     this.#element.style.top = `${clientY - top - this.#r}px`;
@@ -223,7 +200,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         degree = (degree > 0 ? 360 : 0) - degree;
         const direction = VirtualJoystick.#getDir(degree);
-        document.getElementById('log').textContent = `2: ${JSON.stringify(this.#pointers)} ${direction}`;
         this.#log({
             hypot,
             degree,

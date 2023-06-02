@@ -69,7 +69,7 @@ ruffle-player {
 .button {
     position: absolute;
     pointer-events: none;
-    color: ghostwhite;
+    color: darkslategrey;
     border: 1px solid gray;
 	background-color: rgba(255, 255, 255, 0.3);
     min-width: 50px;

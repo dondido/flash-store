@@ -4,26 +4,18 @@
     "aspectRatio": "55/40",
     "controls": [
         {
-            "joystick": {
-                "element": "",
-                "dataset": {
-                    "mode": "fixed"
-                },
-                "mappings": {
-                    "n": "ArrowUp",
-                    "e": "ArrowRight",
-                    "s": "ArrowDown",
-                    "w": "ArrowLeft"
-                }
-            } 
+            "type": "joystick",
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
         },
         {
-            "button": {
-                "label": "Sp",
-                "mappings": [{
-                    "code": "Space"
-                }]
-            }
+            "type": "button",
+            "label": "SP",
+            "mappings": ["Space"]
         }
     ]
 }

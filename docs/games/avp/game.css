@@ -1,0 +1,11 @@
+virtual-joystick {
+	position: absolute;
+	left: 40px;
+    bottom: 30px;
+}
+.button-d {
+    right: 140px;
+}
+.button-s {
+    bottom: 140px;
+}
