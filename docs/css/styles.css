@@ -83,6 +83,15 @@ h1 {
 ruffle-player {
     width: 100%;
     height: 100%;
+    &:before {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: block;
+        position: fixed; 
+    }
 }
 .button {
     position: absolute;
