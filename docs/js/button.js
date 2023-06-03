@@ -1,10 +1,10 @@
 const triggerKeydownEvent = e => window.dispatchEvent(new KeyboardEvent('keydown', e));
 const triggerKeyupEvent = e => window.dispatchEvent(new KeyboardEvent('keyup', e));
-export default ({ mappings, label }) => {
+export default ({ mappings, label }, $player) => {
     const button = document.createElement('div');
     button.className = `button button-${label.toLowerCase()}`;
     button.textContent = label;
-    document.body.appendChild(button);
+    $player.appendChild(button);
     const end = () => {
         button.classList.remove('focus');
         mappings.forEach(triggerKeyupEvent);

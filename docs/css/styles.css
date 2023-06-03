@@ -1,79 +1,91 @@
 body {
-	background-color: dimgray;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
-#container {
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    inset: 0;
+h1 {
+    text-align: center;
+    font-weight: 100;
+}
+.run {
+    & .playground {
+        cursor: auto;
+        border: 0;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+        height: auto;
+        width: auto;
+        border-radius: 0;
+        & .button,
+        & virtual-joystick {
+            visibility: visible;
+        }
+        &:before {
+            content: "";
+            filter: blur(10px);
+            background-image: var(--bg-image);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    & .play-button-label,
+    & .content,
+    & .description {
+        display: none;
+    }
+}
+.playground {
+    cursor: pointer;
+    border: 1px solid #c3c6d1;
     margin: auto;
+    overflow: hidden;
+    height: 48px;
+    width: 200px;
+    border-radius: 0.75em;
+    position: relative;
+}
+.play-button-label {
+    position: absolute;
+    top: 0;
+    padding-top: 3px;
+    pointer-events: none;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    color: #146ebe;
+    background: white;
+    &:before {
+        font-family: 'Material Symbols Outlined';
+        content: "\e037";
+        font-size: 40px;
+        display: inline-block;
+        height: 34px;
+        vertical-align: text-bottom;
+        margin-left: -20px;
+        margin-top: -5px;
+    }
 }
 @media (orientation: portrait) {
-    #container {
+    .run .playground1 {
         margin-top: 70px;
     }
 }
 ruffle-player {
     width: 100%;
     height: 100%;
-    &:before {
-        content: "";
-		width: 100vw;
-		height: 100vh;
-        top: 0;
-        left: 0;
-		display: block;
-		position: fixed; 
-    }
-}
-.joystick {
-	--r: 65;
-	--x: var(--r);
-	--y: var(--r);
-    pointer-events: none;
-	position: absolute;
-	left: calc(20px);
-	width: calc(var(--r) * 2px);
-	height: calc(var(--r) * 2px);
-	border: 1px solid gray;
-	background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transition: background-color 0.2s;
-	&.focus {
-    	background-color: rgba(255, 255, 255, 0.6);
-		&:after {
-            background-color: rgba(255, 255, 255, 0.8);
-			transition: transform 0.1s, background-color 0.2s;
-		}
-	}
-    &:after,
-    &:before {
-        content: "";
-        border-radius: 50%;
-		width: 50px;
-		height: 50px;
-		display: block;
-		position: absolute;
-    }
-	&:after {
-        border: 1px solid gray;
-		background-color: rgba(255, 255, 255, 0.5);
-		transform: translate(calc(-50% + 1px * var(--x)), calc(-50% + 1px * var(--y)));
-		transition: transform 0.4s, background-color 0.2s;
-	}
-    &:before {
-        border: 1px solid rgb(139, 139, 139);
-		transform: translate(calc(-50% + var(--r) * 1px), calc(-50% + var(--r) * 1px));
-    }
 }
 .button {
     position: absolute;
     pointer-events: none;
+    display: none;
     color: #303030;
     border: 1px solid gray;
 	background-color: rgba(255, 255, 255, 0.3);
@@ -87,6 +99,37 @@ ruffle-player {
     	background-color: rgba(255, 255, 255, 0.6);
     }
 }
+.button-close,
+.button-pause {
+    position: fixed;
+    visibility: hidden;
+    pointer-events: auto;
+    inset: 10px auto auto 10px;
+    display: block;
+    height: 50px;
+    &:before {
+        font-family: 'Material Symbols Outlined';
+        content: "\e5cd";
+        font-size: 24px;
+    }
+}
+.button-pause {
+    left: 70px;
+    &:before {
+        content: "\e034";
+    }
+}
 virtual-joystick {
+    visibility: hidden;
     pointer-events: none;
+    position: fixed;
+}
+video {
+    margin: 20px auto;
+    display: block;
+}
+main {
+    margin: auto;
+    padding: 20px;
+    max-width: 640px;
 }
