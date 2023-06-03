@@ -78,9 +78,6 @@ h1 {
             top: 70px;
             bottom: auto;
         }
-        & virtual-joystick::part(joystick) {
-            top: calc(100% - 80px);
-        }
     }
 }
 ruffle-player {
