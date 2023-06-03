@@ -4,6 +4,7 @@ const response = await fetch(`${pathname}game.json`);
 const { url, controls, aspectRatio } = await response.json();
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
+const $controls = document.querySelector('.controls');
 const run = () => {
     document.body.classList.add('run');
     $playground.onclick = null;
@@ -39,7 +40,7 @@ controls.forEach(async (control) => {
         const { mappings, dataset } = control;
         const mapKeydown = direction => triggerKeydownEvent({ code: mappings[direction] });
         const mapKeyup = direction => triggerKeyupEvent({ code: mappings[direction] });
-        $playground.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
+        $controls.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
         const $joystick = document.querySelector('virtual-joystick');
         $joystick.addEventListener('joystickdown', () => {
             $joystick.dataset.capture.split('').forEach(mapKeydown);
@@ -57,6 +58,6 @@ controls.forEach(async (control) => {
     }
     if ('button' === type) {
         const Button = await import('./button.js');
-        Button.default(control, $playground);
+        Button.default(control, $controls);
     }
 });
