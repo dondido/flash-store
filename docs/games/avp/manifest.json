@@ -1,35 +1,15 @@
 {
-    "url": "avp.swf",
-    "title": "Aliens VS Predator",
-    "aspectRatio": "550/330",
-    "controls": [
+    "name": "Indestructo Tank",
+    "description": "You are an indestructible tank and your only weapon is yourself. Catch an attack missile and use the blast to launch yourself up high, then steer to crash your indestructible body into enemy jets and smash them into pieces. Try to hit as many jets as you can to score extra combo points. You need to earn enough points to reach the next level before your fuel runs out. Upgrade your bomber, bouncer, gunner, homer, and miner between levels to improve your tank.",
+    "start_url": "/flash-store/games/avp/",
+    "scope": "/flash-store/games/avp/",
+    "lang": "en-US",
+    "icons": [
         {
-            "type": "joystick",
-            "dataset": {
-                "mode": "fixed"
-            },
-            "mappings": {
-                "n": "ArrowUp",
-                "e": "ArrowRight",
-                "s": "ArrowDown",
-                "w": "ArrowLeft"
-            }
-        },
-        {
-            "type": "button",
-            "label": "A",
-            "mappings": [{ "key": "a" }]
-        },
-        {
-            "type": "button",
-            "label": "S",
-            "mappings": [{ "key": "s" }]
-        },
-        {
-            "type": "button",
-            "label": "D",
-            "mappings": [{ "key": "d" }]
+          "src": "./avp.png",
+          "sizes": "192x192",
+          "type": "image/png"
         }
-    
-    ]
+    ],
+    "display": "standalone"
 }
