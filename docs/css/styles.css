@@ -39,7 +39,7 @@ h1 {
 .run {
     &:before {
         content: "";
-        filter: blur(10px);
+        filter: blur(20px);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
