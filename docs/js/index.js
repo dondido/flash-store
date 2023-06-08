@@ -22,7 +22,7 @@ const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 player.config = {
     autoplay: 'on',
-    contextMenu: 'rightClickOnly'
+    contextMenu: 'rightClickOnly',
 };
 const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
 const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));

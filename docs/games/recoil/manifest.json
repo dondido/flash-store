@@ -1,0 +1,15 @@
+{
+    "name": "Recoil",
+    "description": "Fight it out on the street against your mechanized enemies.",
+    "start_url": "/flash-store/games/recoil/",
+    "scope": "/flash-store/games/recoil/",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}
