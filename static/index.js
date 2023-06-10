@@ -19,11 +19,10 @@ fs.readdir(directoryPath, (err, folders) => {
         // Do whatever you want to do with the file
         console.log(folder);
         const { name } = require(`${directoryPath}/${folder}/manifest.json`);
-        console.log(1111, name)
         return `
             <li>
-                <a href="/s/${folder}/">
-                    <img alt="${name}" src="/s/${folder}/poster.jpg" >
+                <a href="./s/${folder}/">
+                    <img alt="${name}" src="./s/${folder}/poster.jpg" >
                 </a>
             </li>
         `
