@@ -1,0 +1,15 @@
+{
+    "name": "Funny Zoo",
+    "description": "Fight against computer. Throw balls and bombs at the monkey!",
+    "start_url": "/flash-store/g/funny_zoo/",
+    "scope": "/flash-store/g/funny_zoo/",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}

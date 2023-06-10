@@ -156,7 +156,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             this.#pointers.push(event.pointerId);
             this.#element.part.add('active');
             this.#bind(event);
-            this.dataset.release && this.dispatchEvent(new CustomEvent('joystickup'));
             this.dispatchEvent(new CustomEvent('joystickdown'));
         };
         if (this.#pointers.length && this.dataset.mode !== 'fixed') {
@@ -194,15 +193,17 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         let degree = angle * 180 / Math.PI;
         let x = dx;
         let y = dy;
+        const force = hypot / r;
         if (!this.dataset.shape && hypot > r) {
             x = r * Math.cos(angle) + r;
             y = r * Math.sin(angle) + r;
         }
         degree = (degree > 0 ? 360 : 0) - degree;
-        const direction = VirtualJoystick.#getDir(degree);
+        const direction = + this.dataset.threshold > force ? '' : VirtualJoystick.#getDir(degree);
         this.#log({
             hypot,
             degree,
+            force,
             direction,
             capture: VirtualJoystick.#getUniqueDir(this.dataset.direction, direction),
             release: VirtualJoystick.#getUniqueDir(direction, this.dataset.direction),
@@ -210,7 +211,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             y: y + this.#rect.top,
             radian: (angle > 0 ? 2 * Math.PI : 0) - angle,
             distance: Math.min(hypot, r),
-            force: hypot / r,
         });
         this.#setXY(x, y);
     };

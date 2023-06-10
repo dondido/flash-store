@@ -1,0 +1,16 @@
+{
+    "aspectRatio": "60/50",
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "lock": "y"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        }
+    ]
+}

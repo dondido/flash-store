@@ -5,6 +5,9 @@
     "controls": [
         {
             "type": "joystick",
+            "dataset": {
+                "threshold": 0.9
+            },
             "mappings": {
                 "n": "ArrowUp",
                 "e": "ArrowRight",

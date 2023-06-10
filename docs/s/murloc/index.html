@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+            Murloc
+          </title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="
+            Murloc
+          ">
+    <meta name="apple-mobile-web-app-title" content="
+            Murloc
+          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link rel="stylesheet" href="./game.css?v=1.0">
+    <style>
+        .run:before {
+            background-image: url(./poster.jpg)
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1>
+            Murloc
+          </h1>
+            <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="playground">
+            <div class="play-button">Play</div>
+        </div>
+        <div class="controls">
+            <button type="button" class="button button-close"></button>
+            <button type="button" class="button button-pause"></button>
+        </div>
+        <p class="description">
+  Based on the very popular game World of Warcraft.
+</p>
+    </main>
+    <script type="module" src="../../js/virtual-joystick.js"></script>
+    <script src="../../js/ruffle.js"></script>
+    <script src="../../js/player.js"></script>
+    <script type="module" src="../../js/index.js"></script>
+</body>
+</html>

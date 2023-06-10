@@ -1,7 +1,7 @@
 {
     "url": "matrix-rampage.swf",
     "title": "Matrix Rampage",
-    "aspectRatio": "550/400",
+    "aspectRatio": "400/316",
     "controls": [
         {
             "type": "joystick",
