@@ -1,8 +1,8 @@
 {
     "name": "Murloc",
     "description": "Based on the very popular game World of Warcraft.",
-    "start_url": "/flash-store/g/murloc/",
-    "scope": "/flash-store/g/murloc/",
+    "start_url": "/flash-store/s/murloc/",
+    "scope": "/flash-store/s/murloc/",
     "lang": "en-US",
     "icons": [
         {

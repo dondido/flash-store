@@ -1,8 +1,8 @@
 {
     "name": "Aliens VS Predator",
     "description": "According to hunter folklore, the bugs evolved simultaneously on a multitude of worlds. This is nonsense, of course. Worse, it masks the horror behind the true - which is that the bugs are able to adapt to, and thrive in, any environment... And that's it the hunters who are primarily responsible for spreading the bugs throughout the galaxy.",
-    "start_url": "/flash-store/games/avp/",
-    "scope": "/flash-store/games/avp/",
+    "start_url": "/flash-store/sames/avp/",
+    "scope": "/flash-store/sames/avp/",
     "lang": "en-US",
     "icons": [
         {

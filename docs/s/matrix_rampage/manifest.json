@@ -1,8 +1,8 @@
 {
     "name": "Matrix Rampage",
     "description": "The Matrix fans out there will have fun with this one. You play as Neo in this game, jumping to and from floors on buildings and killing agents along the way. Guns, swords, staffs, and pretty much everything else on the scenario can be used to get the job done.",
-    "start_url": "/flash-store/g/matrix_rampage/",
-    "scope": "/flash-store/g/matrix_rampage/",
+    "start_url": "/flash-store/s/matrix_rampage/",
+    "scope": "/flash-store/s/matrix_rampage/",
     "lang": "en-US",
     "icons": [
         {

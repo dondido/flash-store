@@ -1,8 +1,8 @@
 {
     "name": "${title}",
     "description": "${description}",
-    "start_url": "/flash-store/g/${folder}/",
-    "scope": "/flash-store/g/${folder}/",
+    "start_url": "/flash-store/s/${folder}/",
+    "scope": "/flash-store/s/${folder}/",
     "lang": "en-US",
     "icons": [
         {
