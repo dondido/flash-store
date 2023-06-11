@@ -32,3 +32,26 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+main {
+    display: flex;
+    justify-content: center;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    justify-content: space-evenly;
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 1024px;
+    list-style: none;
+    padding: 20px;
+}
+.game {
+}
+.game-link {
+    text-decoration: none;
+}
+.game-title {
+    margin: .5ex 0;
+    font-size: 14px;
+}

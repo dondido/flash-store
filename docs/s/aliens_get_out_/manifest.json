@@ -1,0 +1,15 @@
+{
+    "name": "Aliens Get Out!",
+    "description": "The aliens have invaded our planet, a space squad is ready to defend our positions, shoot your bazooka make them fly through the air and do not let one standing",
+    "start_url": "/flash-store/s/aliens_get_out_/",
+    "scope": "/flash-store/s/aliens_get_out_/",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}

@@ -20,13 +20,14 @@ fs.readdir(directoryPath, (err, folders) => {
         console.log(folder);
         const { name } = require(`${directoryPath}/${folder}/manifest.json`);
         return `
-            <li>
-                <a href="./s/${folder}/">
+            <li class="game">
+                <a class="game-link" href="./s/${folder}/">
                     <img alt="${name}" src="./s/${folder}/poster.jpg" >
+                    <h2 class="game-title">${name}</h2>
                 </a>
             </li>
         `
-    });
+    }).join('');
     console.log(2222, `${path.join(__dirname, '../docs')}\index.html`)
     saveString({ games }, 'index.html');
 });

@@ -1,0 +1,22 @@
+{
+    "aspectRatio": "585/420",
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "Shift", "code": "ShiftLeft" }]
+        }
+    ]
+}
