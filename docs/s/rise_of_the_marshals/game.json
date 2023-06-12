@@ -1,13 +1,10 @@
 {
-    "url": "avp.swf",
-    "title": "Aliens VS Predator",
     "aspectRatio": "640/480",
     "controls": [
         {
             "type": "joystick",
             "dataset": {
-                "mode": "fixed",
-                "threshold": 0.1
+                "mode": "fixed"
             },
             "mappings": {
                 "n": "ArrowUp",
@@ -19,17 +16,17 @@
         {
             "type": "button",
             "label": "A",
-            "mappings": [{ "key": "a" }]
+            "mappings": [{ "key": "a", "code": "KeyA" }]
         },
         {
             "type": "button",
             "label": "S",
-            "mappings": [{ "key": "s" }]
+            "mappings": [{ "key": "s", "code": "KeyS" }]
         },
         {
             "type": "button",
             "label": "D",
-            "mappings": [{ "key": "d" }]
+            "mappings": [{ "key": "d", "code": "KeyD" }]
         }
     
     ]

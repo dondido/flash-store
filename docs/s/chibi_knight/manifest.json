@@ -1,0 +1,15 @@
+{
+    "name": "Chibi Knight",
+    "description": "The, once peaceful, kingdom of Oukoku has been invaded by three fierce beasts. The beasts have ransacked the kingdom. Many citizens have slain. The town's wizards have gone into hiding. Legends tell of a small knight who's courage will defeat the three beasts and save the kingdom.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

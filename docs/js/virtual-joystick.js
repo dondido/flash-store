@@ -60,9 +60,9 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
     static #getDir = (degree) => {
         const dirs = ['ne', 'n', 'nw', 'w', 'sw', 's', 'se'];
         const acute = 45;
-        let treshold = 22.5;
+        let threshold = 22.5;
         for (let dir of dirs) {
-            if (degree >= treshold && degree < (treshold += acute)) {
+            if (degree >= threshold && degree < (threshold += acute)) {
                 return dir;
             }
         }

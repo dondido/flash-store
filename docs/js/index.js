@@ -2,7 +2,6 @@ const { pathname } = window.location;
 await navigator.serviceWorker.register('../../js/sw.js');
 const response = await fetch(`${pathname}game.json`);
 const { controls, aspectRatio } = response.status === 200 ? await response.json?.() : {};
-console.log(112, controls, aspectRatio)
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
 const $playButton = document.querySelector('.play-button')
@@ -35,8 +34,13 @@ if (controls?.length) {
         const { type } = control;
         if ('joystick' === type) {
             const { mappings, dataset } = control;
-            const mapKeydown = direction => triggerKeydownEvent({ code: mappings[direction] });
-            const mapKeyup = direction => triggerKeyupEvent({ code: mappings[direction] });
+            const assignMapping = (direction) => {
+                const code = mappings[direction];
+                console.log(1111, code)
+                return typeof code === 'string' ? { code } : code;
+            };
+            const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
+            const mapKeyup = direction => triggerKeyupEvent(assignMapping(direction));
             $controls.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
             const $joystick = $controls.querySelector('virtual-joystick');
             const handleKeyEvents = () => {

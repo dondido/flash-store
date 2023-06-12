@@ -1,8 +1,8 @@
 {
     "name": "Constructore",
     "description": "Drag shapes to make a stackable surface for the lighter block to reach the outlined area.",
-    "start_url": "/flash-store/s/constructore/",
-    "scope": "/flash-store/s/constructore/",
+    "start_url": "./",
+    "scope": ".",
     "lang": "en-US",
     "icons": [
         {
@@ -11,5 +11,5 @@
           "type": "image/png"
         }
     ],
-    "display": "standalone"
+    "display": "fullscreen"
 }

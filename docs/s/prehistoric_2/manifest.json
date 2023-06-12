@@ -1,0 +1,15 @@
+{
+    "name": "Prehistoric 2",
+    "description": "A creative and clear graphics sidescroller with a little dino. Grab eggs and get passed puzzles.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

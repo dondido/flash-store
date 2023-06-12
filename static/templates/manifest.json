@@ -1,8 +1,8 @@
 {
     "name": "${title}",
     "description": "${description}",
-    "start_url": "/flash-store/s/${folder}/",
-    "scope": "/flash-store/s/${folder}/",
+    "start_url": "./",
+    "scope": ".",
     "lang": "en-US",
     "icons": [
         {
@@ -11,5 +11,5 @@
           "type": "image/png"
         }
     ],
-    "display": "standalone"
+    "display": "fullscreen"
 }

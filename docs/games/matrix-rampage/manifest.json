@@ -11,5 +11,5 @@
           "type": "image/jpg"
         }
     ],
-    "display": "standalone"
+    "display": "fullscreen"
 }

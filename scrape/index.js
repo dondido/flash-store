@@ -27,12 +27,14 @@ fs.existsSync(path) || fs.mkdirSync(path);
 axios
     .get(url, { headers })
     .then((response) => {
-        const dom = new JSDOM(response.data);
-        const [html] = response.data.split('.swf');
+        const dom = new JSDOM(response.data); 
         const $video = dom.window.document.querySelector('video');
         const title = custom.title || dom.window.document.querySelector('h1').textContent; 
         const description = custom.description || dom.window.document.querySelector('h2').textContent;
-        saveStream(`${html.slice(html.lastIndexOf('https'))}.swf`, 'game.swf');
+        if (custom.game === undefined) {
+            const [html] = response.data.split('.swf');
+            saveStream(`${html.slice(html.lastIndexOf('https'))}.swf`, 'game.swf');
+        }
         saveStream($video.poster, 'poster.jpg')
             .then(saveIcon);
         saveStream(`https://img.y8.com${$video.querySelector('source').src}`, 'video.mp4');

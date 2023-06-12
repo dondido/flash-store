@@ -1,8 +1,8 @@
 {
     "name": "Alien Hominid",
     "description": "Our UFO has crash landed, and the FBI is out to get you! Time to take them out!",
-    "start_url": "/flash-store/s/alien_hominid/",
-    "scope": "/flash-store/s/alien_hominid/",
+    "start_url": "./",
+    "scope": ".",
     "lang": "en-US",
     "icons": [
         {
@@ -11,5 +11,5 @@
           "type": "image/png"
         }
     ],
-    "display": "standalone"
+    "display": "fullscreen"
 }

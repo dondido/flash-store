@@ -194,3 +194,13 @@ main {
 .description {
     white-space: pre-line;
 }
+[data-mode="fixed"] {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    left: 0;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
