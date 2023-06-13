@@ -1,0 +1,10 @@
+{
+    "aspectRatio": "7/4",
+    "controls": [
+        {
+            "type": "button",
+            "label": "R",
+            "mappings": [{ "key": "r", "code": "KeyR" }]
+        }
+    ]
+}

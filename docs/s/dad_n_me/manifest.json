@@ -1,0 +1,15 @@
+{
+    "name": "Dad n' Me",
+    "description": "Destroy everything that come in your way!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

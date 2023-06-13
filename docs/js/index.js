@@ -1,21 +1,29 @@
 const { pathname } = window.location;
-await navigator.serviceWorker.register('../../js/sw.js');
+await navigator.serviceWorker.register('../../sw.js');
 const response = await fetch(`${pathname}game.json`);
 const { controls, aspectRatio } = response.status === 200 ? await response.json?.() : {};
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
 const $playButton = document.querySelector('.play-button')
 const $controls = document.querySelector('.controls');
-document.querySelector('.play-button').onclick = () => {
+const launchGame = () => {
     document.body.classList.add('run');
+    $playground.onclick = null;
+};
+const insertPlayer = () => {
     $playground.prepend(player);
     player.load(`${pathname}/game.swf`);
-};
-$playground.style.aspectRatio = aspectRatio || '550/400';
+}
+$playground.onclick = launchGame;
+$playground.style.aspectRatio = aspectRatio || '64/48';
 document.querySelector('.button-close').onclick = (event) => {
     event.preventDefault();
     document.body.classList.remove('run');
     player.remove();
+    $playground.onclick = () => {
+        launchGame();
+        insertPlayer();
+    };
 }
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
@@ -25,6 +33,7 @@ player.config = {
 };
 const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
 const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
+insertPlayer();
 if (controls?.length) {
     $controls.insertAdjacentHTML('beforeend', '<button type="button" class="button button-toggle-controls"></button>');
     $controls.lastElementChild.onclick = ({ currentTarget }) => {

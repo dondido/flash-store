@@ -1,0 +1,15 @@
+{
+    "name": "Drakojan Skies - Mission 1",
+    "description": "This is the first mission of the Drakonjan Skies series. Lead the way in preventing the deaths of innocent Drakojans by destroying an EDU com. station which shall soon call for bombers. Good luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

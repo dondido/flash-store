@@ -1,0 +1,15 @@
+{
+    "name": "Dead Town",
+    "description": "Surprising game for real zombie hunters! Participate in a zombie slaughter, using the weapons you find in a city where a really dangerous virus is wreaking havoc. This is a non-stop living dead massacre!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

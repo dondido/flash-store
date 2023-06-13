@@ -9,7 +9,9 @@ virtual-joystick::part(joystick) {
         }
     }
 }
-virtual-joystick {
+virtual-joystick[data-mode] {
+    top: 0;
     width: 100%;
     height: 100%;
+    display: block;
 }

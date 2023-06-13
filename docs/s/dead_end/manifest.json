@@ -1,0 +1,15 @@
+{
+    "name": "Dead End",
+    "description": "Gore, gunpowder, zombies and you! An unholy army of the undead have gnawed, clawed and ravaged their way across the world leaving ruin and devastation in their wake. You've ran as far as you can, now its time for a last stand.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
