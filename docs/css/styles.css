@@ -36,42 +36,41 @@ h1 {
     text-align: center;
     font-weight: 100;
 }
-.run {
-    &:before {
-        content: "";
-        filter: blur(20px);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    & .playground {
-        cursor: auto;
-        border: 0;
-        max-width: 100%;
-        max-height: 100%;
-        display: flex;
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        inset: 0;
-        height: auto;
-        width: auto;
-        border-radius: 0;
-    }
-    & .play-button,
-    & .content,
-    & .description {
-        display: none;
-    }
-    & .button,
-    & virtual-joystick {
-        visibility: visible;
-    }
+#play:target:before {
+    content: "";
+    filter: blur(20px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#play:target .playground {
+    cursor: auto;
+    border: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+}
+#play:target .play-button,
+#play:target .content,
+#play:target .description {
+    display: none;
+}
+#play:target .button,
+#play:target virtual-joystick {
+    visibility: visible;
 }
 .playground {
+    display: block;
     cursor: pointer;
     border: 1px solid #c3c6d1;
     margin: auto;
@@ -92,37 +91,35 @@ h1 {
     text-align: center;
     color: #146ebe;
     background: white;
-    &:before {
-        font-family: 'Material Symbols Outlined';
-        content: "\e037";
-        font-size: 40px;
-        display: inline-block;
-        height: 34px;
-        vertical-align: text-bottom;
-        margin-left: -20px;
-        margin-top: -5px;
-    }
+}
+.play-button:before {
+    font-family: 'Material Symbols Outlined';
+    content: "\e037";
+    font-size: 40px;
+    display: inline-block;
+    height: 34px;
+    vertical-align: text-bottom;
+    margin-left: -20px;
+    margin-top: -5px;
 }
 @media (orientation: portrait) {
-    .run {
-        & .playground {
-            top: 70px;
-            bottom: auto;
-        }
+    #play:target .playground {
+        top: 70px;
+        bottom: auto;
     }
 }
 ruffle-player {
     width: 100%;
     height: 100%;
-    &:before {
-        content: "";
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: block;
-        position: fixed; 
-    }
+}
+ruffle-player:before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: block;
+    position: fixed; 
 }
 .button {
     position: absolute;
@@ -137,11 +134,10 @@ ruffle-player {
     line-height: 50px;
     bottom: 40px;
     right: 40px;
-    &.focus {
-    	background-color: rgba(255, 255, 255, 0.6);
-    }
 }
-.button-close,
+.button.focus {
+    background-color: rgba(255, 255, 255, 0.6);
+}
 .button-pause,
 .button-toggle-controls {
     position: fixed;
@@ -150,17 +146,15 @@ ruffle-player {
     inset: 10px auto auto 10px;
     display: block;
     height: 50px;
-    &:before {
-        font-family: 'Material Symbols Outlined';
-        content: "\e5cd";
-        font-size: 24px;
-    }
 }
-.button-pause {
-    left: 70px;
-    &:before {
-        content: "\e034";
-    }
+.button-pause:before,
+.button-toggle-controls:before {
+    font-family: 'Material Symbols Outlined';
+    content: "\e5cd";
+    font-size: 24px;
+}
+.button-pause:before {
+    content: "\e034";
 }
 virtual-joystick {
     visibility: hidden;
@@ -182,14 +176,14 @@ main {
     z-index: 2;
 }
 .button-toggle-controls {
-    left: 130px;
-    &:before {
-        font-size: 30px;
-        content: "\e338";
-    }
-    &.hide-gamepad:before {
-        content: "\e500";
-    }
+    left: 70px;
+}
+.button-toggle-controls:before {
+    font-size: 30px;
+    content: "\e338";
+}
+.hide-gamepad:before {
+    content: "\e500";
 }
 .button.hide-gamepad ~ virtual-joystick,
 .button.hide-gamepad ~ button {

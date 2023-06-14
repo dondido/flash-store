@@ -26,26 +26,26 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
                     transition: transform .1s, background-color 0.2s;
                 }
             }
-        }
-        slot:after,
-        slot:before {
-            content: "";
-            display: block;
-            position: absolute;
-            box-sizing: border-box;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-        }
-        slot:after {
-            border: 1px solid gray;
-            background-color: rgba(255, 255, 255, 0.5);
-            transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
-            transition: transform .4s, background-color .2s;
-        }
-        slot:before {
-            border: 1px solid rgb(139, 139, 139);
-            transform: translate(calc(-50% + var(--radius)), calc(-50% + var(--radius)));
+            &:after,
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+            &:after {
+                border: 1px solid gray;
+                background-color: rgba(255, 255, 255, 0.5);
+                transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
+                transition: transform .4s, background-color .2s;
+            }
+            &:before {
+                border: 1px solid rgb(139, 139, 139);
+                transform: translate(calc(-50% + var(--radius)), calc(-50% + var(--radius)));
+            }
         }
         [part*="dynamic"] {
             opacity: 0;
@@ -74,7 +74,7 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
             dir = b[0]; 
         }
         if (b[1] && a.includes(b[1]) === false) {
-            dir += b[1];
+            dir += b;
         }
         return dir;
     }
@@ -200,7 +200,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         degree = (degree > 0 ? 360 : 0) - degree;
         const direction = + this.dataset.threshold > force ? '' : VirtualJoystick.#getDir(degree);
-        console.log(100, this.dataset.direction, direction);
         this.#log({
             hypot,
             degree,

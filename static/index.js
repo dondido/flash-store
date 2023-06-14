@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-//joining path of directory 
 const directoryPath = path.join(__dirname, '../docs/s');
-
 const es6Renderer = require('express-es6-template-engine');
 const saveString = (locals, file) => es6Renderer(
     `./templates/${file}`,
@@ -28,6 +26,5 @@ fs.readdir(directoryPath, (err, folders) => {
             </li>
         `
     }).join('');
-    console.log(2222, `${path.join(__dirname, '../docs')}\index.html`)
     saveString({ games }, 'index.html');
 });

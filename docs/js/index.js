@@ -6,33 +6,27 @@ window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
 const $playButton = document.querySelector('.play-button')
 const $controls = document.querySelector('.controls');
-const launchGame = () => {
-    document.body.classList.add('run');
-    $playground.onclick = null;
-};
+const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
+const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
+const ruffle = window.RufflePlayer.newest();
+const player = ruffle.createPlayer();
 const insertPlayer = () => {
     $playground.prepend(player);
     player.load(`${pathname}/game.swf`);
-}
-$playground.onclick = launchGame;
+};
 $playground.style.aspectRatio = aspectRatio || '64/48';
-document.querySelector('.button-close').onclick = (event) => {
-    event.preventDefault();
-    document.body.classList.remove('run');
-    player.remove();
-    $playground.onclick = () => {
-        launchGame();
-        insertPlayer();
-    };
-}
-const ruffle = window.RufflePlayer.newest();
-const player = ruffle.createPlayer();
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
 };
-const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
-const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
+addEventListener('hashchange', () => {
+    if (location.hash === '#play' && $playground.firstElementChild.tagName !== 'RUFFLE-PLAYER') {
+        insertPlayer();
+    }
+    else if (location.hash === '') {
+        player.remove();
+    }
+});
 insertPlayer();
 if (controls?.length) {
     $controls.insertAdjacentHTML('beforeend', '<button type="button" class="button button-toggle-controls"></button>');
@@ -45,7 +39,6 @@ if (controls?.length) {
             const { mappings, dataset } = control;
             const assignMapping = (direction) => {
                 const code = mappings[direction];
-                console.log(1111, code)
                 return typeof code === 'string' ? { code } : code;
             };
             const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
