@@ -1,0 +1,15 @@
+{
+    "name": "Headcrab Invasion",
+    "description": "Headcrab Invasion. Be the worst parasite there is and jump on to as many host as you can. Jump off of their heads before they die or you will too. Collect money to buy upgrades and make yourself stronger.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

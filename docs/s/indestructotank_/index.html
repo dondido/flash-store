@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="../../css/styles.css?v=1.0">
     <link rel="stylesheet" href="./game.css?v=1.0">
     <style>
-        .run:before {
+        #play:target:before {
             background-image: url(./poster.jpg)
         }
     </style>
 </head>
-<body>
+<body id="play">
     <main>
         <div class="content">
             <h1>IndestructoTank</h1>
@@ -28,15 +28,12 @@
             </video>
         </div>
         <div class="playground">
-            <div class="play-button">Play</div>
+            <div class="button-play" href="#play">Play</div>
         </div>
         <div class="controls">
-            <button type="button" class="button button-close"></button>
             <button type="button" class="button button-pause"></button>
         </div>
-        <p class="description">Indestructotank is an action game that lets you control a single tank to take on a horde of military baddies that'll keep dropping bombs to try and destroy you. Little do they know, you're indestructible, and their bombs will be their demise as it'll let you reach them and smash them with your tank!
-
-You want to know how badass your tank is? The upgrades in this game is used to increase the enemies that'll try to kill you, not to make you stronger! That's how badass your tank is.</p>
+        <p class="description">Indestructotank is an action game that lets you control a single tank to take on a horde of military baddies that'll keep dropping bombs to try and destroy you. Little do they know, you're indestructible, and their bombs will be their demise as it'll let you reach them and smash them with your tank! You want to know how badass your tank is? The upgrades in this game is used to increase the enemies that'll try to kill you, not to make you stronger! That's how badass your tank is.</p>
     </main>
     <script type="module" src="../../js/virtual-joystick.js"></script>
     <script src="../../js/ruffle.js"></script>

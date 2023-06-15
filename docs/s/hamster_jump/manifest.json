@@ -1,0 +1,15 @@
+{
+    "name": "Hamster Jump",
+    "description": "These cute hamsters will jump to get through the grass. Help them not to injure and use your catching skills to make them bounce.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

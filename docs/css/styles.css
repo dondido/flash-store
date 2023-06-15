@@ -49,6 +49,7 @@ h1 {
 #play:target .playground {
     cursor: auto;
     border: 0;
+    pointer-events: none;
     max-width: 100%;
     max-height: 100%;
     display: flex;
@@ -60,7 +61,7 @@ h1 {
     width: auto;
     border-radius: 0;
 }
-#play:target .play-button,
+#play:target .button-play,
 #play:target .content,
 #play:target .description {
     display: none;
@@ -80,7 +81,7 @@ h1 {
     border-radius: 0.75em;
     position: relative;
 }
-.play-button {
+.button-play {
     position: absolute;
     pointer-events: none;
     top: 0;
@@ -92,7 +93,7 @@ h1 {
     color: #146ebe;
     background: white;
 }
-.play-button:before {
+.button-play:before {
     font-family: 'Material Symbols Outlined';
     content: "\e037";
     font-size: 40px;
@@ -149,12 +150,28 @@ ruffle-player:before {
 }
 .button-pause:before,
 .button-toggle-controls:before {
-    font-family: 'Material Symbols Outlined';
+    font-family: "Material Symbols Outlined";
+}
+.button-toggle-controls:before {
     content: "\e5cd";
     font-size: 24px;
 }
-.button-pause:before {
-    content: "\e034";
+.button-pause.active:before {
+    content: "\e037";
+    font-size: 34px;
+}
+.button-pause:after {
+    content: "";
+    border-inline: 1px solid #606060;
+    display: block;
+    height: 12px;
+    width: 10px;
+    top: 20px;
+    left: 18px;
+    position: absolute;
+}
+.button-pause.active::after {
+    content: normal;
 }
 virtual-joystick {
     visibility: hidden;

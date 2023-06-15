@@ -4,7 +4,7 @@ const response = await fetch(`${pathname}game.json`);
 const { controls, aspectRatio } = response.status === 200 ? await response.json?.() : {};
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
-const $playButton = document.querySelector('.play-button')
+const $buttonPause = document.querySelector('.button-pause');
 const $controls = document.querySelector('.controls');
 const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
 const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
@@ -14,6 +14,7 @@ const insertPlayer = () => {
     $playground.prepend(player);
     player.load(`${pathname}/game.swf`);
 };
+const togglePause = () => $buttonPause.classList.toggle('active');
 $playground.style.aspectRatio = aspectRatio || '64/48';
 player.config = {
     autoplay: 'on',
@@ -28,6 +29,16 @@ addEventListener('hashchange', () => {
     }
 });
 insertPlayer();
+$playground.addEventListener('click', () => location.hash = 'play');
+$buttonPause.addEventListener('click', () => {
+    if ($buttonPause.classList.contains('active')) {
+        player.play();
+    } else {
+        player.pause();
+        player.addEventListener('click', togglePause, { once: true })
+    }
+    togglePause();
+});
 if (controls?.length) {
     $controls.insertAdjacentHTML('beforeend', '<button type="button" class="button button-toggle-controls"></button>');
     $controls.lastElementChild.onclick = ({ currentTarget }) => {
