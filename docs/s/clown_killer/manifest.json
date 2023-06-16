@@ -1,0 +1,15 @@
+{
+    "name": "Clown Killer",
+    "description": "Kill all the clowns before they attack you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

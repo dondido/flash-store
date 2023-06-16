@@ -1,0 +1,15 @@
+{
+    "name": "Kogent Knight",
+    "description": "It's your first day on the job as a knight. On your way to your first knightly meeting, you see the princess being kidnapped and carried away. It's your job to find the fiends who stole the beloved princess and rescue her. Good luck, you'll need it!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

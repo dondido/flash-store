@@ -8,7 +8,18 @@ const cache = (request, response) => {
     return caches
       .open(CACHE_NAME)
       .then(cache => cache.put(request, response.clone()));
-  }
+};
+const normaliseRequest = (request) => {
+    if (request.headers.get('Range')) {
+        return new Request(request, {
+            headers: {
+              ...request.headers,
+              Range: null
+            }
+        })
+    }
+    return request;
+};
 self.addEventListener('install', event => {
   console.log('Service Worker installing.');
   event.waitUntil(
@@ -21,9 +32,9 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches
             .match(event.request) // check if the request has already been cached
-            .then(cached => cached || fetch(event.request)) // otherwise request network
-            .then(response => cache(event.request, response).then(() => response) // resolve promise with the network response
-            )
+            .then(cached => cached || fetch(normaliseRequest(event.request))) // otherwise request network
+            .then(response => cache(event.request, response.clone()).then(() => response)) // resolve promise with the network response
+            
     );
 });
 

@@ -1,0 +1,15 @@
+{
+    "name": "Ice Age - Dawn of the Dinosaurs",
+    "description": "Grab the fruit in this Ice Age themed sidescroller as you jump on or kick the enemies you meet.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

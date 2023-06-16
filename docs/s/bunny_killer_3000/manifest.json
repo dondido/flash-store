@@ -1,0 +1,15 @@
+{
+    "name": "Bunny Killer 3000",
+    "description": "Kill enemy bunnies with your fighting action bunny.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
