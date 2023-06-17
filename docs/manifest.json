@@ -1,0 +1,15 @@
+{
+    "name": "Flash Store",
+    "description": "Downloadable PWAs",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

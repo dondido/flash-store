@@ -1,0 +1,37 @@
+{
+    "aspectRatio": "60/35",
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.3
+            },
+            "mappings": {
+                "n": "Space",
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "B",
+            "mappings": [{ "key": "b", "code": "KeyB" }]
+        },
+        {
+            "type": "button",
+            "label": "N",
+            "mappings": [{ "key": "n", "code": "KeyN" }]
+        },
+        {
+            "type": "button",
+            "label": "M",
+            "mappings": [{ "key": "m", "code": "KeyM" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": "(blank space)", "code": "Space" }]
+        }
+    ]
+}

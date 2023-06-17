@@ -1,5 +1,7 @@
 const triggerKeydownEvent = e => window.dispatchEvent(new KeyboardEvent('keydown', e));
 const triggerKeyupEvent = e => window.dispatchEvent(new KeyboardEvent('keyup', e));
+const downs = [];
+const ups = [];
 export default ({ mappings, label }, $player) => {
     let pointerId;
     const button = document.createElement('div');
@@ -10,7 +12,6 @@ export default ({ mappings, label }, $player) => {
         if (pointerId === event.pointerId) {
             button.classList.remove('focus');
             mappings.forEach(triggerKeyupEvent);
-            document.removeEventListener('pointerup', end);
         }
     };
     const start = (event) => {
@@ -23,5 +24,8 @@ export default ({ mappings, label }, $player) => {
             document.addEventListener('pointerup', end);
         }
     };
-    document.addEventListener('pointerdown', start);
+    downs.push(start);
+    ups.push(end);
 }
+document.removeEventListener('pointerup', (event) => ups.forEach(up => up(event)));
+document.addEventListener('pointerdown', (event) => downs.forEach(down => down(event)));
