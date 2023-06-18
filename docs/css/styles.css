@@ -173,6 +173,19 @@ ruffle-player:before {
 .button-pause.active::after {
     content: normal;
 }
+.tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag-list li {
+    padding-right: 20px;
+}
+.tag-list li:before {
+    content: "#";
+    color: #606060;
+}
 virtual-joystick {
     visibility: hidden;
     pointer-events: none;

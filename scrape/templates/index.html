@@ -27,13 +27,15 @@
             <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="playground">
+        <div class="playground" style="aspect-ratio: ${aspectRatio};">
             <div class="button-play" href="#play">Play</div>
         </div>
         <div class="controls">
             <button type="button" class="button button-pause"></button>
         </div>
+        <h2>Description</h2>
         <p class="description">${description}</p>
+        <p>${addedOn}</p>
     </main>
     <script type="module" src="../../js/virtual-joystick.js"></script>
     <script src="../../js/ruffle.js"></script>

@@ -8,9 +8,10 @@
                 "threshold": 0.3
             },
             "mappings": {
-                "n": "Space",
-                "e": "ArrowRight",
-                "w": "ArrowLeft"
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
             }
         },
         {

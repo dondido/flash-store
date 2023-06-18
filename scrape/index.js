@@ -3,7 +3,7 @@ const axios = require('axios');
 const jsdom = require('jsdom');
 const es6Renderer = require('express-es6-template-engine');
 const sharp = require('sharp');
-const [url] = process.argv.slice(2);
+const [url, force] = process.argv.slice(2);
 const { JSDOM } = jsdom;
 const headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) y8-browser/1.0.10 Chrome/73.0.3683.121 Electron/5.0.13 Safari/537.36'
@@ -20,24 +20,28 @@ const saveString = (locals, file, path) => es6Renderer(
     { locals },
     (err, content) => fs.writeFileSync(`${path}/${file}`, content)
 );
-const requestResources = ({ title, description, game, video, poster, folder, path }) => {
+const requestResources = ({ title, description, game, video, poster, folder, path, aspectRatio }) => {
     axios
         .get(url, { headers })
         .then((response) => {
             const dom = new JSDOM(response.data);
             const $video = dom.window.document.querySelector('video');
+            const $embed = new JSDOM(
+                dom.window.document.querySelector('.item-container').getAttribute('data-async-content')
+            ).window.document.querySelector('embed');
             const locals = {
                 title: title || dom.window.document.querySelector('h1').textContent,
-                description: description || dom.window.document.querySelector('h2').textContent
+                description: description || dom.window.document.querySelector('h2').textContent,
+                addedOn: [...dom.window.document.querySelectorAll('.game-info__item')].at(-1).textContent.trim(),
+                aspectRatio: `${$embed.width}/${$embed.height}`,
+            };
+            if (!game) {
+                saveStream($embed.src, 'game.swf', path);
             }
-            if (game === undefined) {
-                const [html] = response.data.split('.swf');
-                saveStream(`${html.slice(html.lastIndexOf('https'))}.swf`, 'game.swf', path);
-            }
-            if (video === undefined) {
+            if (!video) {
                 saveStream(`https://img.y8.com${$video.querySelector('source').src}`, 'video.mp4', path);
             }
-            if (poster === undefined) {
+            if (!poster) {
                 saveStream($video.poster, 'poster.jpg', path)
                     .then(stream => saveIcon(stream, path));
             }
@@ -59,7 +63,7 @@ const scrape = (url) => {
             title = manifest.name;
             description = manifest.description;
         }
-        if (title && description && game && video && poster) {
+        if (title && description && game && video && poster && !force) {
             saveString({ title, description }, 'index.html', path);
         }
         else {
