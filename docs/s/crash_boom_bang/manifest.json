@@ -1,0 +1,15 @@
+{
+    "name": "Crash Boom Bang",
+    "description": "Collab with the three shapes crash, boom and bang to knock all the evil blocks away from their world. Crash boom bang is a beautiful Box2D physics game featuring hilariously animated creatures, each with his own special ability. Some wacky killer tunes by Twune round out the package are included as well. Have fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

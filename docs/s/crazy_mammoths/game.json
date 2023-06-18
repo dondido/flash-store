@@ -1,0 +1,10 @@
+{
+    "aspectRatio": "55/45",
+    "controls": [
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": " ", "code": "Space", "which": 32 }]
+        }
+    ]
+}

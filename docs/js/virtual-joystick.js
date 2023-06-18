@@ -200,7 +200,6 @@ window.customElements.define('virtual-joystick', class VirtualJoystick extends H
         }
         degree = (degree > 0 ? 360 : 0) - degree;
         const direction = + this.dataset.threshold > force ? '' : VirtualJoystick.#getDir(degree);
-        console.log(100, this.dataset.direction, direction);
         this.#log({
             hypot,
             degree,

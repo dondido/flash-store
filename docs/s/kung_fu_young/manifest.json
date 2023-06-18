@@ -1,0 +1,15 @@
+{
+    "name": "Kung Fu Young",
+    "description": "Who needs an arcade cabinet when you can play the street brawl action game Kung Fu Young.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

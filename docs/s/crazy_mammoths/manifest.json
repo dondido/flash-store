@@ -1,0 +1,15 @@
+{
+    "name": "Crazy Mammoths",
+    "description": "Join a competition where frozen mammoths race to be the first to reach the finish line.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

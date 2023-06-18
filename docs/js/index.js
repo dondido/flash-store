@@ -19,6 +19,8 @@ $playground.style.aspectRatio = aspectRatio || '64/48';
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
+    warnOnUnsupportedContent: false,
+    unmuteOverlay: 'hidden'
 };
 addEventListener('hashchange', () => {
     if (location.hash === '#play' && $playground.firstElementChild.tagName !== 'RUFFLE-PLAYER') {
