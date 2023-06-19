@@ -15,7 +15,7 @@ const insertPlayer = () => {
     player.load(`${pathname}/game.swf`);
 };
 const togglePause = () => $buttonPause.classList.toggle('active');
-$playground.style.aspectRatio = aspectRatio || '64/48';
+$playground.style.aspectRatio = aspectRatio || $playground.style.aspectRatio;
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
