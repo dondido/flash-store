@@ -1,0 +1,15 @@
+{
+    "name": "Monsterland 3: Junior Returns",
+    "description": "Senior and Junior are back and Junior is causing more mischief than ever before! Try to keep Senior awake as he is a lazy block who just wants to sleep all day and we want to have FUN!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

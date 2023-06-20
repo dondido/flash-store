@@ -1,0 +1,15 @@
+{
+    "name": "Ghost 'n Goblins",
+    "description": "This one goes out for all retro-freaks out there who appreciate such hard, old and golden games!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Xnail The Forest Guard",
+    "description": "Help Xnail to stop Cid Capezza from cutting the woods! Lets help Xnail the forest protector to save the forest! Good luck.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

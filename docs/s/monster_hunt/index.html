@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+            Monster Hunt
+          </title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="
+            Monster Hunt
+          ">
+    <meta name="apple-mobile-web-app-title" content="
+            Monster Hunt
+          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link rel="stylesheet" href="./game.css?v=1.0">
+    <style>
+        #play:target:before {
+            background-image: url(./poster.jpg)
+        }
+    </style>
+</head>
+<body id="play">
+    <main>
+        <div class="content">
+            <h1>
+            Monster Hunt
+          </h1>
+            <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="playground" style="aspect-ratio: 750/400;">
+            <div class="button-play" href="#play">Play</div>
+        </div>
+        <div class="controls">
+            <button type="button" class="button button-pause"></button>
+        </div>
+        
+        <p class="description">
+  Shoot arrows at your objective and go to the next level!
+</p>
+        <p>Added on
+      
+      
+        30 Oct 2007</p>
+    </main>
+    <script type="module" src="../../js/virtual-joystick.js"></script>
+    <script src="../../js/ruffle.js"></script>
+    <script src="../../js/player.js"></script>
+    <script type="module" src="../../js/index.js"></script>
+</body>
+</html>

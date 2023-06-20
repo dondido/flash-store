@@ -1,0 +1,15 @@
+{
+    "name": "Monster Catcher",
+    "description": "Use the fairy to remove limited blocks to make the creates fall into the net.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

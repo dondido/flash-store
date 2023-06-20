@@ -3,7 +3,8 @@
         {
             "type": "joystick",
             "dataset": {
-                "mode": "fixed"
+                "mode": "fixed",
+                "threshold": 0.3
             },
             "mappings": {
                 "n": "ArrowUp",
@@ -14,8 +15,14 @@
         },
         {
             "type": "button",
+            "label": "EN",
+            "mappings": [{ "key": "Enter", "code": "Enter", "keyCode": 13, "which": 13 }]
+        },
+        {
+            "type": "button",
             "label": "SP",
-            "mappings": [{ "code": "Space" }]
+            "mappings": [{ "key": "(blank space)", "code": "Space" }]
         }
+    
     ]
 }

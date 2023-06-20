@@ -1,0 +1,15 @@
+{
+    "name": "Monster Hunt",
+    "description": "Shoot arrows at your objective and go to the next level!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
