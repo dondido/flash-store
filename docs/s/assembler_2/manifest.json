@@ -1,0 +1,15 @@
+{
+    "name": "Assembler 2",
+    "description": "A 25-level sequel to Assembler. Your task is to get the green shapes into position as quickly as you can.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

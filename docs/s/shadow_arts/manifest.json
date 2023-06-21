@@ -1,0 +1,15 @@
+{
+    "name": "Shadow Arts",
+    "description": "Play as Talia, a female warrior out for vengeance in this fast-paced, action-adventure game!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

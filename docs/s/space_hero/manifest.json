@@ -1,0 +1,15 @@
+{
+    "name": "Space Hero",
+    "description": "Space is always a place to explore and this game called Space Hero offers no different goal than this, you’ll definitely have the great chance to spend some time on a game that really deserves your attention and time! A heroic character must be brought to the moon where a base is located. But as always, it’ll be far from simple goal to achieve as there are many things that will try to stop the hero to reach to his desired location. It’s all up to you to give your best and help him.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

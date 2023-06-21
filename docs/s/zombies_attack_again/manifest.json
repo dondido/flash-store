@@ -1,0 +1,15 @@
+{
+    "name": "Zombies Attack Again",
+    "description": "Zombies are attacking again! You have 3 missions, and 20 different weapons to unlock. Play as either a man with a beard or a rabbit. Don't forget to eat soap to recharge your mana for electric attacks!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Gold Miner - Xploit Machine Edition 2009",
+    "description": "A simple small game to test on the accuracy to collect as many as gold in the mine, as the time goes less. Enjoy the game in your free time. Thanks",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

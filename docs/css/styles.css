@@ -141,12 +141,17 @@ ruffle-player:before {
 }
 .button-pause,
 .button-toggle-controls {
-    position: fixed;
+    position: relative;
     visibility: hidden;
     pointer-events: auto;
-    inset: 10px auto auto 10px;
     display: block;
     height: 50px;
+    margin: 10px 0;
+    bottom: auto;
+    right: auto;
+}
+.button-pause {
+    margin-left: 10px;
 }
 .button-pause:before,
 .button-toggle-controls:before {
@@ -204,9 +209,8 @@ main {
     pointer-events: none;
     inset: 0;
     z-index: 2;
-}
-.button-toggle-controls {
-    left: 70px;
+    display: flex;
+    gap: 10px;
 }
 .button-toggle-controls:before {
     font-size: 30px;
@@ -216,7 +220,7 @@ main {
     content: "\e500";
 }
 .button.hide-gamepad ~ virtual-joystick,
-.button.hide-gamepad ~ button {
+.button.hide-gamepad ~ div.button {
     display: none;
 }
 .description {

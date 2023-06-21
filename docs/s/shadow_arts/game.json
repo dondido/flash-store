@@ -1,0 +1,36 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "lock": "y",
+                "mode": "fixed"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "Q",
+            "mappings": [{ "key": "q", "code": "KeyQ" }]
+        },
+        {
+            "type": "button",
+            "label": "W",
+            "mappings": [{ "key": "w", "code": "KeyW" }]
+        },
+        {
+            "type": "button",
+            "label": "E",
+            "mappings": [{ "key": "e", "code": "KeyE" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    
+    ]
+}

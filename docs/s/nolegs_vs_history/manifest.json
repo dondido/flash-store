@@ -1,0 +1,15 @@
+{
+    "name": "NoLegs vs History",
+    "description": "Nolegs the cat must fight hordes of skeleton cats. How long will you survive?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
