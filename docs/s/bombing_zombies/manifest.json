@@ -1,0 +1,15 @@
+{
+    "name": "Bombing Zombies",
+    "description": "The zombies have risen from their graves, spooking the people who were visiting the cemetery. Bombs have been placed all over the place, so the zombie revolution can be stopped, and peace can be enjoyed again. Find the best way to use all the bombs, and destroy all the zombies so the cemetery visitors can be safe and at peace . Use your skills and blow up all the zombies in this fun physics game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

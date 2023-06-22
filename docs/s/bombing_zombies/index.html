@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+            Bombing Zombies
+          </title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="
+            Bombing Zombies
+          ">
+    <meta name="apple-mobile-web-app-title" content="
+            Bombing Zombies
+          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link rel="stylesheet" href="./game.css?v=1.0">
+    <style>
+        #play:target:before {
+            background-image: url(./poster.jpg)
+        }
+    </style>
+</head>
+<body id="play">
+    <main>
+        <div class="content">
+            <h1>
+            Bombing Zombies
+          </h1>
+            <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="playground" style="aspect-ratio: 800/600;">
+            <div class="button-play" href="#play">Play</div>
+        </div>
+        <div class="controls">
+            <button type="button" class="button button-pause"></button>
+        </div>
+        
+        <p class="description">
+  The zombies have risen from their graves, spooking the people who were visiting the cemetery. Bombs have been placed all over the place, so the zombie revolution can be stopped, and peace can be enjoyed again. Find the best way to use all the bombs, and destroy all the zombies so the cemetery visitors can be safe and at peace . Use your skills and blow up all the zombies in this fun physics game.
+</p>
+        <p>Added on
+      
+      
+        23 Jul 2015</p>
+    </main>
+    <script type="module" src="../../js/virtual-joystick.js"></script>
+    <script src="../../js/ruffle.js"></script>
+    <script src="../../js/player.js"></script>
+    <script type="module" src="../../js/index.js"></script>
+</body>
+</html>

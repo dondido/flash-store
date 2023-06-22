@@ -1,0 +1,15 @@
+{
+    "name": "Portal Defenders",
+    "description": "Battle some very evil hordes with your giant wooden spoon.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

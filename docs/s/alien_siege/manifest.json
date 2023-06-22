@@ -1,0 +1,15 @@
+{
+    "name": "Alien Siege",
+    "description": "Alien Siege is a modern space invaders style arcade shooter, in which an alien spaceship attacks Earth. It is advanced enough to make it to Earth and equipped with laser cannon to wipe out human civilization. Game-play is simple and fast paced as players battle their way through different levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

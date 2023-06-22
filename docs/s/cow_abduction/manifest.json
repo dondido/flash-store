@@ -1,0 +1,15 @@
+{
+    "name": "Cow Abduction",
+    "description": "Beam the cows with your flying saucer alien thing and throw them into the warp thingie. Rapisci più mucche possibili e spostale nel portale, quante mucche riesci a prendere in 40 secondi?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Zombies brazen",
+    "description": "The invasion of zombies. Use the board and parachute to move. Control game on the key arrows. You drive down the road. Your goal is to get into the city. On the way you'll meet a lot of zombies insidious enemies. The game has 12 levels. Pass all the levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
