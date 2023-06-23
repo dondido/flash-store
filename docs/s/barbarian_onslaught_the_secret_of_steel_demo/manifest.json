@@ -1,0 +1,15 @@
+{
+    "name": "Barbarian Onslaught - The Secret of Steel Demo",
+    "description": "Watch out for arrows as you cut down your enemies. Don't let them gang up on you",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

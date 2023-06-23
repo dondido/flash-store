@@ -3,18 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>
-            Kogent Knight
-          </title>
+    <title>Kogent Knight</title>
     <link rel="manifest" href="./manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="
-            Kogent Knight
-          ">
-    <meta name="apple-mobile-web-app-title" content="
-            Kogent Knight
-          ">
+    <meta name="application-name" content="Kogent Knight">
+    <meta name="apple-mobile-web-app-title" content="Kogent Knight">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
     <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
@@ -29,21 +23,20 @@
 <body id="play">
     <main>
         <div class="content">
-            <h1>
-            Kogent Knight
-          </h1>
+            <h1>Kogent Knight</h1>
             <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="playground">
+        <div class="playground" style="aspect-ratio: 7/5;;;;">
             <div class="button-play" href="#play">Play</div>
         </div>
         <div class="controls">
-            <button type="button" class="button button-pause"></button>
+            <button type="button" class="menu-button button-pause"></button>
+            <button type="button" class="menu-button button-fullscreen"></button>
+            <button type="button" class="menu-button button-mute"></button>
         </div>
-        <p class="description">
-  It's your first day on the job as a knight. On your way to your first knightly meeting, you see the princess being kidnapped and carried away. It's your job to find the fiends who stole the beloved princess and rescue her. Good luck, you'll need it!
-</p>
+        <p class="description">It's your first day on the job as a knight. On your way to your first knightly meeting, you see the princess being kidnapped and carried away. It's your job to find the fiends who stole the beloved princess and rescue her. Good luck, you'll need it!</p>
+        <p class="added-on"></p>
     </main>
     <script type="module" src="../../js/virtual-joystick.js"></script>
     <script src="../../js/ruffle.js"></script>

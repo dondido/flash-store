@@ -3,18 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>
-            Headcrab Invasion
-          </title>
+    <title>Headcrab Invasion</title>
     <link rel="manifest" href="./manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="
-            Headcrab Invasion
-          ">
-    <meta name="apple-mobile-web-app-title" content="
-            Headcrab Invasion
-          ">
+    <meta name="application-name" content="Headcrab Invasion">
+    <meta name="apple-mobile-web-app-title" content="Headcrab Invasion">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
     <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
@@ -29,21 +23,20 @@
 <body id="play">
     <main>
         <div class="content">
-            <h1>
-            Headcrab Invasion
-          </h1>
+            <h1>Headcrab Invasion</h1>
             <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="playground">
+        <div class="playground" style="aspect-ratio: 70/48;;;;">
             <div class="button-play" href="#play">Play</div>
         </div>
         <div class="controls">
-            <button type="button" class="button button-pause"></button>
+            <button type="button" class="menu-button button-pause"></button>
+            <button type="button" class="menu-button button-fullscreen"></button>
+            <button type="button" class="menu-button button-mute"></button>
         </div>
-        <p class="description">
-  Headcrab Invasion. Be the worst parasite there is and jump on to as many host as you can. Jump off of their heads before they die or you will too. Collect money to buy upgrades and make yourself stronger.
-</p>
+        <p class="description">Headcrab Invasion. Be the worst parasite there is and jump on to as many host as you can. Jump off of their heads before they die or you will too. Collect money to buy upgrades and make yourself stronger.</p>
+        <p class="added-on"></p>
     </main>
     <script type="module" src="../../js/virtual-joystick.js"></script>
     <script src="../../js/ruffle.js"></script>

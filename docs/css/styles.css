@@ -66,8 +66,12 @@ h1 {
 #play:target .description {
     display: none;
 }
-#play:target .button,
-#play:target virtual-joystick {
+#play:target .button-toggle-controls,
+#play:target .button-pause {
+    display: block;
+}
+#play:target virtual-joystick,
+#play:target .button {
     visibility: visible;
 }
 .playground {
@@ -122,10 +126,8 @@ ruffle-player:before {
     display: block;
     position: fixed; 
 }
+.menu-button,
 .button {
-    position: absolute;
-    pointer-events: none;
-    visibility: hidden;
     color: #303030;
     border: 1px solid gray;
 	background-color: rgba(255, 255, 255, 0.3);
@@ -133,37 +135,50 @@ ruffle-player:before {
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
+}
+.button {
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
     bottom: 40px;
     right: 40px;
 }
 .button.focus {
     background-color: rgba(255, 255, 255, 0.6);
 }
-.button-pause,
-.button-toggle-controls {
+.menu-button {
     position: relative;
-    visibility: hidden;
     pointer-events: auto;
-    display: block;
+    cursor: pointer;
+    display: none;
     height: 50px;
     margin: 10px 0;
-    bottom: auto;
-    right: auto;
 }
 .button-pause {
     margin-left: 10px;
 }
-.button-pause:before,
-.button-toggle-controls:before {
+.menu-button:before {
     font-family: "Material Symbols Outlined";
+    font-size: 24px;
 }
 .button-toggle-controls:before {
     content: "\e5cd";
-    font-size: 24px;
 }
 .button-pause.active:before {
     content: "\e037";
     font-size: 34px;
+}
+.button-mute:before {
+    content: "\e050";
+}
+.button-mute.active:before {
+    content: "\e04f";
+}
+.button-fullscreen:before {
+    content: "\e5d0";
+}
+.button-fullscreen.active:before {
+    content: "\e5d1";
 }
 .button-pause:after {
     content: "";
@@ -177,6 +192,9 @@ ruffle-player:before {
 }
 .button-pause.active::after {
     content: normal;
+}
+#play:target .button-pause.active ~ .menu-button:not(.button-toggle-controls) {
+    display: block;
 }
 .tag-list {
     list-style: none;
@@ -219,8 +237,8 @@ main {
 .hide-gamepad:before {
     content: "\e500";
 }
-.button.hide-gamepad ~ virtual-joystick,
-.button.hide-gamepad ~ div.button {
+.hide-gamepad ~ virtual-joystick,
+.hide-gamepad ~ .button {
     display: none;
 }
 .description {

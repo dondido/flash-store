@@ -1,0 +1,15 @@
+{
+    "name": "Bosozoku Fighters",
+    "description": "The chinese ambassador's daughter has been abducted by the powerful Yakuza clan boss Kunimura! The kidnappers' demands: 10 billion yen and no police! Only three heroes can save the day! Three members of Bosozoku Japanese street brawlers whom Kunimura would never suspect of working with the authorities. Choose between graceful Natsuki, cool-headed Kitaro and mighty Gaho to infiltrate the Japanese world of crime. Use skill and power to find the God father's  hideout and put a stop to his game and you'll be redeemed from your own crimes!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Yeti Sports (Part 3) - Seal Bounce",
+    "description": "Just pick 'em up and see how high you can throw him. Pingu's tough, he can take it. If pingu hits the seals on the sides at a nice near vertical angle they'll give him a super speed boost and keep the rapid acceleration upwards going full tilt.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
