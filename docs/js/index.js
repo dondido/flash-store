@@ -12,17 +12,23 @@ const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('key
 const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
-const insertPlayer = () => {
-    $playground.prepend(player);
-    player.load(`${pathname}/game.swf`);
-};
-const togglePause = () => $buttonPause.classList.toggle('active');
+const gamePath = `${pathname}/game.swf`;
 const exitFullscreen = () => {
-    if (document.exitFullscreen) {
+    if (document.exitFullscreen && document.fullscreenElement) {
         document.exitFullscreen();
         $buttonFullscreen?.classList.remove('active');
     }
-}
+};
+const handleHashChange = () => {
+    if (location.hash === '#play') {
+        $playground.prepend(player);
+        player.load(gamePath);
+    }
+    else {
+        player.remove();
+        exitFullscreen();
+    }
+};
 $playground.style.aspectRatio = aspectRatio || $playground.style.aspectRatio;
 player.config = {
     autoplay: 'on',
@@ -30,25 +36,12 @@ player.config = {
     warnOnUnsupportedContent: false,
     unmuteOverlay: 'hidden'
 };
-addEventListener('hashchange', () => {
-    if (location.hash === '#play' && $playground.firstElementChild.tagName !== 'RUFFLE-PLAYER') {
-        insertPlayer();
-    }
-    else if (location.hash === '') {
-        player.remove();
-        exitFullscreen();
-    }
-});
-insertPlayer();
-$playground.addEventListener('click', () => location.hash = 'play');
+addEventListener('hashchange', handleHashChange);
+handleHashChange();
+fetch(gamePath);
 $buttonPause.addEventListener('click', () => {
-    if ($buttonPause.classList.contains('active')) {
-        player.play();
-    } else {
-        player.pause();
-        player.addEventListener('click', togglePause, { once: true })
-    }
-    togglePause();
+    $buttonPause.classList.contains('active') ? player.play() : player.pause();
+    $buttonPause.classList.toggle('active');
 });
 $buttonMute.addEventListener('click', () => {
     player.volume = + $buttonMute.classList.contains('active');
@@ -68,7 +61,6 @@ if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matc
 }
 if (controls?.length) {
     $buttonPause.insertAdjacentHTML('afterend', '<button type="button" class="menu-button button-toggle-controls"></button>');
-    console.log(1111, $controls.querySelector('.button-toggle-controls'), document.querySelector('.button-toggle-controls'))
     document.querySelector('.button-toggle-controls').onclick = ({ currentTarget }) => {
         currentTarget.classList.toggle('hide-gamepad');
     }

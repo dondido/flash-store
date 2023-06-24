@@ -1,5 +1,5 @@
 const CACHE_NAME = 'v1';
-const STATIC_CACHE_URLS = [];
+const STATIC_CACHE_URLS = [`${location.pathname}/game.swf`];
 const cache = (request, response) => {
     if (response.type === 'error' || response.type === 'opaque') {
       return Promise.resolve(); // do not put in cache network errors

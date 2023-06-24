@@ -66,6 +66,7 @@ h1 {
 #play:target .description {
     display: none;
 }
+#play:target .playground,
 #play:target .button-toggle-controls,
 #play:target .button-pause {
     display: block;
@@ -75,27 +76,20 @@ h1 {
     visibility: visible;
 }
 .playground {
-    display: block;
-    cursor: pointer;
-    border: 1px solid #c3c6d1;
+    display: none;
     margin: auto;
-    overflow: hidden;
-    height: 48px;
-    width: 200px;
-    border-radius: 0.75em;
-    position: relative;
 }
 .button-play {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    z-index: 2;
-    padding-top: 3px;
     width: 200px;
-    height: 48px;
+    line-height: 48px;
+    text-decoration: none;
     text-align: center;
     color: #146ebe;
     background: white;
+    display: block;
+    border: 1px solid #c3c6d1;
+    margin: auto;
+    border-radius: 0.75em;
 }
 .button-play:before {
     font-family: 'Material Symbols Outlined';
@@ -190,8 +184,15 @@ ruffle-player:before {
     left: 18px;
     position: absolute;
 }
-.button-pause.active::after {
-    content: normal;
+.button-pause.active:after {
+    content: "";
+    border: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 #play:target .button-pause.active ~ .menu-button:not(.button-toggle-controls) {
     display: block;
