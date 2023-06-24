@@ -1,0 +1,15 @@
+{
+    "name": "Way's Hero",
+    "description": "This cool sideview game is a combat against evil guys, so you can finally meet their boss and slay him down! Make sure you finish all his helpers first..",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

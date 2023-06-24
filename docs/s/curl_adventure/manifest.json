@@ -1,0 +1,15 @@
+{
+    "name": "Curl Adventure",
+    "description": "Try to finish the level. Collect the stars, but beware of the creatures that hurt you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Chicken Adventure",
+    "description": "This little chicken is on an important adventure. The level are are full of obstacles and many stars. Chicken must collect all the stars and find the exit. Good Luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

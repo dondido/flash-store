@@ -1,0 +1,15 @@
+{
+    "name": "Vox Populi Vox Dei",
+    "description": "Run and dive into werewolves and start to rip them apart. Don't let other werewolves see you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
