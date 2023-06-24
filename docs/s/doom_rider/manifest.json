@@ -1,0 +1,15 @@
+{
+    "name": "Doom Rider",
+    "description": "This game lets you drive a bike straight through the underworld where to other road users seem to be only skeletons and other strange creatures. In order to escape this evil place, without being caught by the skeletons you have to drive fast, and make sure you reach all the checkpoints in time!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

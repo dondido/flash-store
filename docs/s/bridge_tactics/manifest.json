@@ -1,0 +1,15 @@
+{
+    "name": "Bridge Tactics",
+    "description": "Cut them off at the bridge!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

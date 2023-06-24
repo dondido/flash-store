@@ -1,0 +1,15 @@
+{
+    "name": "The Egg",
+    "description": "In this physics based game you must get the egg into the basket quite simply by dragging around the various objects to bounce, twang, zip and push your egg into it.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

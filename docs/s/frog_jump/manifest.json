@@ -1,0 +1,15 @@
+{
+    "name": "Frog Jump",
+    "description": "Help the little frog to reach as higher as it can. Wait for the perfect moment to jump and reach other platform.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

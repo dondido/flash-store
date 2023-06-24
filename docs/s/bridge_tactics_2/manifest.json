@@ -1,0 +1,15 @@
+{
+    "name": "Bridge Tactics 2",
+    "description": "Back with a bridge-blasting vengeance! Strategically place dynamite to inflict maximum damage on the enemy. Reach your destruction targets to pass each level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

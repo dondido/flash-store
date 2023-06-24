@@ -1,0 +1,15 @@
+{
+    "name": "Indestructotank Anniversary Edition",
+    "description": "Bounce the tank all around the game as you run into missiles and bounce on helicopters and jets.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
