@@ -12,14 +12,15 @@ fs.readdir('../docs/s/', (err, folders) => {
         const html = fs.readFileSync(ref, 'utf8');
         const dom = new JSDOM(html);
         const extractAspectRatio = () => {
-            const style = dom.window.document.querySelector('.playground').getAttribute('style');
+            const { style } = dom.window.document.querySelector('.playground');
             if (style) {
-                return style.replace('aspect-ratio: ', '').replace(';', '')
+                console.log(111, folder, style._values['aspect-ratio']);
+                return "style.replace('aspect-ratio: ', '').replace(';', '')"
             }
-            const cfg = `../docs/s/${folder}/game.json`;
-            return fs.existsSync(cfg) ? (require(cfg).aspectRatio || '') : '';
+            return '';
         };
-        console.log(111, folder.toString(), dom.window.document.querySelector('.playground').style)
+        extractAspectRatio();
+        // console.log(111, folder.toString(), dom.window.document.querySelector('.playground').style)
         /* const addedOn = dom.window.document.querySelector('.added-on')?.textContent || '';
         const locals = { title: name, description, addedOn, aspectRatio: extractAspectRatio() };
         es6Renderer(
