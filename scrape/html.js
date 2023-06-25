@@ -19,12 +19,13 @@ fs.readdir('../docs/s/', (err, folders) => {
             const cfg = `../docs/s/${folder}/game.json`;
             return fs.existsSync(cfg) ? (require(cfg).aspectRatio || '') : '';
         };
-        const addedOn = dom.window.document.querySelector('.description + p')?.textContent || '';
+        console.log(111, folder.toString(), dom.window.document.querySelector('.playground').style)
+        /* const addedOn = dom.window.document.querySelector('.added-on')?.textContent || '';
         const locals = { title: name, description, addedOn, aspectRatio: extractAspectRatio() };
         es6Renderer(
             './templates/index.html',
             { locals },
             (err, content) => fs.writeFileSync(ref, content)
-        );
+        ); */
     });
 });

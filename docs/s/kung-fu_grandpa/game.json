@@ -3,7 +3,8 @@
         {
             "type": "joystick",
             "dataset": {
-                "mode": "fixed"
+                "mode": "fixed",
+                "threshold": 0.3
             },
             "mappings": {
                 "n": "ArrowUp",

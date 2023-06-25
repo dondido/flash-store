@@ -80,6 +80,9 @@ h1 {
     display: none;
     margin: auto;
 }
+.playground.scaled {
+    scale: calc(1095px / 640);
+}
 .button-play {
     width: 200px;
     line-height: 48px;
