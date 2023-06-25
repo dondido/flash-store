@@ -63,7 +63,8 @@ h1 {
 }
 #play:target .button-play,
 #play:target .content,
-#play:target .description {
+#play:target .description,
+#play:target .added-on {
     display: none;
 }
 #play:target .playground,

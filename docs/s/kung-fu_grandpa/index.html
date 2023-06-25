@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+            Kung-Fu Grandpa
+          </title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="
+            Kung-Fu Grandpa
+          ">
+    <meta name="apple-mobile-web-app-title" content="
+            Kung-Fu Grandpa
+          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link rel="stylesheet" href="./game.css?v=1.0">
+    <style>
+        #play:target:before {
+            background-image: url(./poster.jpg)
+        }
+    </style>
+</head>
+<body id="play">
+    <main>
+        <div class="content">
+            <h1>
+            Kung-Fu Grandpa
+          </h1>
+            <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="playground" style="aspect-ratio: 640/480;"></div>
+        <a class="button-play" href="#play">Play</a>
+        <div class="controls">
+            <button type="button" class="menu-button button-pause"></button>
+            <button type="button" class="menu-button button-fullscreen"></button>
+            <button type="button" class="menu-button button-mute"></button>
+        </div>
+        <p class="description">
+  Fight in the streets as a Kung-Fu Grandpa. Pick up money to be able to afford new grandpa upgrades.
+</p>
+        <p class="added-on">Added on
+      
+      
+        09 Nov 2018</p>
+    </main>
+    <script type="module" src="../../js/virtual-joystick.js"></script>
+    <script src="../../js/ruffle.js"></script>
+    <script src="../../js/player.js"></script>
+    <script type="module" src="../../js/index.js"></script>
+</body>
+</html>
