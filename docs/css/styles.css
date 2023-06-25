@@ -79,6 +79,7 @@ h1 {
 .playground {
     display: none;
     margin: auto;
+    aspect-ratio: var(--w) / var(--h);
 }
 .playground.scaled {
     scale: calc(1095px / 640);
