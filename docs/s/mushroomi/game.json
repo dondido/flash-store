@@ -1,0 +1,20 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "lock": "y"
+            },
+            "mappings": {
+                "e": "KeyD",
+                "w": "KeyA"
+            }
+        },
+        {
+            "type": "button",
+            "label": "W",
+            "mappings": [{ "key": "w", "code": "KeyW" }]
+        }
+    ]
+}

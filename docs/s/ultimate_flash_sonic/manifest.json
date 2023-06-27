@@ -1,0 +1,15 @@
+{
+    "name": "Ultimate Flash Sonic",
+    "description": "Try this another sonic adventures in flash!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Sonic Earth",
+    "description": "Sonic style game but with Earth's characters and screen inspired in real cities.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

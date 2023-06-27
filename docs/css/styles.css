@@ -67,7 +67,7 @@ h1 {
 #play:target .added-on {
     display: none;
 }
-#play:target .playground,
+
 #play:target .button-toggle-controls,
 #play:target .button-pause {
     display: block;
@@ -81,8 +81,35 @@ h1 {
     margin: auto;
     aspect-ratio: var(--w) / var(--h);
 }
-.playground.scaled {
-    scale: calc(1095px / 640);
+ruffle-player {
+    width: 100%;
+    height: 100%;
+}
+ruffle-player:before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: block;
+    position: fixed; 
+}
+.scale .playground {
+    transform: scale(var(--s));
+}
+#play.scale:target {
+    overflow: hidden;
+}
+#play.scale:target .playground {
+    max-width: calc(1px * var(--w));
+    width: calc(1px * var(--w));
+    height: calc(1px * var(--h));
+    max-height: calc(1px * var(--h));
+    transform-origin: var(--to);
+}
+.scale ruffle-player:before {
+    transform: scale(calc(var(--w) / (var(--w) * var(--s)))) translateX(calc(1px * (var(--vw) - var(--w) * var(--s)) / -2));
+    transform-origin: left top;
 }
 .button-play {
     width: 200px;
@@ -111,19 +138,6 @@ h1 {
         top: 70px;
         bottom: auto;
     }
-}
-ruffle-player {
-    width: 100%;
-    height: 100%;
-}
-ruffle-player:before {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: block;
-    position: fixed; 
 }
 .menu-button,
 .button {

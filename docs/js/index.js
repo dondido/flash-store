@@ -1,7 +1,7 @@
 const { pathname } = window.location;
 await navigator.serviceWorker.register('../../sw.js');
 const response = await fetch(`${pathname}game.json`);
-const { controls, aspectRatio } = response.status === 200 ? await response.json?.() : {};
+const { controls, scale } = response.status === 200 ? await response.json?.() : {};
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
 const $buttonPause = document.querySelector('.button-pause');
@@ -29,7 +29,6 @@ const handleHashChange = () => {
         exitFullscreen();
     }
 };
-$playground.style.aspectRatio = aspectRatio || $playground.style.aspectRatio;
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
@@ -58,6 +57,23 @@ if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matc
             exitFullscreen();
         }
     });
+}
+if (scale) {
+    const { style } = $playground;
+    const w = style.getPropertyValue('--w');
+    const h = style.getPropertyValue('--h');
+    const ratio = w / h;
+    const setScale = () => {
+        const { innerWidth, innerHeight } = window;
+        const scale = ratio > innerWidth / innerHeight ? innerWidth / w : innerHeight / h;
+        style.setProperty('--vw', innerWidth);
+        style.setProperty('--vh', innerHeight);
+        style.setProperty('--s', scale);
+        style.setProperty('--to', innerWidth > w ? 'center' : 'left top');
+    }
+    window.addEventListener('resize', setScale);
+    document.body.classList.add('scale');
+    setScale();
 }
 if (controls?.length) {
     $buttonPause.insertAdjacentHTML('afterend', '<button type="button" class="menu-button button-toggle-controls"></button>');

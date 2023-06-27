@@ -33,7 +33,8 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
                 title: title || dom.window.document.querySelector('h1').textContent,
                 description: description || dom.window.document.querySelector('h2').textContent,
                 addedOn: [...dom.window.document.querySelectorAll('.game-info__item')].at(-1).textContent.trim(),
-                aspectRatio: `${$embed.width}/${$embed.height}`,
+                w: $embed.width,
+                h: $embed.height,
             };
             if (!game) {
                 saveStream($embed.src, 'game.swf', path);

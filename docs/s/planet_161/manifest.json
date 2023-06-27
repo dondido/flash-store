@@ -1,0 +1,15 @@
+{
+    "name": "Planet 161",
+    "description": "Play as the nobel soldier Hinds who is trapped on a small planet by the evil emperor Zordak. Hinds' only hope to escape is to travel through wormholes until he finds a way out!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
