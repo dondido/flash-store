@@ -5,12 +5,10 @@
             "type": "joystick",
             "dataset": {
                 "mode": "fixed",
-                "threshold": 0.3
+                "lock": "y"
             },
             "mappings": {
-                "n": "ArrowUp",
                 "e": "ArrowRight",
-                "s": "ArrowDown",
                 "w": "ArrowLeft"
             }
         },
@@ -18,6 +16,16 @@
             "type": "button",
             "label": "S",
             "mappings": [{ "key": "s", "code": "KeyS" }]
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "R",
+            "mappings": [{ "key": "r", "code": "KeyR" }]
         }
     ]
 }

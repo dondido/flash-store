@@ -1,0 +1,15 @@
+{
+    "name": "Jump Gear",
+    "description": "Jump gear is a kind of BMX jumping game. The game is a race against the time, with many powerups to catch before you can reach the final line.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

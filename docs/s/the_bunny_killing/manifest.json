@@ -1,0 +1,15 @@
+{
+    "name": "The Bunny killing",
+    "description": "A side scrolling shooter / brawler, take control of the ever popular 'Bunny' assassin over 8 levels of gun wielding mayhem!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
