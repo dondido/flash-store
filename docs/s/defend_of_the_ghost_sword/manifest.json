@@ -1,0 +1,15 @@
+{
+    "name": "Defend Of The Ghost Sword",
+    "description": "You are a brave warrior armored by 3 types of weapon to defend the Ghost Sword. There are various enemies, but you are strong and you will defeat them all!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

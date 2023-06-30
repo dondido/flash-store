@@ -1,0 +1,15 @@
+{
+    "name": "The Lost Sword",
+    "description": "A legendary sword is lost in a far land infested of mythologic creatures and skeletons. Collect the magical marbles to pass through each area, items to make you more powerful and foods to restore your life in your way to find the lost sword. Fight and kill the most creatures you can using your magical sword of your guns, the want to eat your body and soul.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

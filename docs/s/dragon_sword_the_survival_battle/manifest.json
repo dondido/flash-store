@@ -1,0 +1,15 @@
+{
+    "name": "Dragon Sword: The Survival Battle",
+    "description": "Can you survive against all the odds of multiple sets of fighters. Get slicing and dicing!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Wulfgar",
+    "description": "Battle the undead as you chop off their heads and cut them into pieces. Put them back in the ground!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,46 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
+            }
+        },
+        {
+            "type": "button",
+            "label": "J",
+            "mappings": [{ "key": "j", "code": "KeyJ" }]
+        },
+        {
+            "type": "button",
+            "label": "K",
+            "mappings": [{ "key": "k", "code": "KeyK" }]
+        },
+        {
+            "type": "button",
+            "label": "L",
+            "mappings": [{ "key": "l", "code": "KeyL" }]
+        },
+        {
+            "type": "button",
+            "label": "I",
+            "mappings": [{ "key": "i", "code": "KeyI" }]
+        },
+        {
+            "type": "button",
+            "label": "s",
+            "mappings": [{ "key": ";", "code": "Semicolon" }]
+        },
+        {
+            "type": "button",
+            "label": "o",
+            "mappings": [{ "key": "o", "code": "KeyO" }]
+        }
+    ]
+}

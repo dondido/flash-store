@@ -1,0 +1,15 @@
+{
+    "name": "Battle Masters",
+    "description": "Click on the rock, paper, or scissors icon to determine who will attack: you or the enemy. After winning a rock-paper-scissors match, select a combat skill from the control panel. Empty the enemy's green health bar to win the battle! Between battles, use your points to stock up on items to help you in the next battle.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

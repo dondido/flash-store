@@ -1,0 +1,15 @@
+{
+    "name": "Switch Bot",
+    "description": "Lost on an unfamiliar planet, Switch Bot needs to find his way home. Change colors to move objects and obstacles. How many times will you die before you can complete the game?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

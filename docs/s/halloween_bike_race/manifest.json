@@ -1,0 +1,15 @@
+{
+    "name": "Halloween Bike Race",
+    "description": "Choose your favorite character collected all the skulls to boost your nitro finish the level in first place and make a high score have fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

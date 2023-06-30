@@ -1,0 +1,15 @@
+{
+    "name": "Dragon Sword",
+    "description": "Slice up the enemies and grab potions to use magic spells against them in this cool sidescroller.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

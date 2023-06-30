@@ -1,0 +1,15 @@
+{
+    "name": "Magic Sword",
+    "description": "Sidescrolling fighting. One key to slash, the rest of your moves are results of remembering combos.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

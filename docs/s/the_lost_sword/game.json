@@ -1,0 +1,41 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": " ", "code": "Space" }]
+        },
+        {
+            "type": "button",
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
+        },
+        {
+            "type": "button",
+            "label": "Q",
+            "mappings": [{ "key": "q", "code": "KeyQ" }]
+        },
+        {
+            "type": "button",
+            "label": "E",
+            "mappings": [{ "key": "e", "code": "KeyE" }]
+        }
+    ]
+}

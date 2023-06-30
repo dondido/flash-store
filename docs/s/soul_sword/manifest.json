@@ -1,0 +1,15 @@
+{
+    "name": "Soul Sword",
+    "description": "Go in the dungeon and at the end of each room you have 2 choices to “save” your loot, or continue forward with the risk of losing a lot. You can sell your kept loot to get yourself some souls and buy new swords! See if you can reach the final room!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
