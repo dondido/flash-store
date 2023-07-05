@@ -1,0 +1,15 @@
+{
+    "name": "Grossology The Big Bug Blast",
+    "description": "Shoot the bugs as they continue to fill the screen in this sidescroller.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

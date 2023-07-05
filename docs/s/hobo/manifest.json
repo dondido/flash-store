@@ -1,0 +1,15 @@
+{
+    "name": "Hobo",
+    "description": "The days possibly darker then, Hobo is a fighting game with dark undertones only possible in the Flash games era of 2008. The game features arcade style controls and relentless street fights in the awesome side scrolling levels. Oh yeah you can pick up objects! This is the original that started the Hobo franchise if you will. Punch and kick your way to success, in this funny fighting game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
