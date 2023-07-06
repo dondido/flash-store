@@ -1,0 +1,15 @@
+{
+    "name": "DaDa War",
+    "description": "Pando is a very lovely planet. DaDa people have been live and work there happily. However one day,other tribes invade the happy land. Recruit miners to mining and earn money to build army for fighting against those enemies and defensing home together!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
