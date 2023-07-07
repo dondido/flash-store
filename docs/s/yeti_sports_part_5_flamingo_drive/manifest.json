@@ -1,0 +1,15 @@
+{
+    "name": "Yeti Sports (Part 5) - Flamingo Drive",
+    "description": "Your aim is to get Pingu past all the giraffes, elephants and snakes to make the greatest distance. Control the game by clicking your LEFT MOUSE BUTTON. First click defines angle and second click defines power of your swing.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

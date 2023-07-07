@@ -1,0 +1,15 @@
+{
+    "name": "Age of Defense - Mini",
+    "description": "Send out troops to defeat the enemy. Earn coins to afford better units for later levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Rolly Stone Age",
+    "description": "Get ready to be sent back to the Stone Age when you play this brand new puzzle game! Your mission is to rescue the wooly mammoths and take out the cavemen who are hunting them for lunch. There are 24 exciting and challenging levels and in each one you must solve the puzzle of how to destroy the cavemen without hurting the mammoths. When you click on the gray stones with your mouse they will break apart. Use this feature to cause the cavemen to fall onto the spears or holes. Each level has a timer, and you must solve the puzzle before it runs out. If you don't in time, don't worry, you can restart the level at any time by clicking the refresh button above. When you go to the Level Select screen you can see your high scores for each level. See if you have the puzzle solving skills to get through all 24 levels and rescue the mammoths from the hunters!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
