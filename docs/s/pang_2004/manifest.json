@@ -1,0 +1,15 @@
+{
+    "name": "Pang 2004",
+    "description": "Shoot the bubbles so that they split in two, until there are none left on the screen.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Synj Sneak Attack",
+    "description": "Fight different aliens on the way by slashing them with your sword or breathing fireballs unto them.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

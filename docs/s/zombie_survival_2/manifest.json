@@ -1,0 +1,15 @@
+{
+    "name": "Zombie Survival 2",
+    "description": "An amazing action game! survive from all the zombies!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

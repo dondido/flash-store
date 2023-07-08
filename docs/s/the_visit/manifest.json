@@ -1,0 +1,15 @@
+{
+    "name": "The Visit",
+    "description": "Help the man reach to the other house and visit his girl friend. Avoid hurting the crabs on your way, otherwise you will go to jail.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

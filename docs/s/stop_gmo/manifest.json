@@ -1,0 +1,15 @@
+{
+    "name": "Stop GMO",
+    "description": "Fight the veggies before they eat you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
