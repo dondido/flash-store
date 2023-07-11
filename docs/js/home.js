@@ -1,4 +1,4 @@
-let activeVideos = [];
+/* let activeVideos = [];
 const up = ({ target }) => target.load();
 const move = ({ target, pointerId }) => {
     if (target.classList.contains('game-link-video')) {
@@ -11,4 +11,4 @@ const move = ({ target, pointerId }) => {
         activeVideos = [];
     }
 }
-document.addEventListener('pointermove', move);
+document.addEventListener('pointermove', move); */
