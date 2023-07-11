@@ -1,7 +1,7 @@
 let activeVideos = [];
 const up = ({ target }) => target.load();
 const move = ({ target, pointerId }) => {
-    if (target.classList.contains('game-link-video')) {
+    /* if (target.classList.contains('game-link-video')) {
         target.setPointerCapture(pointerId);
         target.play();
         activeVideos.push(target);
@@ -9,7 +9,7 @@ const move = ({ target, pointerId }) => {
     else {
         activeVideos.forEach(activeVideo => activeVideo.load());
         activeVideos = [];
-    }
+    } */
 };
 const click = (event) => {
     const link = event.target.closest('.game-link');
@@ -20,4 +20,4 @@ const click = (event) => {
     }
 };
 document.addEventListener('pointermove', move);
-document.addEventListener('click', click);
+document.addEventListener('pointerdown', click);
