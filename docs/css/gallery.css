@@ -55,49 +55,8 @@ main {
     margin: .5ex 0;
     font-size: 14px;
 }
-
-
-
-.loading {
-    overflow: hidden;
-    height: 100vh;
-}
-.overlay {
-    display: none;
-}
-.loading .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    inset: 0;
-    display: flex;
-}
-.overlay:before {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    opacity: .3;
-    position: absolute;
-    display: block;
-    background-color: black;
-}
-svg {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: auto;
-    z-index: 1;
-}
-.cls-1,.cls-2 {
-	fill:none;
-	stroke-linecap:bevel;
-	stroke-linejoin:round;
-}
-.cls-1 {
-	stroke-width:2px;
-}
-.cls-2 {
-	fill:none;
-	stroke:#fff;
-	stroke-width:4px;
+video.lazy {
+    visibility: hidden;
+    width: 180px;
+    height: 135px;
 }

@@ -14,8 +14,8 @@ const move = ({ target }) => {
     }
 };
 document.addEventListener('pointermove', move);
-document.addEventListener('DOMContentLoaded', function () {
-    const lazyVideos = [...document.querySelectorAll('video.lazy')];
+document.addEventListener('DOMContentLoaded', () => {
+    /* const lazyVideos = [...document.querySelectorAll('video.lazy')];
     if ('IntersectionObserver' in window) {
         const lazyVideoObserver = new IntersectionObserver((entries) => {
             entries.forEach((video) => {
@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
         lazyVideos.forEach(lazyVideo => lazyVideoObserver.observe(lazyVideo));
-    }
+    } */
 });
