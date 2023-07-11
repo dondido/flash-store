@@ -1,4 +1,4 @@
-/* let activeVideos = [];
+let activeVideos = [];
 const up = ({ target }) => target.load();
 const move = ({ target, pointerId }) => {
     if (target.classList.contains('game-link-video')) {
@@ -10,5 +10,14 @@ const move = ({ target, pointerId }) => {
         activeVideos.forEach(activeVideo => activeVideo.load());
         activeVideos = [];
     }
-}
-document.addEventListener('pointermove', move); */
+};
+const click = (event) => {
+    const link = event.target.closest('.game-link');
+    if (link) {
+        event.preventDefault();
+        location.href = link.href;
+        alert(link.href);
+    }
+};
+document.addEventListener('pointermove', move);
+document.addEventListener('click', click);
