@@ -31,6 +31,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-image: url('../home-background.svg');
 }
 main {
     display: flex;
@@ -46,14 +47,19 @@ main {
     list-style: none;
     padding: 20px;
 }
-.game {
-}
 .game-link {
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    background: white;
     text-decoration: none;
 }
 .game-title {
-    margin: .5ex 0;
+    margin: 4px 6px 6px;
     font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 video.lazy {
     visibility: hidden;
