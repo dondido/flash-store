@@ -7,9 +7,10 @@
                 "mode": "fixed"
             },
             "mappings": {
-                "n": "Space",
+                "n": "ArrowUp",
                 "e": "ArrowRight",
-                "w": "ArrowLeft"
+                "w": "ArrowLeft",
+                "s": "ArrowDown"
             }
         },
         {
