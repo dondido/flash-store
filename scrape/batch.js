@@ -6,5 +6,4 @@ fs.readdir('../docs/s/', (err, folders) => {
         return console.log('Unable to scan directory: ' + err);
     }
     folders.forEach(scrape);
-    console.log(222, folders)
 });

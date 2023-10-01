@@ -4,6 +4,7 @@ const response = await fetch(`${pathname}game.json`);
 const { controls, scale } = response.status === 200 ? await response.json?.() : {};
 window.RufflePlayer = window.RufflePlayer || {};
 const $playground = document.querySelector('.playground');
+const $buttonInstall = document.querySelector('.button-install');
 const $buttonPause = document.querySelector('.button-pause');
 const $buttonMute = document.querySelector('.button-mute');
 const $buttonFullscreen = document.querySelector('.button-fullscreen');
@@ -29,6 +30,7 @@ const handleHashChange = () => {
         exitFullscreen();
     }
 };
+let deferredPrompt;
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
@@ -109,4 +111,29 @@ if (controls?.length) {
         }
     });
 }
-
+window.addEventListener('beforeinstallprompt', (event) => {
+    // Prevent the mini-infobar from appearing on mobile.
+    event.preventDefault();
+    console.log('👍', 'beforeinstallprompt', event);
+    // Stash the event so it can be triggered later.
+    deferredPrompt = event;
+    $buttonInstall.hidden = false;
+});
+$buttonInstall.addEventListener('click', async () => {
+    console.log('👍', 'butInstall-clicked');
+    const promptEvent = deferredPrompt;
+    if (!promptEvent) {
+      // The deferred prompt isn't available.
+      return;
+    }
+    // Show the install prompt.
+    promptEvent.prompt();
+    // Log the result
+    const result = await promptEvent.userChoice;
+    console.log('👍', 'userChoice', result);
+    // Reset the deferred prompt variable, since
+    // prompt() can only be called once.
+    deferredPrompt = null;
+    // Hide the install button.
+    $buttonInstall.hidden = true;
+  });

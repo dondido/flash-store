@@ -28,7 +28,8 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
-body {
+body,
+.button-install {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -111,7 +112,8 @@ ruffle-player:before {
     transform: scale(calc(var(--w) / (var(--w) * var(--s)))) translateX(calc(1px * (var(--vw) - var(--w) * var(--s)) / -2));
     transform-origin: left top;
 }
-.button-play {
+.button-play,
+.button-install {
     width: 200px;
     line-height: 48px;
     text-decoration: none;
@@ -123,6 +125,13 @@ ruffle-player:before {
     margin: auto;
     border-radius: 0.75em;
 }
+.button-install {
+    margin-top: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-install:before,
 .button-play:before {
     font-family: 'Material Symbols Outlined';
     content: "\e037";
@@ -132,6 +141,9 @@ ruffle-player:before {
     vertical-align: text-bottom;
     margin-left: -20px;
     margin-top: -5px;
+}
+.button-install:before {
+    content: "\f090";
 }
 @media (orientation: portrait) {
     #play:target .playground {
