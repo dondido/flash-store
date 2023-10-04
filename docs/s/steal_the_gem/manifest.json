@@ -1,0 +1,15 @@
+{
+    "name": "Steal the Gem",
+    "description": "Fast action game, with some spice of logic ones. Unique atmosphere, pixelart graphics.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
