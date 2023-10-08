@@ -1,0 +1,10 @@
+{
+    "controls": [
+        {
+            "type": "button",
+            "label": "EN",
+            "mappings": [{ "code": "Enter" }]
+        }
+    
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "MURDER",
+    "description": "Try to become king and stay in the throne to secure a lasting reign in this nasty stab-a-roo.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

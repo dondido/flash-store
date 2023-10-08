@@ -1,0 +1,15 @@
+{
+    "name": "Epic Boss Fighter",
+    "description": "Battle 10 Epic Bosses in this action packed game! Earth is under threat by 10 of the most epic bosses known to mankind. And only one can stop them….his name is Blast! Help Blast upgrades his weaponry, buy force field and upgrade his character. Be ready to defend earth against these monsters and bring peace back to our world!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
