@@ -1,0 +1,15 @@
+{
+    "name": "Flash Bash",
+    "description": "A compilation of godlimations characters formed into this streetfighter / tekken brawler. Literally 100's of combos to learn, challenge a local friend in 2 player mode, familiarize the character combos and moves in challenge mode, and much more.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

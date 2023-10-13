@@ -1,0 +1,15 @@
+{
+    "name": "Line of Men",
+    "description": "Stop the line of men before they reach the tent.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -20,7 +20,7 @@ fs.readdir(directoryPath, (err, folders) => {
         return `
             <li class="game">
                 <a class="game-link" href="./s/${folder}/">
-                    <video class="game-link-video" disableremoteplayback loop muted poster="./s/${folder}/poster.jpg"><source src="./s/${folder}/video.mp4" type="video/mp4"></video>
+                    <video class="game-link-video lazy" disableremoteplayback loop muted data-poster="./s/${folder}/poster.jpg"><source data-src="./s/${folder}/video.mp4" type="video/mp4"></video>
                     <h2 class="game-title">${name}</h2>
                 </a>
             </li>
