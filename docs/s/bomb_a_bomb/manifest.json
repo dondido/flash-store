@@ -1,0 +1,15 @@
+{
+    "name": "Bomb A Bomb",
+    "description": "A colorful flash game in which you have to detonate enough bombs to make it to the next level. New bomb types will unlock are you progress through the levels. The flash game has over 40 levels in total!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

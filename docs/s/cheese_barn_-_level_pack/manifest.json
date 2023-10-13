@@ -1,0 +1,15 @@
+{
+    "name": "Cheese Barn - Level Pack",
+    "description": "Slide crates, traps, &amp; potions to make a clear path for the mouse to grab the cheese.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

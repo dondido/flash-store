@@ -1,0 +1,15 @@
+{
+    "name": "Mini Train",
+    "description": "physics engine based puzzle game where you've to close the gaps with the given shapes in order to pave the way for the train.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
