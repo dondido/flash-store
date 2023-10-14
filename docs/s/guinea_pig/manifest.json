@@ -1,0 +1,15 @@
+{
+    "name": "Guinea Pig",
+    "description": "Guinea pig dont crawling forward.he will roll up the body, and the move forward sprint.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
