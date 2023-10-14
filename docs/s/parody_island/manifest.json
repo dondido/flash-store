@@ -1,0 +1,15 @@
+{
+    "name": "Parody Island",
+    "description": "In this Mario style platform adventure, you have to help our superstar DJ Chris Moyles find his way through Parody Island, and collect music notes along the way.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

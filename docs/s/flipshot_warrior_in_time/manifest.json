@@ -1,0 +1,15 @@
+{
+    "name": "Flipshot: Warrior in Time",
+    "description": "Sort of like arkanoid game except it's on vertical line. Destroy all the colored rocks in order to win.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

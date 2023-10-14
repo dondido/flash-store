@@ -1,0 +1,15 @@
+{
+    "name": "Candy Cane Crisis",
+    "description": "Play as good ol' Saint Nick in this mario-like platform game. Jump, double jump, and pounce on enemies while collecting enough candy canes throughout each of the different levels to refuel your crashed sleigh and finish Christmas!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

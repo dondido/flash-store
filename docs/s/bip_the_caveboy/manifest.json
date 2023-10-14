@@ -1,0 +1,15 @@
+{
+    "name": "Bip the Caveboy",
+    "description": "A retro mario-style platform game following Bip a young caveboy set in prehistoric time. Collect coins, kill enemies, find hidden passages and explore the levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
