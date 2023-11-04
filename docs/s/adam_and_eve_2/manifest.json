@@ -1,0 +1,15 @@
+{
+    "name": "Adam and Eve 2",
+    "description": "After Adam won Eve's heart, he gave up happiness. Help him to flee from his commandingly wife to meet another woman in Adam and Eve 2, the second installment of the fun-addicting point'n'click puzzle game. Have fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

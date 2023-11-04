@@ -1,0 +1,15 @@
+{
+    "name": "Car Yard",
+    "description": "It is your time to go to the car yard, or isn't it? try to finish the trail as fast as you can without dying.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

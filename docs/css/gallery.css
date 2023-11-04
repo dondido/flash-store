@@ -39,7 +39,33 @@ body:before {
     height: 100%;
     position: fixed;
     z-index: -1;
-    /* background-image: url('../home-background.svg'); */
+    /* background-size: cover;
+    background-image: url('a.jpg');
+    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);  */
+}
+.color {
+    position: fixed;
+    filter: blur(150px);
+}
+.color:nth-child(1) {
+    background: #ff359b;
+    width: 600px;
+    height: 600px;
+    top: -350px;
+}
+.color:nth-child(2) {
+    background: #00d2ff;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    left: 100px;
+}
+.color:nth-child(3) {
+    background: #fffd87;
+    width: 300px;
+    height: 300px;
+    bottom: 50px;
+    right: 0px;
 }
 main {
     display: flex;
@@ -61,9 +87,22 @@ main {
 .game-link {
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
     display: block;
-    background: white;
     text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+}
+.game-link:before {
+    content: "";
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    display: block;
 }
 .game-title {
     margin: 4px 6px 6px;
@@ -71,6 +110,8 @@ main {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    color: #222;
+    font-weight: 100;
 }
 video.lazy {
     opacity: 0;

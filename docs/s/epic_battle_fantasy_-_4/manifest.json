@@ -1,0 +1,15 @@
+{
+    "name": "Epic Battle Fantasy - 4",
+    "description": "Battle over 120 types of monsters, collect over 140 types of equipment and use over 130 different skills and spells!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

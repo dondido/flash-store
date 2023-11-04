@@ -1,0 +1,15 @@
+{
+    "name": "Zombie Tactics",
+    "description": "Tactical turn-based zombie survival game, featuring full story, survival mode, and four alternative endings!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
