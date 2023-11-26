@@ -1,0 +1,15 @@
+{
+    "name": "Achilles",
+    "description": "𝑨𝒄𝒉𝒊𝒍𝒍𝒆𝒔 is a flash game that was released in 2008 and developed by Ben Olding Games. It is a side-scrolling action game that lets you play as Achilles, the legendary Greek hero who fought in the Trojan War.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

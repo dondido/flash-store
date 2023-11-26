@@ -1,0 +1,15 @@
+{
+    "name": "Kawairun",
+    "description": "Play the running game in 2 player mode or single player mode. The goal is to go as far as possible without hitting an obstacle. Remember to jump over logs and slide under branches in this funny racing game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

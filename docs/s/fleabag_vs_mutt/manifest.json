@@ -1,0 +1,15 @@
+{
+    "name": "Fleabag vs Mutt",
+    "description": "𝑭𝒍𝒆𝒂𝒃𝒂𝒈 𝑽𝑺 𝑴𝒖𝒕𝒕, often referred to as Cat VS Dog, is a Flash game where a teal cat (Fleabag) and a gray dog (Mutt) throw objects at each other until one of them gets knocked down.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

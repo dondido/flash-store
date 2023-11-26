@@ -151,6 +151,11 @@ ruffle-player:before {
         bottom: auto;
     }
 }
+@media all and (display-mode: standalone) {
+    .button-install {
+        display: none
+    }
+}
 .menu-button,
 .button {
     color: #303030;
@@ -276,6 +281,10 @@ main {
 .description {
     white-space: pre-line;
 }
+[data-mode] {
+    position: absolute;
+    left: 0;
+}
 [data-mode="fixed"] {
     position: absolute;
     width: 210px;
@@ -285,4 +294,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+[data-mode="dynamic"] {
+    width: 100%;
+    height: 100%;
 }

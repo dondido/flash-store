@@ -1,0 +1,15 @@
+{
+    "name": "Fleabag vs Mutt 2",
+    "description": "Throw the shells by defeating Cat or Dog in this squeal 2 player game. Good luck and enjoy.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

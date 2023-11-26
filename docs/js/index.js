@@ -85,14 +85,15 @@ if (controls?.length) {
     controls.forEach(async (control) => {
         const { type } = control;
         if ('joystick' === type) {
-            const { mappings, dataset } = control;
+            const { mappings, dataset = { mode: 'fixed' } } = control;
             const assignMapping = (direction) => {
                 const code = mappings[direction];
                 return typeof code === 'string' ? { code } : code;
             };
             const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
             const mapKeyup = direction => triggerKeyupEvent(assignMapping(direction));
-            $controls.insertAdjacentHTML('beforeend', '<virtual-joystick></virtual-joystick>');
+            const data = Object.entries(dataset).map(([key, value]) => `data-${key}=${value}`).join(' ');
+            $controls.insertAdjacentHTML('beforeend', `<virtual-joystick ${data}></virtual-joystick>`);
             const $joystick = $controls.querySelector('virtual-joystick');
             const handleKeyEvents = () => {
                 $joystick.dataset.release.split('').forEach(mapKeyup);
@@ -101,9 +102,6 @@ if (controls?.length) {
             $joystick.addEventListener('joystickdown', handleKeyEvents);
             $joystick.addEventListener('joystickmove', handleKeyEvents);
             $joystick.addEventListener('joystickup', handleKeyEvents);
-            if (dataset) {
-                Object.assign($joystick.dataset, dataset);
-            }
         }
         if ('button' === type) {
             const Button = await import('./button.js');

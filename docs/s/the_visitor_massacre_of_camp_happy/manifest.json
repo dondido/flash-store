@@ -1,0 +1,15 @@
+{
+    "name": "The Visitor - Massacre of Camp Happy",
+    "description": "Its probably not the best news for all inhabitants of Camp Happy.. the visitor has arrived! Help the hungry murderous wurm to slaughter everything and everyone. Eat other animals to grow and take their abilities to swim or fly.. Eat everything in your path in search for a human meal.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "The Visitor",
+    "description": "Guide an alien parasite through it's new earthly surroundings in this interactive horror adventure. The Visitor is alien and comes from a strange world. He seems to be harmless and looks like a tiny worm, but he came to conquer the Earth. Help him to grow and to become stronger, by eating all living creutures on the planet. Start with the small ones, like insects, birds or fish. Click on the different items in the picture and solve all puzzles to feed this hungry monster. Enjoy The Visitor!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
