@@ -1,0 +1,15 @@
+{
+    "name": "Grizzly Adventure",
+    "description": "Grizzly adventure is a colorful Platformer game with a massive 30 levels in 3 different worlds. And even more custom levels submitted by the grizzly community.. You can beat opponents by jumping on them or throwing apples on theirs noses!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

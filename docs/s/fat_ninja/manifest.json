@@ -1,0 +1,15 @@
+{
+    "name": "Fat Ninja",
+    "description": "Fat Ninja is a Ninja Game about Stealth. Using your ninja skills try not to get spotted by the security guards, as you make your way through the building. Use your judgement whether you should hide, or use one of your attack moves to kill the guards. You can hide behind objects or jump up and hang onto the ceiling. You can attack with your sword or using your secret weapon, your FARTS. Every time you are spotted the alarm bar will get higher, and if it reaches the end it's game over.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

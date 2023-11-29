@@ -1,0 +1,32 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.4
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "[", "code": "BracketLeft" }]
+        },
+        {
+            "type": "button",
+            "label": "B",
+            "mappings": [{ "key": "]", "code": "BracketRight" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    ]
+}

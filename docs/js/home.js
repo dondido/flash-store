@@ -1,4 +1,7 @@
 let activeVideo = null;
+const $games = document.querySelectorAll('.game');
+const gameTitles = Array.from(document.querySelectorAll('.game-title'))
+    .map(({ textContent }) => textContent.toLocaleLowerCase());
 const up = ({ target }) => target.load();
 const move = ({ target }) => {
     if (target.tagName === 'VIDEO') {
@@ -35,3 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyVideos.forEach(lazyVideo => lazyVideoObserver.observe(lazyVideo));
     }
 });
+window.search.oninput = ({ target: { value } }) => {
+    const term = value.toLowerCase();
+    $games.forEach(($game, index) => {
+        $game.hidden = gameTitles[index].includes(term) === false;
+    })
+};

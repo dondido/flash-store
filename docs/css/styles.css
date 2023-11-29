@@ -151,6 +151,11 @@ ruffle-player:before {
         bottom: auto;
     }
 }
+@media all and (display-mode: fullscreen) {
+    .button-install {
+        display: none
+    }
+}
 @media all and (display-mode: standalone) {
     .button-install {
         display: none

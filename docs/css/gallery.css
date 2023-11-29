@@ -70,11 +70,13 @@ body:before {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, 180px);
     justify-content: space-evenly;
+    margin: auto;
     grid-gap: 10px;
     width: 100%;
     max-width: 1024px;
@@ -117,4 +119,13 @@ video.lazy {
     opacity: 0;
     width: 180px;
     height: 135px;
+}
+main .input-search {
+    width: 200px;
+    color: #666;
+    margin: 32px auto  16px;
+    border: 1px solid grey;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
 }

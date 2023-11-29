@@ -1,0 +1,32 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.4
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "C",
+            "mappings": [{ "code": "ControlLeft" }]
+        },
+        {
+            "type": "button",
+            "label": "EN",
+            "mappings": [{ "code": "Enter" }]
+        },
+        {
+            "type": "button",
+            "label": "SH",
+            "mappings": [{ "key": "Shift", "code": "ShiftLeft" }]
+        }
+    ]
+}
