@@ -81,7 +81,7 @@ main {
     width: 100%;
     max-width: 1024px;
     list-style: none;
-    padding: 20px;
+    padding: 20px 0;
 }
 .game {
     height: 168px;
