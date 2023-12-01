@@ -1,0 +1,15 @@
+{
+    "name": "Pause Ahead",
+    "description": "You’ve woken up in a strange place with the eerie feeling that you’ve been here before. Conquer the treacherous traps by running, jumping and using your power of pausing to get ahead. Just remember: once you pause, there is nothing you can do to change your path. Let the chips fall where they may. Hopefully not directly onto a spike.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

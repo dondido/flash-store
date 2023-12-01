@@ -1,0 +1,27 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.3
+            },
+            "mappings": {
+                "n": { "key": "w", "code": "KeyW" },
+                "e": { "key": "d", "code": "KeyD" },
+                "s": { "key": "s", "code": "KeyS" },
+                "w": { "key": "a", "code": "KeyA" }
+            }
+        },
+        {
+            "type": "button",
+            "label": "J",
+            "mappings": [{ "key": "j", "code": "KeyJ" }]
+        },
+        {
+            "type": "button",
+            "label": "K",
+            "mappings": [{ "key": "k", "code": "KeyK" }]
+        }
+    ]
+}
