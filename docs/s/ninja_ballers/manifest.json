@@ -1,0 +1,15 @@
+{
+    "name": "Ninja Ballers",
+    "description": "In this game you have a ball that looks like a ninja's head. You can select one of the available ninja heads from the list. They're all the same, but have different expressions and accessories. What you need to do in the game is to draw lines that will direct the ninja ball first to the key and then to the exit door. The ninja ball follows physics laws and falls down pulled by the gravity until it meets something on its way.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

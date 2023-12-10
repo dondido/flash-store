@@ -1,0 +1,15 @@
+{
+    "name": "Panda Ninja",
+    "description": "Grapple along walls &amp; the floor to get into grapple reach of the scrolls in bubbles.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
