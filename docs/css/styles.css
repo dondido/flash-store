@@ -70,6 +70,8 @@ body:before {
     border-radius: 0;
 }
 #play:target .button-play,
+#play:target .button-install,
+#play:target .button-rate,
 #play:target .content,
 #play:target .description,
 #play:target .added-on {
@@ -119,37 +121,15 @@ ruffle-player:before {
     transform: scale(calc(var(--w) / (var(--w) * var(--s)))) translateX(calc(1px * (var(--vw) - var(--w) * var(--s)) / -2));
     transform-origin: left top;
 }
-.button-play,
-.button-install {
-    width: 200px;
-    line-height: 48px;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    border: 1px solid #cdcdcd;
-    margin: auto;
-    color: #222;
-    font-weight: 100;
-    border-radius: 0.75em;
-    background-color: whitesmoke;
-    box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.2);
-}
-.button-install {
-    margin-top: 16px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 .button-install:before,
+.button-rate:before,
 .button-play:before {
     font-family: 'Material Symbols Outlined';
     content: "\e037";
-    font-size: 40px;
-    display: inline-block;
-    height: 34px;
-    vertical-align: text-bottom;
-    margin-left: -20px;
-    margin-top: -5px;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    mix-blend-mode: difference;
 }
 .button-install:before {
     content: "\f090";
@@ -286,7 +266,9 @@ body:not(:target) main {
     background-color: rgba(255, 255, 255, .3);
     border-radius: 10px;
     overflow-y: auto;
-    box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
+    border: 1px solid #ffffff44;
+    border-right-color: #00000088;
+    border-bottom-color: #00000088;
 }
 .controls {
     position: fixed;
@@ -327,4 +309,46 @@ body:not(:target) main {
 [data-mode="dynamic"] {
     width: 100%;
     height: 100%;
+}
+.game-menu {
+    width: 220px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+.button-install,
+.button-play,
+.button-rate {
+    text-decoration: none;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .2);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 40px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1), 3px 3px 5px rgba(0, 0, 0, .1);
+}
+.button-install,
+.button-rate {
+    width: 48px;
+    height: 48px;
+}
+.button-play:before {
+    font-weight: normal;
+    font-size: 58px;
+}
+.button-rate:before {
+    content: "\e87d";
 }

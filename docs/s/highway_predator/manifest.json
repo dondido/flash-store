@@ -1,0 +1,15 @@
+{
+    "name": "Highway Predator",
+    "description": "Winter it's here, so try our new car racing game. Race through the snow and beat all your opponents. Run fast on highway and try to avoid damaging your car. Smash all your enemies from each level, to be able to be the best winter driver from the highway. Enjoy the game!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

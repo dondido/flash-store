@@ -3,18 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>
-            Parody Island
-          </title>
+    <title>Parody Island</title>
     <link rel="manifest" href="./manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="
-            Parody Island
-          ">
-    <meta name="apple-mobile-web-app-title" content="
-            Parody Island
-          ">
+    <meta name="application-name" content="Parody Island">
+    <meta name="apple-mobile-web-app-title" content="Parody Island">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
     <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
@@ -37,22 +31,21 @@
 <body id="play">
     <main>
         <div class="content">
-            <h1>
-            Parody Island
-          </h1>
+            <h1>Parody Island</h1>
             <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4"></video>
         </div>
         <div class="playground" style="--w: 650; --h: 450;"></div>
-        <a class="button-play" href="#play">Play</a>
-        <button class="button-install" type="button" hidden>Install</button>
+        <div class="game-menu">
+            <button class="button-install" type="button" title="Install" hidden></button>
+            <a class="button-play" href="#play" title="Play"></a>
+            <a class="button-rate" target="_blank" href="https://play.google.com/store/apps/details?id=io.dondido.flashgameemulator" title="Rate"></a>
+        </div>
         <div class="controls">
             <button type="button" class="menu-button button-pause"></button>
             <button type="button" class="menu-button button-fullscreen"></button>
             <button type="button" class="menu-button button-mute"></button>
         </div>
-        <p class="description">
-  In this Mario style platform adventure, you have to help our superstar DJ Chris Moyles find his way through Parody Island, and collect music notes along the way.
-</p>
+        <p class="description">In this Mario style platform adventure, you have to help our superstar DJ Chris Moyles find his way through Parody Island, and collect music notes along the way.</p>
         <p class="added-on">Added on
       
       
