@@ -1,0 +1,15 @@
+{
+    "name": "Vegetable Rescue",
+    "description": "Rescue Vegetables in your back garden like eggplants, carrots and mushrooms are ripe. Don't be overexcited about the harvest, because the pests are ready to have a good feast as well. Use this spiked hammer to kill all the pests. Try not to destroy the fence and veggies.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

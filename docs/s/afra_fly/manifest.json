@@ -1,0 +1,15 @@
+{
+    "name": "Afra Fly",
+    "description": "Flutter among the finest safari animals!Stay in the air as long as you can! The amount of energy you have will determine how long you can fly, so keep an eye on the flower bar in the top-right corner. If you need to take a break, try landing on an animal's back.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

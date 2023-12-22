@@ -1,0 +1,15 @@
+{
+    "name": "Clear Animal",
+    "description": "Clear all the animals by clicking on them. Collect enough points to unlock the next level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

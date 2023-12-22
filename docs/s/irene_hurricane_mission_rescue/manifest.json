@@ -1,0 +1,15 @@
+{
+    "name": "Irene Hurricane Mission Rescue",
+    "description": "Rescue people and other animals from the destructive flood caused by the Irene hurricane. They are standing on the elevated surface, pull them up and save their life. Save them before the water level increases before they get drowned. Earn score by saving more lives or else you may lose the game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

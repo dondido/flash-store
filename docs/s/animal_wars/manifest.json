@@ -1,0 +1,15 @@
+{
+    "name": "Animal Wars",
+    "description": "Like Worm games? You should evolve, dude! Angry goats, slimy slugs, fire ants and poopy gorillas wage war against each other. Battle across America, my friends!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
