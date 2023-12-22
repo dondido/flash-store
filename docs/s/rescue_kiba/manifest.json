@@ -1,0 +1,15 @@
+{
+    "name": "Rescue Kiba",
+    "description": "Kiba &amp; Kumba, the popular monkey couple best known from KaiserGames games network ,are now finally starring in their own entire game! Monkey lady Kiba has been hijacked by an evil villain, which brings Monkey King Kumba to the scene. Ready for rescueing his girlfriend. Accompany him on his adventure through various worlds, which will amaze you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

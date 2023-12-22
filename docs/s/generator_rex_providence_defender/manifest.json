@@ -1,0 +1,15 @@
+{
+    "name": "Generator Rex Providence Defender",
+    "description": "Fly your ship and shoot down big bugs as you rescue the required number of people.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

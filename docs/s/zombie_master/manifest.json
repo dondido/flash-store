@@ -1,0 +1,15 @@
+{
+    "name": "Zombie Master",
+    "description": "Zombie Master is a bloody shooting game. They have kidnapped a lot of villagers. The frightened abductees are tied onto the cross waiting for your rescue. You need to exercise all diligence to eliminate the approaching zombies. If you are touched by the horrible zombies, they will suck your blood. Use up and down arrow keys to move, the space bar to shoot.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

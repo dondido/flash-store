@@ -1,0 +1,15 @@
+{
+    "name": "Bungee Rescue",
+    "description": "You have to go out into canyon and save people and animals from the rising flood waters. if you're too slow, they will drown.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
