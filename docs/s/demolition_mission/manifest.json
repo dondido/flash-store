@@ -1,0 +1,15 @@
+{
+    "name": "Demolition Mission",
+    "description": "You are on a mission to demolish all in sight. Tired of all the parking and driving games around? Time to try a new kind of game. Place the bombs cleverly in strategic spots of the building to bring it down below the red line. Don’t let one wall standing with your mighty pyrotechnic equipment.  The demolition area is cleared for you to work your magic and make a insignificant pile of debris out of a old unfinished building that is soaring to the city sky.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

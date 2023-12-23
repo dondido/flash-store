@@ -1,0 +1,15 @@
+{
+    "name": "SD Robo Battle Arena",
+    "description": "Nine robots which are skilled from each other, which meet in an arena, are struggling to win the battle. SD Robo Battle Arena can be played as single player in “Campaign” or “Quick Battle” modes. If you want, you can prove your skills against your friend by taking him/her along in “Survival”, “Capture the Flag” or “Deathmatch” game modes which are entertaining from each other and under “Multiplayer” section. You can do more effective attacks with the weapons which drop from the boxes. Besides, you can increase the number of robots in arena up to six.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

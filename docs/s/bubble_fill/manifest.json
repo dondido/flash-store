@@ -1,0 +1,15 @@
+{
+    "name": "Bubble Fill",
+    "description": "Fill out the area with bubbles. In Bubble Fill, your goal is to cover 66% of the playing field with bubbles, all the while avoiding collisions with the bouncing balls while inflating.Click and hold left mouse button to grow bubble. Don't let the bubbles hit the red balls while creating or they will burst.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

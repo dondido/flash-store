@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                         intent.action = Intent.ACTION_VIEW
                         intent.data = Uri.parse(market_url)
                         startActivity(intent)
+                        return true
                     } catch (e: ActivityNotFoundException) {
                     }
                 }

@@ -1,0 +1,18 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "F",
+            "mappings": [{ "key": "f", "code": "KeyF" }]
+        }
+    ]
+}

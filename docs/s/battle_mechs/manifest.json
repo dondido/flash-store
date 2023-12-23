@@ -1,0 +1,15 @@
+{
+    "name": "Battle Mechs",
+    "description": "Pit your mech against the enemy in this turn based mech fighting game. Upgrade mech points.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
