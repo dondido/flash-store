@@ -1,0 +1,28 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.4
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "R",
+            "mappings": [{ "key": "r", "code": "KeyR" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": "(blank space)", "code": "Space" }]
+        }
+    ]
+}

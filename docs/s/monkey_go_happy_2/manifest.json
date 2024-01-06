@@ -1,0 +1,15 @@
+{
+    "name": "Monkey Go Happy 2",
+    "description": "Monkey Go Happy 2 includes: 15 levels to beat and here comes little monkey is here to help make Monkey go happy.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

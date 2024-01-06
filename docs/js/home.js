@@ -3,18 +3,27 @@ const $games = document.querySelectorAll('.game');
 const gameTitles = Array.from(document.querySelectorAll('.game-title'))
     .map(({ textContent }) => textContent.toLocaleLowerCase());
 const up = ({ target }) => target.load();
+const disablePreview = () => {
+    activeVideo?.load();
+    activeVideo = null;
+};
+const enablePreview = target => {
+    target.load();
+    target.play();
+    activeVideo = target;
+};
 const move = ({ target }) => {
     if (target.tagName === 'VIDEO') {
         if (activeVideo === null) {
-            target.load();
-            target.play();
-            activeVideo = target;
+            return enablePreview(target);
         }
+        if (activeVideo.poster !== target.poster) {
+            disablePreview();
+            enablePreview(target);
+        }
+        return;
     }
-    else {
-        activeVideo?.load();
-        activeVideo = null;
-    }
+    disablePreview();
 };
 document.addEventListener('pointermove', move);
 document.addEventListener('DOMContentLoaded', () => {

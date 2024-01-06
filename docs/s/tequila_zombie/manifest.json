@@ -1,0 +1,15 @@
+{
+    "name": "Tequila Zombies",
+    "description": "Tequila Zombies is the very first opus of the famous twisted zombie killing game series.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

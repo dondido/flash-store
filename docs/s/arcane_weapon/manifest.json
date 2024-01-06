@@ -1,0 +1,15 @@
+{
+    "name": "Arcane Weapon",
+    "description": "When a lonely man comes across the unknown Arcane Weapon he unleashed beast from the Netherworld! Fight your way through these beasts by learning new moves and building up your rage to throw down a mega special attacks.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

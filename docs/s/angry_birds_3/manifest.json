@@ -1,0 +1,15 @@
+{
+    "name": "Angry Birds 3",
+    "description": "In this third part of the very popular and free game Angry Birds, the birds battle again against the evil pigs. Use the cannon and load it with different birds, each with it's own special abilities. Fire the birds to bounce, bump and explode the pigs.Aim the cannnon by moving mouse cursor, press the left mouse button to shoot.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

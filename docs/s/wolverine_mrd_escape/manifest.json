@@ -1,0 +1,15 @@
+{
+    "name": "Wolverine MRD Escape",
+    "description": "Wolverine must escape from the M.R.D using nitrous explosion as his covers. Try make it out without being detected by avoiding the cameras and taking out the robot guards.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
