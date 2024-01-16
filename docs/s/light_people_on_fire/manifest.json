@@ -1,0 +1,15 @@
+{
+    "name": "Light People On Fire",
+    "description": "Share your flame with as many people as possible! They love it! If it looks like rain just turn into a tree... Then: MORE FIRE!!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

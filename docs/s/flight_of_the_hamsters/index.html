@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+            Flight of the Hamsters
+          </title>
+    <link rel="manifest" href="./manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="
+            Flight of the Hamsters
+          ">
+    <meta name="apple-mobile-web-app-title" content="
+            Flight of the Hamsters
+          ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="144x144" href="./icon.png">
+    <link rel="stylesheet" href="../../css/styles.css?v=1.0">
+    <link rel="stylesheet" href="./game.css?v=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK2XK0Y6DY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YK2XK0Y6DY');
+    </script>
+    <style>
+        #play:before {
+            background-image: url(./poster.jpg)
+        }
+    </style>
+</head>
+<body id="play">
+    <main>
+        <div class="content">
+            <h1>
+            Flight of the Hamsters
+          </h1>
+            <video disableremoteplayback loop muted autoplay poster="./poster.jpg"><source src="./video.mp4" type="video/mp4"></video>
+        </div>
+        <div class="playground" style="--w: 590; --h: 450;"></div>
+        <div class="game-menu">
+            <button class="button-install" type="button" title="Install" hidden></button>
+            <a class="button-play" href="#play" title="Play"></a>
+            <a class="button-rate" target="_blank" href="https://play.google.com/store/apps/details?id=io.dondido.flashgameemulator" title="Rate"  rel="external"></a>
+        </div>
+        <div class="controls">
+            <button type="button" class="menu-button button-pause"></button>
+            <button type="button" class="menu-button button-fullscreen"></button>
+            <button type="button" class="menu-button button-mute"></button>
+        </div>
+        <p class="description">
+  Help the hamsters enjoy their time off with the new extreme sports of hamster launching!
+</p>
+        <p class="added-on">Added on
+      
+      
+        02 Feb 2007</p>
+    </main>
+    <script type="module" src="../../js/virtual-joystick.js"></script>
+    <script src="../../js/ruffle.js"></script>
+    <script src="../../js/player.js"></script>
+    <script type="module" src="../../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "Final Fight 2: Guard",
+    "description": "This is a walk-and-fight game with Street Fighter characters. As in all other games of the kind, you need to beat all your enemies. You choose your character and a guard, another person that will fight your enemies with you. You do not control the guard. He/she does his/her job alone.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
