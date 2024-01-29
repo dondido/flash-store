@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyVideos.forEach(lazyVideo => lazyVideoObserver.observe(lazyVideo));
     }
 });
+window.search.placeholder = `Search ${gameTitles.length} games`
 window.search.oninput = ({ target: { value } }) => {
     const term = value.toLowerCase();
     $games.forEach(($game, index) => {

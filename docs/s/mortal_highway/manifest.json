@@ -1,0 +1,15 @@
+{
+    "name": "Mortal Highway",
+    "description": "Drive at full speed in this freeway avoiding the other cars. If you hit one you lose and you must begin again. You must maneuver fast because the cars go at full speed. Use the arrows to move.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

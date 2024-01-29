@@ -1,0 +1,15 @@
+{
+    "name": "Twisted Adventures: Little Red Riding Hood",
+    "description": "This is an alternate story of the Little Red Riding Hood in an innovative and magical plat former game presented in slightly scary graphics.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

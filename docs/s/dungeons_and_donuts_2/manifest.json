@@ -1,0 +1,15 @@
+{
+    "name": "Dungeons And Donuts 2",
+    "description": "Dungeons And Donuts 2 is an action game in which you need to rescue your lady donuts friend in each action packed level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

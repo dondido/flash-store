@@ -1,0 +1,15 @@
+{
+    "name": "Tech Orb",
+    "description": "Drag n drop the platforms &amp; rotate them to get the orb to roll &amp; bounce into the exit portal.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

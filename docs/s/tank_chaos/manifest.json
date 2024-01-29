@@ -1,0 +1,15 @@
+{
+    "name": "Tank Chaos",
+    "description": "Destroy all Tanks! Tank Chaos is a fast action skill game where you cause mayhem and destruction by destroying any and all tanks! Unleash incredible powerups and weapons to destroy as many tanks as possible before they collide and over heat.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

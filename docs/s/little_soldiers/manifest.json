@@ -1,0 +1,15 @@
+{
+    "name": "Little Soldiers",
+    "description": "Your Little Soldiers obey your every command. Guide your Little Soldiers safely to the goal on each level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

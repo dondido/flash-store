@@ -1,0 +1,15 @@
+{
+    "name": "Mortal Kombat Karnage",
+    "description": "Mortal Kombat remake in flash. Its really a new fighting game. This one is better than ever, with an infinite forest background with no corners, new cool looking moves with very clever use of the sprites, and more! Finish him!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

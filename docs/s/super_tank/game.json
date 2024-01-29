@@ -1,0 +1,27 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "X",
+            "mappings": [{ "key": "x", "code": "KeyX" }]
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "U",
+            "mappings": [{ "code": "ArrowUp" }]
+        }
+    ]
+}

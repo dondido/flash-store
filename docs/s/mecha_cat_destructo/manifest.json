@@ -1,0 +1,15 @@
+{
+    "name": "Mecha-Cat Destructo",
+    "description": "Mecha cats are trying to kick our heroes out of the house. Help Waffle find all the parts needed to build a Robot Super Cat. Destroy and kick all bots to earn and obtain more gears. You may also collect for caviar for your health. Good luck and have fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

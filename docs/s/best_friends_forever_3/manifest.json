@@ -1,0 +1,15 @@
+{
+    "name": "Best Friends Forever 3",
+    "description": "Use the 3 friends to help each other out and solve all puzzles. Trigger switches &amp; boost each other.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

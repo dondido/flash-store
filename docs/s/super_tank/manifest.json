@@ -1,0 +1,15 @@
+{
+    "name": "Super Tank",
+    "description": "A tank is specifically build for blowing things to pieces. What makes the tank in this game so super is that it’s really good at blowing things to pieces.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

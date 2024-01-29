@@ -1,0 +1,15 @@
+{
+    "name": "LUV Tank",
+    "description": "This vertical scrolling shooter is inspired by the classic Gun.Smoke game, released by Capcom in 1985.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

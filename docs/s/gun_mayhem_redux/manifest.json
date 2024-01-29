@@ -1,0 +1,15 @@
+{
+    "name": "Gun Mayhem 3",
+    "description": "Gun Mayhem is back. Battle with friends or vs CPU. Battle the AI or with friends in high octane arena fights with up to 4 players. Revamped cartoon art style gives you more action, less fluff.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

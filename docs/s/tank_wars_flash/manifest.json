@@ -1,0 +1,15 @@
+{
+    "name": "Tank Wars",
+    "description": "Play against the computer or better, play against a real human player in this exciting tank war! Aim and bomb your enemy but beware on the damages that will also caused by your opponent.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

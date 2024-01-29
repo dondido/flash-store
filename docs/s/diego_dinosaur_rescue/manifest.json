@@ -1,0 +1,15 @@
+{
+    "name": "Diego Dinosaur Rescue",
+    "description": "Join Diego and his friends on a journey in the time of the dinosaurs to reunite a lost Maiasaura and her family.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
