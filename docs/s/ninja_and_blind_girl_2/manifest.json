@@ -1,0 +1,15 @@
+{
+    "name": "Ninja and Blind Girl 2",
+    "description": "Use the powers of 4 brave companions and defend Blind Girl at any cost! Use powerful spells, various upgrades and deadly weapons to defeat the evil King Panda and his minions.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

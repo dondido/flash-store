@@ -1,0 +1,15 @@
+{
+    "name": "Frat Boy Blind Date Horror",
+    "description": "Unfortunately for Austin, his love life hasn't been going too well lately. His fraternity brothers pitch in to try to help him, but much to Austin's dismay it seems every girl they set him up with turns out to be an absolute horror!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

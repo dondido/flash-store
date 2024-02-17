@@ -1,0 +1,15 @@
+{
+    "name": "Gumball Bling Fooled",
+    "description": "Create path for blindfoolded friends.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

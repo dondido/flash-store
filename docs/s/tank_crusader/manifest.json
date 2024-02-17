@@ -1,0 +1,15 @@
+{
+    "name": "Tank Crusader",
+    "description": "You have a great chance to become the leader of the forces and guide your tank over enemy lines. Be ready to aim, shoot, and play this free online game here. Just protect your territory and complete all the missions.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

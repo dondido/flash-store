@@ -1,12 +1,10 @@
 virtual-joystick::part(joystick) {
     margin: auto;
-    top: calc(100% - 150px);
+    top: calc(100% - 70px);
 }
-@media (orientation: landscape) {
-    .run {
-        & virtual-joystick::part(joystick) {
-            top: calc(100% - 70px);
-        }
+@media (orientation: portrait) {
+    virtual-joystick::part(joystick) {
+        top: calc(100% - 150px);
     }
 }
 virtual-joystick[data-mode] {

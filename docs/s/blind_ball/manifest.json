@@ -1,0 +1,15 @@
+{
+    "name": "Blind Ball",
+    "description": "The game is simple, all you need to do is guide a ball to the finish using placed tools of the users choice, there are twenty levels with each a unique layout and different path to complete that level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

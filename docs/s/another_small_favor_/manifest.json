@@ -1,0 +1,15 @@
+{
+    "name": "Another Small Favor...",
+    "description": "After playing the awesome adventure game 'A Small Favor', it's really exciting to see the sequel. The story continues after the assassination of Senator Lobe. With his security clearance severely compromised, the assassin heads deep into the blind zone to find a new identity.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Alien vs Predator",
+    "description": "Stay alive as long as possible as a predator that is killing alien hoards until he finally dies.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

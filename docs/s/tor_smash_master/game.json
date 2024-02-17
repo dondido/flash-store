@@ -1,0 +1,32 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "w": "ArrowLeft",
+                "s": "ArrowDown"
+            }
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "s", "code": "KeyS" }]
+        },
+        {
+            "type": "button",
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
+        }
+    
+    ]
+}

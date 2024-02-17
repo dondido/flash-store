@@ -1,0 +1,15 @@
+{
+    "name": "Dinosaurs and Cadillac",
+    "description": "A tale of a man and a woman trying to survive against dinosaurs ( Pteranodont, Velociraptors, Triceraptop, Stegosaurus and Tyranosaurus )…",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

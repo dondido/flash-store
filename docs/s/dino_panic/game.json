@@ -1,0 +1,20 @@
+{
+    "controls": [
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "s", "code": "KeyS" }]
+        },
+        {
+            "type": "button",
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
+        }
+    
+    ]
+}
