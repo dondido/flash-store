@@ -1,0 +1,15 @@
+{
+    "name": "3D Mountain Bike",
+    "description": "Ride your bike and race on the rocky street. Collect as many stars while dodging obstacles.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

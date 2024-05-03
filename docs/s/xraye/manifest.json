@@ -1,0 +1,15 @@
+{
+    "name": "xRaye",
+    "description": "Hit all pegs to complete the level, some require multiple hits.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

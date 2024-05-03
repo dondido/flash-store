@@ -1,0 +1,14 @@
+{
+    "controls": [
+        {
+            "type": "button",
+            "label": "Z",
+            "mappings": [{ "key": "z", "code": "KeyZ" }]
+        },
+        {
+            "type": "button",
+            "label": "X",
+            "mappings": [{ "key": "x", "code": "KeyX" }]
+        }
+    ]
+}

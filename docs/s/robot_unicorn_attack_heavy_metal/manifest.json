@@ -1,0 +1,15 @@
+{
+    "name": "Robot Unicorn Attack: Heavy Metal",
+    "description": "Do you like fast, agressive power metal like old Blind Guardian? Then give a try to Robot Unicorn Attack: Heavy Metal. You got three chances to navigate the mechanical legendary creature out of that evil underworld. Just keep the awesome unicorn on running as you dash over explosive obstacles, overcome giant gaps and destroy hellish enemies. Much fun.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

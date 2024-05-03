@@ -1,0 +1,15 @@
+{
+    "name": "Crash Bandicoot",
+    "description": "Crash Bandicoot is a funny cartoonish jump and run action game with various themed levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

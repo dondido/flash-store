@@ -1,0 +1,15 @@
+{
+    "name": "Pie Craving",
+    "description": "Play as a pie craving creature! Try to get the pie in order to level up! Collect fruits and other item to earn bonus points!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

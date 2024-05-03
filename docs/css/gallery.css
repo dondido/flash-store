@@ -114,8 +114,7 @@ main {
     color: #222;
     font-weight: 100;
 }
-video.lazy {
-    opacity: 0;
+video {
     width: 180px;
     height: 135px;
 }

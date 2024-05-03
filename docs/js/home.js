@@ -27,24 +27,20 @@ const move = ({ target }) => {
 };
 document.addEventListener('pointermove', move);
 document.addEventListener('DOMContentLoaded', () => {
-    const lazyVideos = [...document.querySelectorAll('video.lazy')];
     if ('IntersectionObserver' in window) {
         const lazyVideoObserver = new IntersectionObserver((entries) => {
-            entries.forEach((video) => {
-                if (video.isIntersecting) {
-                    video.target.poster = video.target.dataset.poster;
-                    for (const source in video.target.children) {
-                        const videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === 'string' && videoSource.tagName === 'SOURCE') {
-                            videoSource.src = videoSource.dataset.src;
-                        }
-                    }
-                    video.target.classList.remove('lazy');
-                    lazyVideoObserver.unobserve(video.target);
+            entries.forEach(({ target, isIntersecting }) => {
+                if (isIntersecting) {
+                    const { href } = target.parentElement;
+                    target.disableremoteplayback = true;
+                    target.loop = true;
+                    target.poster = `${href}poster.jpg`;
+                    target.src = `${href}video.mp4`;
+                    lazyVideoObserver.unobserve(target);
                 }
             });
         });
-        lazyVideos.forEach(lazyVideo => lazyVideoObserver.observe(lazyVideo));
+        document.querySelectorAll('video').forEach(lazyVideo => lazyVideoObserver.observe(lazyVideo));
     }
 });
 window.search.placeholder = `Search ${gameTitles.length} games`
