@@ -1,0 +1,23 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
+            }
+        },
+        {
+            "type": "button",
+            "label": "F",
+            "mappings": [{ "key": "f", "code": "KeyF" }]
+        },
+        {
+            "type": "button",
+            "label": "G",
+            "mappings": [{ "key": "g", "code": "KeyG" }]
+        }
+    ]
+}

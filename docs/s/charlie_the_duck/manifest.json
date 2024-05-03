@@ -1,0 +1,15 @@
+{
+    "name": "Charlie The Duck",
+    "description": "The goal for you is try to complete the levels. In the game, you can move with left and right arrow keys. Press spacebar to jump over the obstacle or jump on the heads of your dangers to knock off them. On your journey, try to collect useful things like coins and you will need them. Come on and help this little duck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

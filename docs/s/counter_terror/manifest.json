@@ -1,0 +1,15 @@
+{
+    "name": "Counter Terror",
+    "description": "Your job, as part of an elite squad of heroes, is to execute missions to take out the bad guys and rescue hostages, leading up to a final confrontation with an evil scientist who knows all that strange and mystifying dangerous stuff like 'chemistry' and 'math'. Use the [arrow] keys to move, [Z] to jump, and [X] to shoot. [S] will cycle through your special weapons like grenades, deployable ropes, and flashbangs, while [C] will use whichever is equipped. You'll need to use cover, cunning, and the advanced technique known as 'spraying everything ahead of you with bullets' in order to save the day... as long as you don't fall and break your own neck in the process.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

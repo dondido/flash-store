@@ -1,0 +1,15 @@
+{
+    "name": "Madness Accelerant",
+    "description": "Your task in this intense fighting game is to fight through hoards of enemies and at the same time you have to kill the clown.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Halloween Basketball Legends",
+    "description": "Play basketball against these scary but adorable monsters. You can use the supershot skill as an advantage to make sure that you will get that perfect shot! Unleash your basketball skills and be the champion of this game. Enjoy!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
