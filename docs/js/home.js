@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     target.disableremoteplayback = true;
                     target.loop = true;
                     target.poster = `${href}poster.jpg`;
+                    target.muted = true;
                     target.src = `${href}video.mp4`;
                     lazyVideoObserver.unobserve(target);
                 }

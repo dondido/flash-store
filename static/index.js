@@ -20,7 +20,7 @@ fs.readdir(directoryPath, (err, folders) => {
         return `
             <li class="game">
                 <a class="game-link" href="./s/${folder}/">
-                    <video poster="spinner.webp"></video>
+                    <video poster="spinner.svg"></video>
                     <h2 class="game-title">${name}</h2>
                 </a>
             </li>

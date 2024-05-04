@@ -1,0 +1,15 @@
+{
+    "name": "Yeti Sports (Part 2) - Orca Slap",
+    "description": "Another game in the famous Yeti-series. Hit the penguins with the snowballs.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
