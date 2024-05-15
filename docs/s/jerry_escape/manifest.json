@@ -1,0 +1,15 @@
+{
+    "name": "Jerry Escape",
+    "description": "Jerry Escape is very simple yet a very interesting Tom and Jerry game. As always Jerry is troubling Tom so Tom has decided to catch Jerry and teach him a lesson but you have to help little Jerry to successfully escape from Tom to save his life. While running away from Tom try to collect as much cheese as you can to get a high score and collect other items which are useful as well. Hurt Tom by throwing every obstacle at him while running away from him, you have only 6 lives in the game, if you are trapped by any obstacle you will lose 1 life.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "The Deep Castle",
+    "description": "Deep castle you progress to the right killing all the monsters in your path, defeat 5 bosses and you win.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

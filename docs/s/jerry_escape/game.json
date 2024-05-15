@@ -1,0 +1,16 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "lock": "x",
+                "mode": "fixed",
+                "threshold": 0.3
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "s": "ArrowDown"
+            }
+        }
+    ]
+}
