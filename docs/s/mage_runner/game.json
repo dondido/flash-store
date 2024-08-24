@@ -1,0 +1,15 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "button",
+            "label": "C",
+            "mappings": [{ "code": "ControlLeft" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    ]
+}

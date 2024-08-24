@@ -1,0 +1,15 @@
+{
+    "name": "Run Red Run",
+    "description": "Help the little red riding hood escape from the wolf. How far will you get?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

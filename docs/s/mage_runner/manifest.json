@@ -1,0 +1,15 @@
+{
+    "name": "Mage Runner",
+    "description": "This game is about the little magician who seeks to become big. And strives for it in spite of the terrible difficulties awaiting him – sinister stones will block his path, burning lava, bottomless abysses, even the earth under their feet is insecure. Help him to overcome all these obstacles and get what he wants.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
