@@ -16,6 +16,7 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
+var app_url = "https://dondido.github.io/flash-store/"
 var market_url = "market://details?id=io.dondido.flashgameemulator"
 var website_url = "https://play.google.com/store/apps/details?id=io.dondido.flashgameemulator"
 
@@ -65,10 +66,11 @@ class MainActivity : ComponentActivity() {
 
         val webSettings: WebSettings = webView.getSettings()
         webSettings.javaScriptEnabled = true
-        webView.loadUrl("https://dondido.github.io/flash-store/")
+        webView.loadUrl(app_url)
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
-                if (request.url.toString().equals(website_url)) {
+                val requestUrl = request.url.toString()
+                if (requestUrl.equals(website_url)) {
                     try {
                         val intent = Intent()
                         intent.action = Intent.ACTION_VIEW
@@ -78,7 +80,10 @@ class MainActivity : ComponentActivity() {
                     } catch (e: ActivityNotFoundException) {
                     }
                 }
-                return false
+                if (requestUrl.startsWith(app_url)) {
+                    return false
+                }
+                return true
             }
         }
 

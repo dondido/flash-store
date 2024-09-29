@@ -1,0 +1,42 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "threshold": 0.3
+            },
+            "mappings": {
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
+            }
+        },
+        {
+            "type": "button",
+            "label": "B",
+            "mappings": [{ "key": "b", "code": "KeyB" }]
+        },
+        {
+            "type": "button",
+            "label": "N",
+            "mappings": [{ "key": "n", "code": "KeyN" }]
+        },
+        {
+            "type": "button",
+            "label": "V",
+            "mappings": [{ "key": "v", "code": "KeyV" }]
+        },
+        {
+            "type": "button",
+            "label": "EN",
+            "mappings": [{ "code": "Enter" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": "(blank space)", "code": "Space" }]
+        }
+    ]
+}

@@ -11,20 +11,29 @@ fs.readdir(directoryPath, (err, folders) => {
     //handling error
     if (err) {
         return console.log('Unable to scan directory: ' + err);
-    } 
-    //listing all folders using forEach
-    const games = folders.map((folder) => {
-        // Do whatever you want to do with the file
-        console.log(folder);
+    }
+    const games = folders.reduce((games, game) => {
+        const path = `${directoryPath}/${game}/`;
+        const intrinsic = require(`${path}intrinsic.json`);
+        return { ...games, [game]: intrinsic };
+    }, {});
+    
+    const sortByReleaseDate = (a, b) => games[b].released - games[a].released;
+    const sortByPublishDate = (a, b) => games[b].published - games[a].published;
+    const gamesByPublishDate = folders.toSorted(sortByPublishDate);
+    const getGameIndex = game => gamesByPublishDate.indexOf(game);
+    const gamesByReleaseDate = gamesByPublishDate.toSorted(sortByReleaseDate).map(getGameIndex);
+    const gameList = gamesByPublishDate.map((folder) => {
         const { name } = require(`${directoryPath}/${folder}/manifest.json`);
         return `
-            <li class="game">
-                <a class="game-link" href="./s/${folder}/">
+            <li>
+                <a href="./s/${folder}/">
                     <video poster="spinner.svg"></video>
-                    <h2 class="game-title">${name}</h2>
+                    <h2>${name}</h2>
                 </a>
             </li>
         `;
     }).join('').replace(/>\s+</g,'><');
-    saveString({ games }, 'index.html');
+    saveString({ games: gameList }, 'index.html');
+    fs.writeFileSync(`${path.join(__dirname, '../docs')}/release-order.csv`, gamesByReleaseDate.toString());
 });

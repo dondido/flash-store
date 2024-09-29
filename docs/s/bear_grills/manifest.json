@@ -1,0 +1,15 @@
+{
+    "name": "Bear Grills",
+    "description": "Get your bear launched &amp; grabbing pickups. Earn money for upgrades to get farther.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

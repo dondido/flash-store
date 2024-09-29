@@ -23,7 +23,7 @@
             "label": "Z",
             "mappings": [{ "key": "z", "code": "KeyZ" }]
         },
-	{
+	    {
             "type": "button",
             "label": "D",
             "mappings": [{ "key": "d", "code": "KeyD" }]

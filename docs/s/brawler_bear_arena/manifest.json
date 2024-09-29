@@ -1,0 +1,15 @@
+{
+    "name": "Brawler Bear Arena",
+    "description": "A bear themed beat em up game is finally here for all of you bear brawler fans! Show off your brawler skills in this arena fighting game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

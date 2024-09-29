@@ -29,10 +29,11 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             const $embed = new JSDOM(
                 dom.window.document.querySelector('.item-container').getAttribute('data-async-content')
             ).window.document.querySelector('embed');
+            const addedOn = [...dom.window.document.querySelectorAll('.game-info__item')].at(-1).textContent.trim();
             const locals = {
+                addedOn,
                 title: title || dom.window.document.querySelector('h1').textContent,
                 description: description || dom.window.document.querySelector('h2').textContent,
-                addedOn: [...dom.window.document.querySelectorAll('.game-info__item')].at(-1).textContent.trim(),
                 w: $embed.width,
                 h: $embed.height,
             };
@@ -48,6 +49,7 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             }
             saveString(locals, 'index.html', path);
             saveString({ ...locals, folder }, 'manifest.json', path);
+            fs.writeFileSync(`${path}/intrinsic.json`, JSON.stringify({ published: Date.now(), released: + new Date(addedOn) }));
         });
 };
 const scrape = (url) => {

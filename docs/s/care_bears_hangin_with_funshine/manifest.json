@@ -1,0 +1,15 @@
+{
+    "name": "Care Bears: Hangin with Funshine",
+    "description": "Funshine is giving Wonderheart a lift in his glider so she can catch all the stars flying by.  They sure could use your help to collect as many stars as possible.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

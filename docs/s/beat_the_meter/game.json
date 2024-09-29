@@ -1,0 +1,13 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft",
+                "n": "ArrowUp",
+		"s": "ArrowDown"
+            }
+        }
+    ]
+}

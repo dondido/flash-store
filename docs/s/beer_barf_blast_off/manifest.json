@@ -1,0 +1,15 @@
+{
+    "name": "Beer Barf Blast Off",
+    "description": "Barf and move your way to the exit.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
