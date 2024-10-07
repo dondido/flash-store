@@ -1,0 +1,25 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed",
+                "lock": "y"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "U",
+            "mappings": [{ "code": "ArrowUp" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    ]
+}

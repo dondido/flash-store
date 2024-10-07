@@ -1,0 +1,15 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "button",
+            "label": "E",
+            "mappings": [{ "key": "e", "code": "KeyE" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    ]
+}

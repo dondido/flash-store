@@ -26,9 +26,12 @@
     <main>
         <input type="search" id="search" class="input-search" name="search" placeholder="Search games" />
         <fieldset class="sort-by">
-            <label><input type="radio" name="sort" value="published" checked />Published</label>
-            <label><input type="radio" name="sort" value="released" />Released</label>
+            <label><input type="radio" name="sort" value="views" checked />Views</label>
+            <label><input type="radio" name="sort" value="rating" />Rating</label>
+            <label><input type="radio" name="sort" value="publish" />Published</label>
+            <label><input type="radio" name="sort" value="release" />Released</label>
             <label><input type="radio" name="sort" value="az" />A-Z</label>
+            <button title="Ascending"></button>
         </fieldset>
         <ul class="gallery">
             ${games}

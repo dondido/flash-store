@@ -1,0 +1,15 @@
+{
+    "name": "Super Robocade",
+    "description": "Do you have some needs to play some arcady retro platformer? Super Robocade is the game for you! The very goal of this game is to survive the endless onslaught of ever-evolving robots! In order to keep up with them, you need to eliminate the automatons and then salvage their parts so that you get stronger and acquire more power.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Zombie Run in the Big City",
+    "description": "Zombie Run in the big city is a action packed, run and jump game inspired by canabalt.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

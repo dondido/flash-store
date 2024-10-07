@@ -1,0 +1,15 @@
+{
+    "name": "Kill Your Way Up The Food Chain",
+    "description": "Are you sick and tired of seeing tourists everywhere? Play as the crazy monkey who's gone bananas and help him decapitate everything in sight! Whether its in Asia, Canada or the USA, witness the rise of the apes!Complete objectives and buy new attacks to make it even more gory!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

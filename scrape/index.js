@@ -22,8 +22,8 @@ const saveString = (locals, file, path) => es6Renderer(
 );
 const requestResources = ({ title, description, game, video, poster, folder, path, aspectRatio }) => {
     axios
-        .get(url, { headers })
-        .then((response) => {
+        .get(url || `https://y8.com/games/${folder}`, { headers })
+        .then(async (response) => {
             const dom = new JSDOM(response.data);
             const $video = dom.window.document.querySelector('video');
             const $embed = new JSDOM(
@@ -38,7 +38,9 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
                 h: $embed.height,
             };
             if (!game) {
-                saveStream($embed.src, 'game.swf', path);
+                await new Promise(
+                    resolve => saveStream($embed.src, 'game.swf', path).then(stream => stream.on('finish', resolve))
+                );
             }
             if (!video) {
                 saveStream(`https://img.y8.com${$video.querySelector('source').src}`, 'video.mp4', path);
@@ -47,13 +49,24 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
                 saveStream($video.poster, 'poster.jpg', path)
                     .then(stream => saveIcon(stream, path));
             }
+            const tags = [...dom.window.document.querySelectorAll('.tag-item')].map(({title} = {}) => title);
+            const rating = dom.window.document.querySelector('.rating')?.textContent.trim();
+            const views = dom.window.document.querySelector('.sub-infos span span')?.textContent.match(/\d/g).join('');
             saveString(locals, 'index.html', path);
             saveString({ ...locals, folder }, 'manifest.json', path);
-            fs.writeFileSync(`${path}/intrinsic.json`, JSON.stringify({ published: Date.now(), released: + new Date(addedOn) }));
+            const published = fs.statSync(`${path}/game.swf`).mtimeMs;
+            const intrinsicJson = JSON.stringify({
+                published,
+                tags,
+                rating,
+                views,
+                released: + new Date(addedOn || published),
+            })
+            fs.writeFileSync(`${path}/intrinsic.json`, intrinsicJson);
         });
 };
-const scrape = (url) => {
-    const folder = url.split('/').pop();
+const scrape = (target) => {
+    const folder = target.split('/').pop();
     const path = `../docs/s/${folder}`;
     if (fs.existsSync(path)) {
         let title;
@@ -66,7 +79,7 @@ const scrape = (url) => {
             title = manifest.name;
             description = manifest.description;
         }
-        if (title && description && game && video && poster && !force) {
+        if (title && description && game && video && poster && url && fs.existsSync(`${path}/intrinsic.json`) && !force) {
             saveString({ title, description }, 'index.html', path);
         }
         else {

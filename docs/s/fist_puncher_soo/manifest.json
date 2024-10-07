@@ -1,0 +1,15 @@
+{
+    "name": "Fist Puncher: SoO",
+    "description": "Fist Puncher: Streets of Outrage is a beatemup set within the world of “Fist Puncher” available on Steam.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

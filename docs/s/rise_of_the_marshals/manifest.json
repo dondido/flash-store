@@ -1,8 +1,8 @@
 {
     "name": "Rise of the Marshals",
     "description": "An amazing action game with some RPG elements and player choice that has a big impact on gameplay and story progression.",
-    "start_url": "/flash-store/s/rise_of_the_marshals/",
-    "scope": "/flash-store/s/rise_of_the_marshals/",
+    "start_url": "./",
+    "scope": ".",
     "lang": "en-US",
     "icons": [
         {

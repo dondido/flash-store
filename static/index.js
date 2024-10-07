@@ -20,10 +20,17 @@ fs.readdir(directoryPath, (err, folders) => {
     
     const sortByReleaseDate = (a, b) => games[b].released - games[a].released;
     const sortByPublishDate = (a, b) => games[b].published - games[a].published;
-    const gamesByPublishDate = folders.toSorted(sortByPublishDate);
-    const getGameIndex = game => gamesByPublishDate.indexOf(game);
-    const gamesByReleaseDate = gamesByPublishDate.toSorted(sortByReleaseDate).map(getGameIndex);
-    const gameList = gamesByPublishDate.map((folder) => {
+    const sortByViews = (a, b) => games[b].views - games[a].views;
+    const sortByRating = (a, b) => games[b].rating - games[a].rating;
+    const gamesByViews = folders.toSorted(sortByViews);
+    
+    const getGameIndex = game => gamesByViews.indexOf(game);
+    const gamesByRating = gamesByViews.toSorted(sortByRating).map(getGameIndex);
+    const gamesByPublishDate = gamesByViews.toSorted(sortByPublishDate).map(getGameIndex);
+    const gamesByReleaseDate = gamesByViews.toSorted(sortByReleaseDate).map(getGameIndex);
+    // console.log(gamesByViews.map(name => `${name} - ${games[name].views}`));
+    console.log(gamesByRating.map(idx => `${gamesByViews[idx]} - ${games[gamesByViews[idx]].rating}`))
+    const gameList = gamesByViews.map((folder) => {
         const { name } = require(`${directoryPath}/${folder}/manifest.json`);
         return `
             <li>
@@ -35,5 +42,8 @@ fs.readdir(directoryPath, (err, folders) => {
         `;
     }).join('').replace(/>\s+</g,'><');
     saveString({ games: gameList }, 'index.html');
+    fs.writeFileSync(`${path.join(__dirname, '../docs')}/alphabetical-order.csv`, gamesByRating.toString());
+    fs.writeFileSync(`${path.join(__dirname, '../docs')}/rating-order.csv`, gamesByRating.toString());
     fs.writeFileSync(`${path.join(__dirname, '../docs')}/release-order.csv`, gamesByReleaseDate.toString());
+    fs.writeFileSync(`${path.join(__dirname, '../docs')}/publish-order.csv`, gamesByPublishDate.toString());
 });

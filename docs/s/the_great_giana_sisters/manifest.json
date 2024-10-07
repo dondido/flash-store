@@ -1,0 +1,15 @@
+{
+    "name": "The Great Giana Sisters",
+    "description": "Retroflash The Great Giana Sisters was released on the commodore 64, Amiga, Amstrad CPC, Atari ST and MSX2 but was pulled off the shelves allegedly due to Nintendo putting pressure on the publisher to pull the game off shelves because of its similarities to Nintendo's Super Mario Brothers. This led to the game becoming rare and a valuable collectors item.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

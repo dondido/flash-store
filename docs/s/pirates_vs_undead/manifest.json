@@ -1,0 +1,15 @@
+{
+    "name": "Pirates vs Undead",
+    "description": "Pirates found a treasure map! Dangerous, scary island inhabited by strange creatures – Frankenstein, skeleton, a grandmother with a hatchet, a malicious clown, and many others! Break through hordes of undead to find the treasure!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

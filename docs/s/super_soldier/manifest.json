@@ -1,0 +1,15 @@
+{
+    "name": "Super Soldier",
+    "description": "You're the Super Soldier. Fight for peace.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

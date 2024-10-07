@@ -5,5 +5,10 @@ fs.readdir('../docs/s/', (err, folders) => {
     if (err) {
         return console.log('Unable to scan directory: ' + err);
     }
-    folders.forEach(scrape);
+    for(let i = 0; i < folders.length; i++){
+        setTimeout(() => {
+            scrape(folders[i]);
+            console.log(i, folders[i]);
+        }, i * 200)
+    }
 });
