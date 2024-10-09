@@ -57,7 +57,6 @@ body:before {
 #play:target .playground {
     cursor: auto;
     border: 0;
-    pointer-events: none;
     max-width: 100%;
     max-height: 100%;
     display: flex;

@@ -1,0 +1,15 @@
+{
+    "name": "Bunny Kill 5.1",
+    "description": "Survive as you kick and chop of bunny heads. New weapons magically appear in your bunny hands.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
