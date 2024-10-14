@@ -44,30 +44,6 @@ body:before {
     background-image: url('a.jpg');
     background: linear-gradient(to bottom, #ff4f8b, #dff1ff);  */
 }
-.color {
-    position: fixed;
-    filter: blur(150px);
-}
-.color:nth-child(1) {
-    background: #ff359b;
-    width: 600px;
-    height: 600px;
-    top: -350px;
-}
-.color:nth-child(2) {
-    background: #00d2ff;
-    width: 500px;
-    height: 500px;
-    bottom: -150px;
-    left: 100px;
-}
-.color:nth-child(3) {
-    background: #fffd87;
-    width: 300px;
-    height: 300px;
-    bottom: 50px;
-    right: 0px;
-}
 main {
     display: flex;
     justify-content: center;
@@ -102,17 +78,9 @@ main {
         display: block;
         text-decoration: none;
         background-color: whitesmoke;
+        height: 100%;
         content-visibility: auto;
         box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
-        &:before {
-            content: "";
-            backdrop-filter: blur(2px);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: -1;
-            display: block;
-        }
     }
 }
 video {
@@ -130,72 +98,82 @@ main .input-search {
     box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
     outline: gray;
 }
-fieldset {
+.sort-by {
     padding: 6px 12px;
+    list-style: none;
     border-radius: 20px;
-    gap: 40px;
     margin: 10px auto;
-    border: 0;
     box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
     display: flex;
-    align-items: center;
     gap: 14px;
-    position: relative;
-}
-input[type="radio"] {
-    appearance: none;
-    opacity: 1;
-    cursor: pointer;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    margin: -6px 0 0 -12px;
-}
-label {
-    padding: 6px 12px;
-    font-size: 14px;
-    color: #222;
-    border: 1px solid #bbb;
-    border-radius: 20px;
-    position: relative;
-}
-label:has(input:checked) {
-    cursor: default;
-    box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
-}
-.gallery:nth-child(1) {
-    opacity: 1;
-}
-[title=Ascending],
-[title=Descending] {
-    position: relative;
-    background: center / 50% no-repeat url(../icons/south.svg) transparent;
-    width: 27px;
-    height: 27px;
-    border: 1px solid #bbb;
-    border-radius: 20px;
-    margin-left: 16px;
-    cursor: pointer;
-    &:after {
-        content: "";
-        position: absolute;
-        height: 20px;
-        width: 1px;
+    width: min-content;
+    a {
         display: block;
-        background-color: #bbb;
-        top: 2px;
-        left: -13px;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #222;
+        border: 1px solid #bbb;
+        border-radius: 20px;
+        position: relative;
+        text-decoration: none;
+    }
+    .current {
+        cursor: default;
+        box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
     }
 }
-[title=Descending] {
-    scale: 1 -1;
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    flex-wrap: wrap;
+    li {
+        &:empty:after {
+            content: '...';
+            line-height: 2.4;
+        }
+        a {
+            display: flex;
+            font-size: 14px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #222;
+            box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
+            &[aria-current] {
+                cursor: default;
+                box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
+            }
+        }
+    } 
 }
-@media (width < 520px) {
-    fieldset {
-        min-width: 244px;
-        width: min-content;
-        justify-content: center;
-        flex-wrap: wrap;
+@view-transition {
+    navigation: auto;
+}
+::view-transition-old(root) {
+    animation: 0.4s ease-in both fade-out;
+}
+::view-transition-new(root) {
+    animation: 0.4s ease-in both fade-in;
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

@@ -351,3 +351,31 @@ body:not(:target) main {
 .button-rate:before {
     content: "\e87d";
 }
+#play {
+    background-image: url(./poster.jpg)
+}
+@view-transition {
+    navigation: auto;
+}
+::view-transition-old(root) {
+    animation: 0.4s ease-in both fade-out;
+}
+::view-transition-new(root) {
+    animation: 0.4s ease-in both fade-in;
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
