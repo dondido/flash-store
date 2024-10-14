@@ -9,17 +9,17 @@ fs.readdir(directoryPath, (err, folders) => {
     folders.forEach((folder) => {
         const path = `${directoryPath}/${folder}/`;
         const intrinsicPath = `${path}intrinsic.json`;
-        const published = fs.statSync(`${path}game.swf`).mtimeMs;
-        const getReleaseDate = () => {
+        const date = fs.statSync(`${path}game.swf`).mtimeMs;
+        const getPublishDate = () => {
             const html = fs.readFileSync(`${path}index.html`, 'utf8');
             const addedOn = html.match(/\d{2}\s{1}\w{3}\s{1}20\d{2}/)?.[0] || '01 Jan 2001';
             return + new Date(addedOn);
         };
-        const { tags, views, rating, released = getReleaseDate() } = require(intrinsicPath);
+        const { tags, views, rating, published = getPublishDate() } = require(intrinsicPath);
         /*const isIntrinsicCreated = fs.existsSync(intrinsicPath);
         if (isIntrinsicCreated) {
             return;
         } */
-        fs.writeFileSync(intrinsicPath, JSON.stringify({ published, tags, views, rating, released }));
+        fs.writeFileSync(intrinsicPath, JSON.stringify({ date, tags, views, rating, published }));
     });
 });
