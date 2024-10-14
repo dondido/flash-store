@@ -1,7 +1,14 @@
 let activeVideo = null;
-let gameTitles = '';
-let searchTimer;
+const order = {};
 let $gallery = document.querySelector('.gallery');
+let $games = Array.from($gallery.querySelectorAll('li'), $game => {
+    $game.dataset.title = $game.firstElementChild.lastElementChild.textContent.toLocaleLowerCase();
+    return $game;
+});
+const $ascendingButton = document.querySelector('[title=Ascending]')
+const gameTitles = Array.from($gallery.querySelectorAll('h2'))
+    .map(({ textContent }) => textContent.toLocaleLowerCase());
+const up = ({ target }) => target.load();
 const disablePreview = () => {
     activeVideo?.load();
     activeVideo = null;
@@ -27,50 +34,49 @@ const move = ({ target }) => {
 const lazyVideoObserver = new IntersectionObserver((entries) => {
     entries.forEach(({ target, isIntersecting }) => {
         if (isIntersecting) {
-            const { href } = target;
-            const video = document.createElement('video');
-            video.disableremoteplayback = true;
-            video.loop = true;
-            video.poster = `${href}poster.jpg`;
-            video.muted = true;
-            video.src = `${href}video.mp4`;
-            target.prepend(video);
+            const { href } = target.parentElement;
+            target.disableremoteplayback = true;
+            target.loop = true;
+            target.poster = `${href}poster.jpg`;
+            target.muted = true;
+            target.src = `${href}video.mp4`;
             lazyVideoObserver.unobserve(target);
         }
     });
 });
 const applyObserver = lazyVideo => lazyVideoObserver.observe(lazyVideo);
-const attachObserver = () => $gallery.querySelectorAll('a').forEach(applyObserver);
-const matchGameOrdering = $a => location.pathname.startsWith($a.getAttribute('href').slice(1));
-const $currentTab = location.pathname === '/'
-    ? document.querySelector('.sort-by a')
-    : Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering);
-const cap = str => `${str[0].toUpperCase()}${str.slice(1)}`;
-const formatTitle = (title = '') => {
-    const exludeWords = ['of', 'the', 'vs', 'in'];
-    return cap(title.split('_').join(' ').replace(/\b\w+\b/g, m => exludeWords.includes(m) ? m : cap(m)));
+const attachObserver = () => $gallery.querySelectorAll('video').forEach(applyObserver);
+const sortGames = (games) => {
+    const $ul = document.createElement('ul');
+    $ul.className = 'gallery';
+    ($ascendingButton.title === 'Descending' ? games.toReversed() : games)
+        .forEach(game => $ul.appendChild($games.find($game => $game.dataset.title === game).cloneNode(true)));
+    $gallery.replaceWith($ul);
+    $gallery = $ul;
+    $games = Array.from($gallery.querySelectorAll('li'));
+    attachObserver();
 };
-const searchGames = ({ target: { value } }) => {
-    const term = value.toLocaleLowerCase().split(' ').join('_');
-    clearTimeout(searchTimer); 
-    searchTimer = setTimeout(() => {
-        $gallery.innerHTML = gameTitles
-            .filter(gameTitle => gameTitle.includes(term))
-            .map(game => `<li><a href="/s/${game}/"><h2>${formatTitle(game)}</h2></a></li>`)
-            .join('');
-        attachObserver();
-    }, 300);
-};
-const fetchgameTitles = async () => {
-    window.search.onfocus = null;
-    const response = await fetch(`${$currentTab.href}/search.csv`);
-    const csv = await response.text();
-    gameTitles = csv.split(' ');
-    window.search.oninput = searchGames;
+const matchByGameTitle = index => gameTitles[index];
+const sortOnClick = async ({ target: { value } }) => {
+    order[value] ||= (await (await fetch(`./${value}-order.csv`)).text()).split(',').map(matchByGameTitle);
+    sortGames(order[value]);
 };
 document.addEventListener('pointermove', move);
 document.addEventListener('DOMContentLoaded', attachObserver);
-window.search.placeholder = `Search ${$gallery.dataset.count} games`;
-window.search.onfocus = fetchgameTitles;
-$currentTab.className = 'current';
-document.querySelector('.gallery a').styles.viewTransitionName = 'my';
+window.search.placeholder = `Search ${gameTitles.length} games`
+window.search.oninput = ({ target: { value } }) => {
+    const term = value.toLowerCase();
+    $games.forEach(($game) => {
+        $game.hidden = $game.dataset.title.includes(term) === false;
+    });
+};
+document.querySelector('label:has([value=az])').onclick = () => sortGames(gameTitles.toSorted());
+document.querySelector('label:has([value=views])').onclick = () => sortGames(gameTitles);
+document.querySelector('label:has([value=rating])').onclick = sortOnClick;
+document.querySelector('label:has([value=publish])').onclick = sortOnClick;
+document.querySelector('label:has([value=release])').onclick = sortOnClick;
+$ascendingButton.onclick = (event) => {
+    const games = $games.map(({ dataset }) => dataset.title);
+    event.currentTarget.title = event.currentTarget.title === 'Ascending' ? 'Descending' : 'Ascending';
+    sortGames(event.currentTarget.title === 'Ascending' ? games.reverse() : games);
+}

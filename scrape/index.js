@@ -54,13 +54,13 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             const views = dom.window.document.querySelector('.sub-infos span span')?.textContent.match(/\d/g).join('');
             saveString(locals, 'index.html', path);
             saveString({ ...locals, folder }, 'manifest.json', path);
-            const date = fs.statSync(`${path}/game.swf`).mtimeMs;
+            const published = fs.statSync(`${path}/game.swf`).mtimeMs;
             const intrinsicJson = JSON.stringify({
-                date,
+                published,
                 tags,
                 rating,
                 views,
-                published: + new Date(addedOn || date),
+                released: + new Date(addedOn || published),
             })
             fs.writeFileSync(`${path}/intrinsic.json`, intrinsicJson);
         });
