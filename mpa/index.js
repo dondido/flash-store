@@ -27,7 +27,7 @@ const makePagination = (currentPage, lastPage, path, onSides = 1) => {
             const ariaCurrent = i === currentPage ? ' aria-current="true"' : '';
             $pages += `
                 <li>
-                    <a href=".${'${path}'}/${path}/${i}" ${ariaCurrent}>${i}</a>
+                    <a href="./${path}/${i}" ${ariaCurrent}>${i}</a>
                 </li>
             `;
         } else if (i === currentPage - (offset + 1) || i === currentPage + (offset + 1)) {
@@ -45,7 +45,7 @@ const makePagination = (currentPage, lastPage, path, onSides = 1) => {
 const makeGallery = (games, gameCount) => {
     const $games =  games.map((game) => {
         const { name } = require(`${directoryPath}/${game}/manifest.json`);
-        return `<li><a href=".${'${path}'}/s/${game}/"><h2>${name}</h2></a></li>`;
+        return `<li><a href="./s/${game}/"><h2>${name}</h2></a></li>`;
     }).join('');
     return `<ul class="gallery" data-count=${gameCount}>${$games}</ul>`;
 };
