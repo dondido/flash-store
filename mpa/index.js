@@ -63,10 +63,10 @@ const makePages = (games, order) => {
             ${makeGallery(games.slice(start, end), gameCount)}
             ${makePagination(count, lastPage, order)}
         `;
-        const path = './..'
+        const path = '/../..'
         savePage(content, pageFolder, path);
     }
-    savePage(content, folder, '.');
+    savePage(content, folder, '/..');
     fs.writeFileSync(`${folder}search.csv`, games.join(' '));
     return content;
 };
