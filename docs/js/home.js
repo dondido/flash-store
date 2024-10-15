@@ -41,7 +41,8 @@ const lazyVideoObserver = new IntersectionObserver((entries) => {
 });
 const applyObserver = lazyVideo => lazyVideoObserver.observe(lazyVideo);
 const attachObserver = () => $gallery.querySelectorAll('a').forEach(applyObserver);
-const matchGameOrdering = $a => location.pathname.startsWith($a.getAttribute('href').slice(1));
+const matchGameOrdering = $a => location.pathname.slice(1)
+    .startsWith($a.getAttribute('href').replace(/\.|\//g, ''));
 const $currentTab = location.pathname === '/'
     ? document.querySelector('.sort-by a')
     : Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering);
