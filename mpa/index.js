@@ -7,11 +7,12 @@ const BUILD_PATH = path.join(__dirname, '../docs/');
 const directoryPath = path.join(__dirname, '../docs/s');
 const $template = fs.readFileSync('./templates/index.html', 'utf8');
 
-const savePage = (content, folder, path) => {
+let pageCount = 0;
+
+const savePage = (content, folder) => {
     const html = $template.replace('${games}', content)
-        .replace(/>\s+</g,'><')
-        .replaceAll('${path}', path);
-    console.log(1111, `${folder}index.html`)
+        .replace(/>\s+</g,'><');
+    console.log(`Page ${++ pageCount}: ${folder}index.html`)
     folder !== BUILD_PATH && fs.mkdirSync(folder, { recursive: true });
     fs.writeFileSync(`${folder}index.html`, html);
 };
@@ -27,7 +28,7 @@ const makePagination = (currentPage, lastPage, path, onSides = 1) => {
             const ariaCurrent = i === currentPage ? ' aria-current="true"' : '';
             $pages += `
                 <li>
-                    <a href="./${path}/${i}" ${ariaCurrent}>${i}</a>
+                    <a href="./${path}/${i}/" ${ariaCurrent}>${i}</a>
                 </li>
             `;
         } else if (i === currentPage - (offset + 1) || i === currentPage + (offset + 1)) {

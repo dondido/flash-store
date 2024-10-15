@@ -55,10 +55,9 @@ const searchGames = ({ target: { value } }) => {
     const term = value.toLocaleLowerCase().split(' ').join('_');
     clearTimeout(searchTimer); 
     searchTimer = setTimeout(() => {
-        const path = location.pathname.startsWith('/flash-store/') ? '/flash-store' : '';
         $gallery.innerHTML = gameTitles
             .filter(gameTitle => gameTitle.includes(term))
-            .map(game => `<li><a href="${path}/s/${game}/"><h2>${formatTitle(game)}</h2></a></li>`)
+            .map(game => `<li><a href="./s/${game}/"><h2>${formatTitle(game)}</h2></a></li>`)
             .join('');
         attachObserver();
     }, 300);
