@@ -43,9 +43,7 @@ const applyObserver = lazyVideo => lazyVideoObserver.observe(lazyVideo);
 const attachObserver = () => $gallery.querySelectorAll('a').forEach(applyObserver);
 const matchGameOrdering = $a => location.pathname.slice(1).replace('flash-store/', '')
     .startsWith($a.getAttribute('href').replace(/\.|\//g, ''));
-const $currentTab = location.pathname === '/'
-    ? document.querySelector('.sort-by a')
-    : Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering);
+const $currentTab = Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering) || document.querySelector('.sort-by a');
 const cap = str => `${str[0].toUpperCase()}${str.slice(1)}`;
 const formatTitle = (title = '') => {
     const exludeWords = ['of', 'the', 'vs', 'in'];
