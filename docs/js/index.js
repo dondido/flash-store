@@ -24,6 +24,25 @@ const handleHashChange = () => {
     if (location.hash === '#play') {
         $playground.prepend(player);
         player.load(gamePath);
+        // Create a new "constructed" stylesheet in light DOM space
+    const sheet = new CSSStyleSheet();
+    sheet.replaceSync(`
+        canvas {
+            position: relative;
+        }
+        #container:before {
+           content: ""; 
+           position: fixed;
+           width: 100vw;
+           height: 100vh;
+           left: 0;
+           top: 0;
+        }
+    `);
+    player.shadowRoot.adoptedStyleSheets.push(sheet);
+    // The CSS rules
+        //player.shadowRoot.querySelector('div')
+        //    .insertAdjacentHTML('afterBegin', '<div style="position: fixed; width: 100vw; height: 100vh; left: 0; top: 0; z-index: -1;"></div>')
     }
     else {
         player.remove();
