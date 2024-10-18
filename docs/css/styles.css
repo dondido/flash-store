@@ -107,18 +107,39 @@ ruffle-player {
         scale: var(--s, 1);
     }
 }
-.button-install:before,
-.button-rate:before,
-.button-play:before {
-    font-family: 'Material Symbols Outlined';
-    content: "\e037";
-    font-size: 26px;
-    font-weight: bold;
-    color: black;
-    mix-blend-mode: difference;
-}
-.button-install:before {
-    content: "\f090";
+@media (height < 440px) {
+    .content {
+        grid-area: header;
+        display: inline-flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        h1 {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 370px;
+        }
+        video {
+            margin: 0 40px 0 20px;
+        }
+    }
+    
+    .game-menu { grid-area: menu; }
+    .description {
+        grid-area: main;
+        margin-top: -90px;
+        width: calc(100% - 20px);
+    }
+    .added-on { grid-area: footer; }
+    main {
+        display: grid;
+        grid-template-areas:
+            'header header header header'
+            'menu main main main'
+            'menu footer footer footer';
+        gap: 22px;
+    }
 }
 @media (orientation: portrait) {
     #play:target .playground {
@@ -318,12 +339,20 @@ body:not(:target) main {
     width: 48px;
     height: 48px;
 }
-.button-play:before {
-    font-weight: normal;
-    font-size: 58px;
+.button-play,
+.button-rate,
+.button-install {
+    background-image: url(../icons/download.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
 }
-.button-rate:before {
-    content: "\e87d";
+.button-play {
+    background-image: url(../icons/play.svg);
+    background-size: 42px;
+}
+.button-rate {
+    background-image: url(../icons/rate.svg);
 }
 #play {
     background-image: url(./poster.jpg)
