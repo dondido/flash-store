@@ -24,25 +24,6 @@ const handleHashChange = () => {
     if (location.hash === '#play') {
         $playground.prepend(player);
         player.load(gamePath);
-        // Create a new "constructed" stylesheet in light DOM space
-    const sheet = new CSSStyleSheet();
-    sheet.replaceSync(`
-        canvas {
-            position: relative;
-        }
-        #container:before {
-           content: ""; 
-           position: fixed;
-           width: 100vw;
-           height: 100vh;
-           left: 0;
-           top: 0;
-        }
-    `);
-    player.shadowRoot.adoptedStyleSheets.push(sheet);
-    // The CSS rules
-        //player.shadowRoot.querySelector('div')
-        //    .insertAdjacentHTML('afterBegin', '<div style="position: fixed; width: 100vw; height: 100vh; left: 0; top: 0; z-index: -1;"></div>')
     }
     else {
         player.remove();
@@ -79,6 +60,24 @@ if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matc
         }
     });
 }
+if (scale || controls?.length) {
+    const sheet = new CSSStyleSheet();
+    sheet.replaceSync(`
+        canvas {
+            position: relative;
+        }
+        #container:before {
+            content: "";
+            position: fixed;
+            --rs: calc(1 / var(--s, 1));
+            width: calc(var(--rs) * 100vw);
+            height: calc(var(--rs) * 100vh);
+            left: calc(var(--rs) * -1 * 50vw + 50%);
+            top: 0;
+        }
+    `);
+    player.shadowRoot.adoptedStyleSheets.push(sheet);
+}
 if (scale) {
     const { style } = $playground;
     const w = style.getPropertyValue('--w');
@@ -87,10 +86,7 @@ if (scale) {
     const setScale = () => {
         const { innerWidth, innerHeight } = window;
         const scale = ratio > innerWidth / innerHeight ? innerWidth / w : innerHeight / h;
-        style.setProperty('--vw', innerWidth);
-        style.setProperty('--vh', innerHeight);
         style.setProperty('--s', scale);
-        style.setProperty('--to', innerWidth > w ? 'center' : 'left top');
     }
     window.addEventListener('resize', setScale);
     document.body.classList.add('scale');

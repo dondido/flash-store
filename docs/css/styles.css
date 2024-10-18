@@ -93,23 +93,19 @@ body:before {
 ruffle-player {
     width: 100%;
     height: 100%;
-    /*     --ratio: calc(var(--w) / var(--h));
-    --inline: calc((100% - var(--ratio) * 100vh) / 2);
-    --block: calc((100% - var(--ratio) * 100vw) / 2);
-    clip-path: inset(var(--block) var(--inline) var(--block) var(--inline)); */
-}
-.scale .playground {
-    transform: scale(var(--s));
 }
 #play.scale:target {
     overflow: hidden;
-}
-#play.scale:target .playground {
-    max-width: calc(1px * var(--w));
-    width: calc(1px * var(--w));
-    height: calc(1px * var(--h));
-    max-height: calc(1px * var(--h));
-    transform-origin: var(--to);
+    ruffle-player {
+        --cw: calc(1px * var(--w));
+        --ch: calc(1px * var(--h));
+        min-width: var(--cw);
+        min-height: var(--ch);
+        width: var(--cw);
+        height: var(--ch);
+        transform-origin: center;
+        scale: var(--s, 1);
+    }
 }
 .button-install:before,
 .button-rate:before,
@@ -216,19 +212,6 @@ ruffle-player {
 }
 #play:target .button-pause.active ~ .menu-button:not(.button-toggle-controls) {
     display: block;
-}
-.tag-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.tag-list li {
-    padding-right: 20px;
-}
-.tag-list li:before {
-    content: "#";
-    color: #606060;
 }
 virtual-joystick {
     visibility: hidden;
