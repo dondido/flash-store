@@ -97,32 +97,45 @@ if (controls?.length) {
     document.querySelector('.button-toggle-controls').onclick = ({ currentTarget }) => {
         currentTarget.classList.toggle('hide-gamepad');
     }
-    controls.forEach(async (control) => {
-        const { type } = control;
-        if ('joystick' === type) {
-            const { mappings, dataset = { mode: 'fixed' } } = control;
-            const assignMapping = (direction) => {
-                const code = mappings[direction];
-                return typeof code === 'string' ? { code } : code;
-            };
-            const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
-            const mapKeyup = direction => triggerKeyupEvent(assignMapping(direction));
-            const data = Object.entries(dataset).map(([key, value]) => `data-${key}=${value}`).join(' ');
-            $controls.insertAdjacentHTML('beforeend', `<virtual-joystick ${data}></virtual-joystick>`);
-            const $joystick = $controls.querySelector('virtual-joystick');
-            const handleKeyEvents = () => {
-                $joystick.dataset.release.split('').forEach(mapKeyup);
-                $joystick.dataset.capture.split('').forEach(mapKeydown);
-            };
-            $joystick.addEventListener('joystickdown', handleKeyEvents);
-            $joystick.addEventListener('joystickmove', handleKeyEvents);
-            $joystick.addEventListener('joystickup', handleKeyEvents);
-        }
-        if ('button' === type) {
-            const Button = await import('./button.js');
-            Button.default(control, $controls);
-        }
+    const gamepad = Object.groupBy(controls, ({ type }) => type);
+    gamepad.joystick?.forEach((control) => {
+        const { mappings, dataset = { mode: 'fixed' } } = control;
+        const assignMapping = (direction) => {
+            const code = mappings[direction];
+            return typeof code === 'string' ? { code } : code;
+        };
+        const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
+        const mapKeyup = direction => triggerKeyupEvent(assignMapping(direction));
+        const data = Object.entries(dataset).map(([key, value]) => `data-${key}=${value}`).join(' ');
+        $controls.insertAdjacentHTML('beforeend', `<virtual-joystick ${data}></virtual-joystick>`);
+        const $joystick = $controls.querySelector('virtual-joystick');
+        const handleKeyEvents = () => {
+            $joystick.dataset.release.split('').forEach(mapKeyup);
+            $joystick.dataset.capture.split('').forEach(mapKeydown);
+        };
+        $joystick.addEventListener('joystickdown', handleKeyEvents);
+        $joystick.addEventListener('joystickmove', handleKeyEvents);
+        $joystick.addEventListener('joystickup', handleKeyEvents);
     });
+    if (gamepad.button?.length) {
+        const $gamepadButtons = document.createElement('div');
+        $gamepadButtons.className = 'gamepad-buttons';
+        $controls.append($gamepadButtons);
+        gamepad.button.forEach(async (control) => {
+            const Button = await import('./button.js');
+            Button.default(control, $gamepadButtons);
+        });
+    }
+    Promise
+        .allSettled([
+            import(`${pathname}game.css`, { with: { type: 'css' } }),
+            import('../css/gamepad.css', { with: { type: 'css' } }),
+        ])
+        .then(styleSheets => {
+            document.adoptedStyleSheets = styleSheets
+                .map(styleSheet => styleSheet.value?.default)
+                .filter(Boolean);
+        });
 }
 window.addEventListener('beforeinstallprompt', (event) => {
     // Prevent the mini-infobar from appearing on mobile.
@@ -149,4 +162,4 @@ $buttonInstall.addEventListener('click', async () => {
     deferredPrompt = null;
     // Hide the install button.
     $buttonInstall.hidden = true;
-  });
+});

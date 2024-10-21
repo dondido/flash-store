@@ -1,0 +1,15 @@
+{
+    "name": "6Bit Pixel Force",
+    "description": "Friends of Retro Games, this wonderful Megaman-like arcade jump and runner goes out to you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

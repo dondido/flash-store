@@ -80,6 +80,7 @@ const scrape = (target) => {
             description = manifest.description;
         }
         if (title && description && game && video && poster && url && fs.existsSync(`${path}/intrinsic.json`) && !force) {
+            console.log(1111, title);
             saveString({ title, description }, 'index.html', path);
         }
         else {

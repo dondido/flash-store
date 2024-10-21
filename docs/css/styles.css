@@ -168,7 +168,6 @@ ruffle-player {
     line-height: 50px;
 }
 .button {
-    position: absolute;
     pointer-events: none;
     visibility: hidden;
     bottom: 40px;

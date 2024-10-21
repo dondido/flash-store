@@ -1,0 +1,38 @@
+.gamepad-buttons {
+    display: grid;
+    grid-template-areas:
+        'i g e'
+        'h d a'
+        'f c b';
+    gap: 30px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    .button:nth-child(1) {
+        grid-area: a;
+    }
+    .button:nth-child(2) {
+        grid-area: b;
+    }
+    .button:nth-child(3) {
+        grid-area: c;
+    }
+    .button:nth-child(4) {
+        grid-area: d;
+    }
+    .button:nth-child(5) {
+        grid-area: e;
+    }
+    .button:nth-child(6) {
+        grid-area: f;
+    }
+    .button:nth-child(7) {
+        grid-area: g;
+    }
+    .button:nth-child(8) {
+        grid-area: h;
+    }
+    .button:nth-child(9) {
+        grid-area: i;
+    }
+}

@@ -16,8 +16,8 @@ export default ({ mappings, label }, $player) => {
     };
     const start = (event) => {
         const { clientX, clientY } = event;
-        const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = button;
-        if (clientX >= x && clientX <= x + w && clientY >= y && clientY <= y + h) {
+        const { top, right, bottom, left } = button.getBoundingClientRect();
+        if (clientX >= left && clientX <= right && clientY >= top && clientY <= bottom) {
             button.classList.add('focus');
             pointerId = event.pointerId;
             mappings.forEach(triggerKeydownEvent);
