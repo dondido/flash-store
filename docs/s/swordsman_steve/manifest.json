@@ -1,0 +1,15 @@
+{
+    "name": "Swordsman Steve",
+    "description": "Fight other stickmen as you block, and slice with your sword. Watch out for being pushed into spikes",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

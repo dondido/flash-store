@@ -1,0 +1,15 @@
+{
+    "name": "Slime Laboratory",
+    "description": "Slime Laboratory is a physics platform Flash game created by Neutronized studio and released in 2011.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

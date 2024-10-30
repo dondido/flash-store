@@ -1,0 +1,15 @@
+{
+    "name": "Pixel Hop 2.1",
+    "description": "As a square pixel push blocks to trigger buttons. Each the end as you overcome the obstacles.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

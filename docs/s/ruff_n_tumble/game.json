@@ -1,0 +1,23 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        },
+        {
+            "type": "button",
+            "label": "K",
+            "mappings": [{ "key": "k", "code": "KeyK" }]
+        }
+    ]
+}

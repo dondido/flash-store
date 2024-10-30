@@ -1,0 +1,15 @@
+{
+    "name": "TTM There Is Too Many",
+    "description": "Take control of a sword wielding warrior, as she fights off hordes of alien invaders across 3 action packed and intense stages of hack n slash mayhem.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

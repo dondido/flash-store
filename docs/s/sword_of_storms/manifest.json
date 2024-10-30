@@ -1,0 +1,15 @@
+{
+    "name": "Sword of Storms",
+    "description": "When a master swordman got corrupted by the evil inside his magic sword and spreads destruction and pain, only a boy, his lifelong rival, ventures into the Sword Graveyard to look for the only weapon that can confront such terrible power: The Sword of Storms. rn This game combines elements from classic platformers and the metroidvania genre. Expect both permanent powerups to advance trough the maze and temporary ones to give you an advantage against your enemies.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Theropods",
+    "description": "Find and rescue your companion while coming face to face with hungry dinosaurs in a prehistoric jungle.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

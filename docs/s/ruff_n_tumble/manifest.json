@@ -1,0 +1,15 @@
+{
+    "name": "Ruff 'n' Tumble",
+    "description": "Ruff 'n' Tumble flash version will make all fans of Amiga games happy.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
