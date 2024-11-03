@@ -20,7 +20,8 @@ const saveString = (locals, file, path) => es6Renderer(
     { locals },
     (err, content) => fs.writeFileSync(`${path}/${file}`, content)
 );
-const requestResources = ({ title, description, game, video, poster, folder, path, aspectRatio }) => {
+const requestResources = ({ title, description, game, video, poster, folder, path }) => {
+    console.log(1112, url || `https://y8.com/games/${folder}`);
     axios
         .get(url || `https://y8.com/games/${folder}`, { headers })
         .then(async (response) => {
@@ -60,6 +61,8 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
                 tags,
                 rating,
                 views,
+                w: locals.w,
+                h: locals.h,
                 published: + new Date(addedOn || date),
             })
             fs.writeFileSync(`${path}/intrinsic.json`, intrinsicJson);
@@ -79,9 +82,8 @@ const scrape = (target) => {
             title = manifest.name;
             description = manifest.description;
         }
-        if (title && description && game && video && poster && url && fs.existsSync(`${path}/intrinsic.json`) && !force) {
-            console.log(1111, title);
-            saveString({ title, description }, 'index.html', path);
+        if (title && description && game && video && poster && fs.existsSync(`${path}/intrinsic.json`) && !force) {
+            saveString({ title, description, ...require(`${path}/manifest.json`) }, 'index.html', path);
         }
         else {
             requestResources({ title, description, game, video, poster, folder, path });

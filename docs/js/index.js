@@ -14,12 +14,14 @@ const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 const gamePath = `${pathname}/game.swf`;
+const isWebview = /(WebView|Android.*(wv|.0.0.0))/gi.test(navigator.userAgent);
 const exitFullscreen = () => {
     if (document.exitFullscreen && document.fullscreenElement) {
         document.exitFullscreen();
         $buttonFullscreen?.classList.remove('active');
     }
 };
+let deferredPrompt;
 const handleHashChange = () => {
     if (location.hash === '#play') {
         $playground.prepend(player);
@@ -30,7 +32,6 @@ const handleHashChange = () => {
         exitFullscreen();
     }
 };
-let deferredPrompt;
 player.config = {
     autoplay: 'on',
     contextMenu: 'rightClickOnly',
@@ -48,7 +49,7 @@ $buttonMute.addEventListener('click', () => {
     player.volume = + $buttonMute.classList.contains('active');
     $buttonMute.classList.toggle('active');
 });
-if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+if (navigator.standalone || isWebview || window.matchMedia('(display-mode: standalone)').matches) {
     $buttonFullscreen.remove();
 } else {
     $buttonFullscreen.addEventListener('click', () => {
@@ -138,6 +139,9 @@ if (controls?.length) {
         });
 }
 window.addEventListener('beforeinstallprompt', (event) => {
+    if (location.hash === '#install') {
+        return;
+    }
     // Prevent the mini-infobar from appearing on mobile.
     event.preventDefault();
     console.log('👍', 'beforeinstallprompt', event);
@@ -145,17 +149,19 @@ window.addEventListener('beforeinstallprompt', (event) => {
     deferredPrompt = event;
     $buttonInstall.hidden = false;
 });
-$buttonInstall.addEventListener('click', async () => {
-    console.log('👍', 'butInstall-clicked');
-    const promptEvent = deferredPrompt;
-    if (!promptEvent) {
+$buttonInstall.addEventListener('click', async (event) => {
+    if (isWebview) {
+        return;
+    }
+    event.preventDefault();
+    if (!deferredPrompt) {
       // The deferred prompt isn't available.
       return;
     }
     // Show the install prompt.
-    promptEvent.prompt();
+    deferredPrompt.prompt();
     // Log the result
-    const result = await promptEvent.userChoice;
+    const result = await deferredPrompt.userChoice;
     console.log('👍', 'userChoice', result);
     // Reset the deferred prompt variable, since
     // prompt() can only be called once.

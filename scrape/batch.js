@@ -9,6 +9,6 @@ fs.readdir('../docs/s/', (err, folders) => {
         setTimeout(() => {
             scrape(folders[i]);
             console.log(i, folders[i]);
-        }, i * 200)
+        }, i * 300)
     }
 });

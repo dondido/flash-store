@@ -15,6 +15,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.util.Log
 
 var app_url = "https://dondido.github.io/flash-store/"
 var market_url = "market://details?id=io.dondido.flashgameemulator"
@@ -55,6 +56,15 @@ fun Activity.hideSystemUI() {
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
     }
 }
+fun Activity.openBrowserWindow(externalUrl: String) {
+    try {
+        val intent = Intent()
+        intent.action = Intent.ACTION_VIEW
+        intent.data = Uri.parse(externalUrl)
+        startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+    }
+}
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,17 +80,18 @@ class MainActivity : ComponentActivity() {
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                 val requestUrl = request.url.toString()
+                val currentUrl = request.getUrl().toString()
+                val installUrl = currentUrl + "install";
+                Log.d("TAG222", currentUrl)
                 if (requestUrl.equals(website_url)) {
-                    try {
-                        val intent = Intent()
-                        intent.action = Intent.ACTION_VIEW
-                        intent.data = Uri.parse(market_url)
-                        startActivity(intent)
-                        return true
-                    } catch (e: ActivityNotFoundException) {
-                    }
+                    openBrowserWindow(market_url)
+                    return true
                 }
-                if (requestUrl.startsWith(app_url)) {
+                if (requestUrl.equals(installUrl)) {
+                    openBrowserWindow(installUrl.replace("/install", "/#install"))
+                    return true
+                }
+                if (requestUrl.startsWith(requestUrl)) {
                     return false
                 }
                 return true
