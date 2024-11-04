@@ -159,6 +159,9 @@ ruffle-player {
         display: none
     }
 }
+.webview .button-install {
+    display: block;
+}
 .menu-button,
 .button {
     color: #303030;

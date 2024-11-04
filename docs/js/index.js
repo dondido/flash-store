@@ -80,6 +80,9 @@ if (scale || controls?.length) {
     `);
     player.shadowRoot.adoptedStyleSheets.push(sheet);
 }
+if (isWebview) {
+    document.body.classList.add('webview');
+}
 if (scale) {
     const { style } = $playground;
     const w = style.getPropertyValue('--w');
