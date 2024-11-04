@@ -49,6 +49,7 @@ $buttonMute.addEventListener('click', () => {
     player.volume = + $buttonMute.classList.contains('active');
     $buttonMute.classList.toggle('active');
 });
+$buttonInstall.hidden = !isWebview;
 if (navigator.standalone || isWebview || window.matchMedia('(display-mode: standalone)').matches) {
     $buttonFullscreen.remove();
 } else {
