@@ -119,6 +119,8 @@ ruffle-player {
             overflow: hidden;
             text-overflow: ellipsis;
             width: 370px;
+            text-align: left;
+            text-indent: 18px;
         }
         video {
             margin: 0 40px 0 20px;
@@ -247,7 +249,7 @@ main {
     max-width: 640px;
     color: gray;
 }
-main :where(h1, p) {
+main :where(h1, p, a span, .added-on) {
     mix-blend-mode: difference;
 }
 body:not(:target) main {
@@ -308,49 +310,47 @@ body:not(:target) main {
     text-decoration: none;
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: end;
     margin: auto;
     gap: 20px;
 }
 .button-install,
 .button-play,
 .button-rate {
+    &:before {
+        content: "";
+        position: relative;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .2);
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 40px rgba(0, 0, 0, .1);
+        backdrop-filter: blur(12px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -2px -2px 5px rgba(255, 255, 255, 1), 3px 3px 5px rgba(0, 0, 0, .1);
+        background-image: url(../icons/download.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 32px;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 10px;
+    }
     text-decoration: none;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, .2);
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 40px rgba(0, 0, 0, .1);
-    backdrop-filter: blur(12px);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1), 3px 3px 5px rgba(0, 0, 0, .1);
+    color: gray;
 }
-.button-install,
-.button-rate {
-    width: 48px;
-    height: 48px;
-}
-.button-play,
-.button-rate,
-.button-install {
-    background-image: url(../icons/download.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 32px;
-}
-.button-play {
+.button-play:before {
     background-image: url(../icons/play.svg);
     background-size: 42px;
+    width: 80px;
+    height: 80px;
 }
-.button-rate {
+.button-rate:before {
     background-image: url(../icons/rate.svg);
 }
 #play {

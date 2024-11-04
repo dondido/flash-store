@@ -80,15 +80,13 @@ class MainActivity : ComponentActivity() {
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                 val requestUrl = request.url.toString()
-                val currentUrl = request.getUrl().toString()
-                val installUrl = currentUrl + "install";
-                Log.d("TAG222", currentUrl)
                 if (requestUrl.equals(website_url)) {
                     openBrowserWindow(market_url)
                     return true
                 }
-                if (requestUrl.equals(installUrl)) {
-                    openBrowserWindow(installUrl.replace("/install", "/#install"))
+                if (requestUrl.endsWith("/install")) {
+                    val installUrl = requestUrl.replace("/install", "/#install")
+                    openBrowserWindow(installUrl)
                     return true
                 }
                 if (requestUrl.startsWith(requestUrl)) {

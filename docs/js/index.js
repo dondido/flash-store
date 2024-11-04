@@ -14,7 +14,7 @@ const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 const gamePath = `${pathname}/game.swf`;
-const isWebview = /(WebView|Android.*(wv|.0.0.0))/gi.test(navigator.userAgent);
+const isWebview = /(android.*(; wv))/gi.test(navigator.userAgent);
 const exitFullscreen = () => {
     if (document.exitFullscreen && document.fullscreenElement) {
         document.exitFullscreen();

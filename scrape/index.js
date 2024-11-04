@@ -83,7 +83,9 @@ const scrape = (target) => {
             description = manifest.description;
         }
         if (title && description && game && video && poster && fs.existsSync(`${path}/intrinsic.json`) && !force) {
-            saveString({ title, description, ...require(`${path}/manifest.json`) }, 'index.html', path);
+            const locals = require(`${path}/intrinsic.json`);
+            console.log(111, { title, description, ...locals, addedOn: new Date().toDateString(locals.published).slice(4) })
+            saveString({ title, description, ...locals, addedOn: new Date().toDateString(locals.published).slice(4) }, 'index.html', path);
         }
         else {
             requestResources({ title, description, game, video, poster, folder, path });
