@@ -21,7 +21,7 @@ const saveString = (locals, file, path) => es6Renderer(
     (err, content) => fs.writeFileSync(`${path}/${file}`, content)
 );
 const requestResources = ({ title, description, game, video, poster, folder, path }) => {
-    console.log(1112, url || `https://y8.com/games/${folder}`);
+    console.log('Requested: ', url || `https://y8.com/games/${folder}`);
     axios
         .get(url || `https://y8.com/games/${folder}`, { headers })
         .then(async (response) => {

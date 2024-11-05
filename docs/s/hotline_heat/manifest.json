@@ -1,0 +1,15 @@
+{
+    "name": "Hotline Heat",
+    "description": "A short game involving a silent do-er just making a dishonest living in the 80s.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

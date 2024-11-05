@@ -49,7 +49,6 @@ $buttonMute.addEventListener('click', () => {
     player.volume = + $buttonMute.classList.contains('active');
     $buttonMute.classList.toggle('active');
 });
-$buttonInstall.hidden = !isWebview;
 if (navigator.standalone || isWebview || window.matchMedia('(display-mode: standalone)').matches) {
     $buttonFullscreen.remove();
 } else {
@@ -126,10 +125,10 @@ if (controls?.length) {
         const $gamepadButtons = document.createElement('div');
         $gamepadButtons.className = 'gamepad-buttons';
         $controls.append($gamepadButtons);
-        gamepad.button.forEach(async (control) => {
+        for (const control of gamepad.button) {
             const Button = await import('./button.js');
             Button.default(control, $gamepadButtons);
-        });
+        }
     }
     Promise
         .allSettled([
@@ -151,7 +150,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
     console.log('👍', 'beforeinstallprompt', event);
     // Stash the event so it can be triggered later.
     deferredPrompt = event;
-    $buttonInstall.hidden = false;
 });
 $buttonInstall.addEventListener('click', async (event) => {
     if (isWebview) {
@@ -170,6 +168,4 @@ $buttonInstall.addEventListener('click', async (event) => {
     // Reset the deferred prompt variable, since
     // prompt() can only be called once.
     deferredPrompt = null;
-    // Hide the install button.
-    $buttonInstall.hidden = true;
 });

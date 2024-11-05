@@ -1,0 +1,15 @@
+{
+    "name": "Meaty Boner",
+    "description": "This is the tale of one of those servants; an undead trouble maker named Boner. He once rebelled and tried to kill Rektum, not because he had a problem with the guy, no, he just got really freaking bored of being undead for hundreds of years. But alas, he failed in his attempt, and was locked away in a cheap and breakable coffin forever.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

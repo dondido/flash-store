@@ -149,19 +149,20 @@ ruffle-player {
         bottom: auto;
     }
 }
-@media all and (display-mode: fullscreen) {
+/* @media all and (display-mode: fullscreen) {
     .button-install {
         display: none
     }
-}
+} */
 @media all and (display-mode: standalone) {
-    .button-install {
+    .button-install,
+    .button-rate {
         display: none
     }
 }
-.webview .button-install {
+/* .webview .button-install {
     display: block;
-}
+} */
 .menu-button,
 .button {
     color: #303030;
@@ -313,6 +314,7 @@ body:not(:target) main {
     text-decoration: none;
     text-align: center;
     display: flex;
+    justify-content: center;
     align-items: end;
     margin: auto;
     gap: 20px;

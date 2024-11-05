@@ -1,0 +1,15 @@
+{
+    "name": "Seppuku Jisei",
+    "description": "The battle is lost. Your soldiers have fled. As a noble Samurai, you now have only one way to die with honour. Seppuku - ritual suicide by cutting your abdomen. But first, you must compose your death poem, and to do that, you must hold off the enemy troops long enough to write it.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
