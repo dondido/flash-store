@@ -142,9 +142,6 @@ if (controls?.length) {
         });
 }
 window.addEventListener('beforeinstallprompt', (event) => {
-    if (location.hash === '#install') {
-        return;
-    }
     // Prevent the mini-infobar from appearing on mobile.
     event.preventDefault();
     console.log('👍', 'beforeinstallprompt', event);

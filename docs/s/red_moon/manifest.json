@@ -1,0 +1,15 @@
+{
+    "name": "Red Moon",
+    "description": "There's a castle on the hill, but it'll be a long time before you get there. Get serious about your sword training, grasshopper!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

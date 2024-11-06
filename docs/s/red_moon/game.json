@@ -1,0 +1,31 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "Z",
+            "mappings": [{ "key": "Z", "code": "KeyZ" }]
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        },
+        {
+            "type": "button",
+            "label": "EN",
+            "mappings": [{ "code": "Enter" }]
+        }
+    ]
+}

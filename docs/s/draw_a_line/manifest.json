@@ -1,0 +1,15 @@
+{
+    "name": "Draw a Line",
+    "description": "A fun physics based game. The angry ones want to leave, the sad ones want to find their friends, while the happy ones wants to stay. Let's draw a line to help the happy ones stay here!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

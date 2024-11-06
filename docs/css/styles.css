@@ -68,6 +68,7 @@ body:before {
     width: auto;
     border-radius: 0;
 }
+main:has(#install:target) :not(.content, .content *, .game-menu, .game-menu .button-install, .game-menu .button-install *),
 #play:target .button-play,
 #play:target .button-install,
 #play:target .button-rate,
@@ -76,7 +77,6 @@ body:before {
 #play:target .added-on {
     display: none;
 }
-
 #play:target .button-toggle-controls,
 #play:target .button-pause {
     display: block;
@@ -84,6 +84,40 @@ body:before {
 #play:target virtual-joystick,
 #play:target .button {
     visibility: visible;
+}
+body:has(#install:target) {
+    &:before {
+        content: none;
+    }
+    & main {
+        border: none;
+        display: block;
+        & :not(.content, .content *, .game-menu, .button-install, .button-install *) {
+            display: none;
+        }
+        .button-install:after {
+            content: "Tap anywhere to install";
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            padding-top: 18px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                text-indent: 0;
+                text-align: center;
+            }
+            video {
+                margin: 20px 0;
+                width: 180px;
+            }
+        }
+    }
 }
 .playground {
     display: none;
