@@ -392,9 +392,6 @@ body:not(:target) main {
 .button-rate:before {
     background-image: url(../icons/rate.svg);
 }
-#play {
-    background-image: url(./poster.jpg)
-}
 @view-transition {
     navigation: auto;
 }

@@ -1,0 +1,15 @@
+{
+    "name": "King Defender",
+    "description": "The enemy's coming, and there's nowhere for the royal family to hide.Mouse over the borders of the screen to scroll through the landscape. Click and drag building blocks from the toolbar at the bottom of the screen to create a stable castle that will protect the royal family members from the incoming siege. Once your castle is built, click 'Start Siege' to see how it holds up!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

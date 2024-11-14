@@ -1,0 +1,9 @@
+{
+    "controls": [
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "ArrowUp" }, { "code": "ArrowDown" }]
+        }
+    ]
+}

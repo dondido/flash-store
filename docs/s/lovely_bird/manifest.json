@@ -1,0 +1,15 @@
+{
+    "name": "Lovely Bird",
+    "description": "The Lovely Bird is 'flapping' a little late! Help him collect hearts on the way to his Valentine's date! Snatching rainbows will help him go faster and destroy obstacles!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

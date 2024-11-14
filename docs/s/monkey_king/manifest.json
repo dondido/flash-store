@@ -1,0 +1,15 @@
+{
+    "name": "Monkey King",
+    "description": "Train all your three characters, defeat the enemies and their bosses, and solve the riddles of the ancient Chinese fairy tale!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

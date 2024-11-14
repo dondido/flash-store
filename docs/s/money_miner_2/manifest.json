@@ -1,0 +1,15 @@
+{
+    "name": "Money Miner 2",
+    "description": "Use your grapple to grab the money and avoid grappling the rocks. Grab enough to pass each level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
