@@ -1,0 +1,15 @@
+{
+    "name": "Street Wars",
+    "description": "Protect your territory. Old style with a machete or gun blazing, either way kick those thugs out.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

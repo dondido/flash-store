@@ -1,0 +1,15 @@
+{
+    "name": "Street Fitghter Brothers",
+    "description": "Chuang” and “Shi” are two young fighters from a traditional fighting family who have invincible strength of their family. Of course, there are other fighters from other familis who want to become a new generation of street fighter. So, another fierce battle has begun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
