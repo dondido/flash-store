@@ -1,0 +1,15 @@
+{
+    "name": "Papa Louie 2: When Burgers Attack",
+    "description": "It's him, Papa Louie the 2nd! Choose a character and jump and run through the lovely levels of this platform game and beat up burgers and ingredients.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

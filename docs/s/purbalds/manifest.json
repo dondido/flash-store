@@ -1,0 +1,15 @@
+{
+    "name": "Purbalds",
+    "description": "Help your cute monsters move through each platform based level, collect all of the stars before reaching the door to exit.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Papa Louie 3: When Sundaes Attack!",
+    "description": "Papa Louie 3 is the third installment of this wildly popular platformer series. This time, you will be exploring the Land of Munchmore’s sweeter side. Just don’t let the candy fool you, it’s dangerous out there! It’s up to Captain Cori to rescue Papa Louie and the rest of the customers from Radley Madish, Luau LePunch, and an endless army of slimy Sundaesauruses!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

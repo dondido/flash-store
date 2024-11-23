@@ -1,0 +1,15 @@
+{
+    "name": "Box Jumper",
+    "description": "How far can you jump before you fall in the water?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

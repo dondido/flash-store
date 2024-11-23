@@ -1,0 +1,15 @@
+{
+    "name": "CAVE EXPLOR",
+    "description": "There are three endings. Remember, the crown of wishes grants the wish of whoever touches it.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Henry VIII - Dressed to Kill",
+    "description": "Select your armor and your weapon as you battle against another knight. Can you take it all?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Dyna Boy",
+    "description": "In this game in the style of old games you will run underground. Your task is to collect as many precious minerals as possible. To reach them you have to overcome several enemies and there are also various obstacles waiting for you that you have to use TNT for.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

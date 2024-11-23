@@ -1,0 +1,15 @@
+{
+    "name": "Kid Evil Kills Christmas: Demo Level",
+    "description": "Kill the deranged teddy bears in your quest to take down Santa and nab his loot, all while wearing a rather fashionable onesie, in this single level demo for Kid Evil: Kills Christmas.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

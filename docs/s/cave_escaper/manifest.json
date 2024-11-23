@@ -1,0 +1,15 @@
+{
+    "name": "Cave Escaper",
+    "description": "The object of the game is to navigate your way through 50 levels and try to escape the cave. Along the way you will find complex puzzles, bomb your way through rocks and boulders, swing from ledges, and avoid pits of lava. Can you make it out alive?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

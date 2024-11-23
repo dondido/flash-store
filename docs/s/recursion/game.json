@@ -1,0 +1,18 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        }
+    ]
+}
