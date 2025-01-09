@@ -1,0 +1,15 @@
+{
+    "name": "Comic Stars Fighting 3",
+    "description": "Comic Stars Fighting 3 is an excellent fighting game in which you can choose both single mode fighting and 2 players fighting. Come to choose your favorite character and fight with your friends! Experience the excitement of being a knight, killing enemies using your stunning magic Kung Fu skills. Let's see who can survive at last!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

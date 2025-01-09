@@ -1,0 +1,15 @@
+{
+    "name": "Plants vs Aliens",
+    "description": "On Dec 21st, 2012, the earth was invaded by the aliens. All the creatures were facing the threat of being extinguished from the earth. Luckily you've found a kind of plant which can combat with those aliens. Now start your fierce battle with those aliens. You must do all your best to save the destiny of the earth. Game on!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Savage Huskies",
+    "description": "Chose one of 3 characters and brawl your way through 4 large stages!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

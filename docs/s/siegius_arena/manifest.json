@@ -1,0 +1,15 @@
+{
+    "name": "Siegius Arena",
+    "description": "Blood will be spilt as you fight to the death in a series of arena battles. Upgrade your gladiator and fight for your life.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

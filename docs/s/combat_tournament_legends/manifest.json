@@ -1,0 +1,15 @@
+{
+    "name": "Combat Tournament Legends",
+    "description": "So Combat Tournament Legends is a stick man fighting game with intense arcade style controls, think keyboard button mashing. It is a two player game or can be played in single player. Try it out, once you find the controls it is fun.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Electricman 2 HS",
+    "description": "**Electricman 2HS** is a free online Flash game by DX Interactive and freeworldgroup. It was released in early 2007 and could still be played at Y8.com",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
