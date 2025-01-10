@@ -1,0 +1,15 @@
+{
+    "name": "Batman In The Heat of The Night",
+    "description": "Kanjar Ro has built a device that warms the planet Earth. Batman went on a mission to stop that device before it is too late but first he must find the Green Arrow to get help from him in this difficult mission. Are you ready for adventure with Batman and Green Arrow?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
