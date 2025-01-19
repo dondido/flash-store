@@ -1,0 +1,15 @@
+{
+    "name": "Werewolf Tycoon",
+    "description": "Become the Big Bad Wolf of Werewolf Park in this werewolf stealth simulation game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

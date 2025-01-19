@@ -1,0 +1,15 @@
+{
+    "name": "Fury Officer",
+    "description": "Fight off the office works as you earn points for upgrades. Perform long combos &amp; mega attacks.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

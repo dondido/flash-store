@@ -1,0 +1,15 @@
+{
+    "name": "Vampire Physics",
+    "description": "Turn all humans into vampires in this addictive physics puzzle game. Be careful though, as there are priests, werewolves and even rival vampires that are against you. There are 36 levels in this game, and you can also create your own levels with the included level editor.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

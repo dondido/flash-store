@@ -1,0 +1,15 @@
+{
+    "name": "Handsome2x Werewolf",
+    "description": "Girls, you think it would be cool dating a werewolf because of the Twilight Sega? Handsome2x Werewolf play as a handsome werewolf named Alianduk. Flirt with girls and after they fall for you, transform into the beast you are and crush them. Collect money as your proceed. Upgrade your werewolf power to get even more powerful. Watch out for police.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Vegan Vampire",
+    "description": "You’re a vampire with a conscience. Tired of feasting on innocent victims, you’ve gone vegan! Help this Vegan Vampire get home from a late night dinner party before the sun comes up, while feasting on delicious, and nutritious snacks in each level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

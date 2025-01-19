@@ -1,0 +1,15 @@
+{
+    "name": "Dracula's Treasure!",
+    "description": "You play as Dracula, who is being evicted from his foreclosed mansion. Priests are trying to kick you out, but you have to collect all of your riches before you leave! This is kind of similar to games like Flicky and City Connection, but the player wraps around the screen (a la Asteroids).",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
