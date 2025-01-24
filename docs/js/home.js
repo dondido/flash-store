@@ -42,7 +42,7 @@ const lazyVideoObserver = new IntersectionObserver((entries) => {
 const applyObserver = lazyVideo => lazyVideoObserver.observe(lazyVideo);
 const attachObserver = () => $gallery.querySelectorAll('a').forEach(applyObserver);
 const matchGameOrdering = $a => location.pathname.slice(1).replace('flash-store/', '')
-    .startsWith($a.getAttribute('href').replace(/\.|\//g, ''));
+    .startsWith($a.getAttribute('href').split('/')[1]);
 const $currentTab = Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering) || document.querySelector('.sort-by a');
 const cap = str => `${str[0].toUpperCase()}${str.slice(1)}`;
 const formatTitle = (title = '') => {
@@ -62,14 +62,24 @@ const searchGames = ({ target: { value } }) => {
 };
 const fetchgameTitles = async () => {
     window.search.onfocus = null;
-    const response = await fetch(`${$currentTab.href}/search.csv`);
+    const path = location.pathname === '/' || location.pathname === '/flash-store/'
+        ? `${location.pathname}views/`
+        : location.pathname;
+    const response = await fetch(`${path}/search.csv`);
     const csv = await response.text();
     gameTitles = csv.split(' ');
     window.search.oninput = searchGames;
 };
+const handleSlide = (dir) => {
+  const slideWidth = $slider.scrollWidth / $slider.childElementCount;
+  $slider.scrollLeft += slideWidth * dir;
+};
+const $slider = document.querySelector('.tags');
+const [$buttonPrev, $buttonNext] = $slider.parentElement.querySelectorAll('button');
+$buttonPrev.onclick = () => handleSlide(-1);
+$buttonNext.onclick = () => handleSlide(1);
 document.addEventListener('pointermove', move);
 document.addEventListener('DOMContentLoaded', attachObserver);
 window.search.placeholder = `Search ${$gallery.dataset.count} games`;
 window.search.onfocus = fetchgameTitles;
 $currentTab.className = 'current';
-document.querySelector('.gallery a').styles.viewTransitionName = 'my';

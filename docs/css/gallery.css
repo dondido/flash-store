@@ -98,15 +98,21 @@ main .input-search {
     box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
     outline: gray;
 }
-.sort-by {
+.nav-sort,
+.nav-tags {
     padding: 6px 12px;
-    list-style: none;
     border-radius: 20px;
     margin: 10px auto;
     box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
-    display: flex;
-    gap: 14px;
+    font-size: 14px;
     width: min-content;
+    ul {
+        display: flex;
+        gap: 14px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
     a {
         display: block;
         padding: 6px 12px;
@@ -120,6 +126,77 @@ main .input-search {
     .current {
         cursor: default;
         box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
+    }
+    
+}
+.nav-tags {
+    max-width: 980px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    & > a {
+        min-width: 50px;
+        margin-left: 10px;
+    }
+    .tags {
+        overflow: hidden;
+        flex-wrap: nowrap;
+        margin-inline: 16px;
+        padding-inline: 12px;
+        scroll-padding: 12px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        li {
+            scroll-snap-align: start;
+        }
+    }
+}
+.page-tags {
+    .nav-tags {
+        box-shadow: none;
+        box-sizing: content-box;
+    }
+    .tags {
+        flex-wrap: wrap;
+        margin-inline: 0;
+        padding-inline: 0;
+    }
+}
+.btn-slide-prev,
+.btn-slide-next {
+    display: block;
+    min-width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    margin-top: 2px;
+    background: #e0e0e0;
+    cursor: pointer;
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: transparent url(../icons/chevron.svg) no-repeat right top;
+    }
+    &:after {
+        content: '';
+        display: block;
+        height: 20px;
+        width: 1px;
+        background: #bbb;
+        margin-left: 38px;
+        margin-top: -21px;
+        position: absolute;
+    }
+}
+.btn-slide-next{
+    &:before {
+        rotate: 180deg;
+    }
+    &:after {
+        margin-left: -12px;
     }
 }
 .pagination {
@@ -146,11 +223,33 @@ main .input-search {
             color: #222;
             box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
             &[aria-current] {
-                cursor: default;
+                pointer-events: none;
                 box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5) inset, -3px -3px 5px rgba(255, 255, 255, 0.5) inset;
             }
         }
     } 
+}
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    a {
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 13px 7px;
+        text-indent: 24px;
+        width: max-content;
+    }
+    span {
+        margin-left: .5em;
+        &:before {
+            content: "("
+        }
+        &:after {
+            content: ")"
+        }
+    }
 }
 @view-transition {
     navigation: auto;

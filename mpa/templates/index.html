@@ -29,12 +29,20 @@
 <body>
     <main>
         <input type="search" id="search" class="input-search" name="search" placeholder="Search games" />
-        <nav role="navigation" aria-label="Sort by">
+        <nav aria-label="Sort by" class="nav-sort">
             <ul class="sort-by">
-                <li><a href="./views/">Views</a></li>
-                <li><a href="./rating/">Rating</a></li>
-                <li><a href="./newest/">Newest</a></li>
+                <li><a href="./views/${orderSuffix}">Views</a></li>
+                <li><a href="./rating/${orderSuffix}">Rating</a></li>
+                <li><a href="./newest/${orderSuffix}">Newest</a></li>
             </ul>
+        </nav>
+        <nav aria-label="Tags" class="nav-tags">
+            <button class="btn-slide-prev"></button>
+            <ul class="tags">
+                ${tags}
+            </ul>
+            <button class="btn-slide-next"></button>
+            <a href="./${orderBy}tags/">All Tags</a>
         </nav>
         ${games}
     </main>
