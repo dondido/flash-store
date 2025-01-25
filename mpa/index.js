@@ -87,11 +87,11 @@ const iconMap = {
 }
 const toKebabCase = tag => tag.toLowerCase().replace("'", '').split(' ').join('-');
 const makeTags = (folder, gameMap = gamesPerTag) => {
-    let $tags = `<li><a style="background-image: url(../icons/sprite-tags.svg#icon-game" href="./${folder.replace('tags/', '')}">All<span>${Object.keys(games).length}</span></a></li>`;
+    let $tags = `<li><a style="background-image: url(./icons/sprite-tags.svg#icon-game" href="./${folder.replace('tags/', '')}">All<span>${Object.keys(games).length}</span></a></li>`;
     for (const key in gameMap) {
         
         const id = toKebabCase(key);
-        $tags = `${$tags}<li><a style="background-image: url(../icons/sprite-tags.svg#${iconMap[id] || id}" href="./${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
+        $tags = `${$tags}<li><a style="background-image: url(./icons/sprite-tags.svg#${iconMap[id] || id}" href="./${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
     }
     return $tags;
 };
