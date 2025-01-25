@@ -30,7 +30,7 @@ const savePage = (content, folder) => {
         .replaceAll('${orderSuffix}', orderSuffix)
         .replaceAll('${orderBy}', orderBy)
         .replace(/>\s+</g,'><');
-    console.log(`Page ${++ pageCount}: ${folder}index.html`, folder.match(/(\w+)\//gi)?.[0]);
+    console.log(`Page ${++ pageCount}: ${folder}index.html`);
     folder !== BUILD_PATH && fs.mkdirSync(folder, { recursive: true });
     fs.writeFileSync(`${folder}index.html`, html);
 };
@@ -50,7 +50,7 @@ const makePagination = (currentPage, lastPage, path, onSides = 1) => {
         }
     }
     return `
-        <nav role="navigation" aria-label="Pagination Navigation">
+        <nav class="nav-pagination" aria-label="Pagination">
             <ul class="pagination">
                 ${$pages}
             </ul>
@@ -89,7 +89,7 @@ const toKebabCase = tag => tag.toLowerCase().replace("'", '').split(' ').join('-
 const makeTags = (folder, gameMap = gamesPerTag) => {
     let $tags = `<li><a style="background-image: url(../icons/sprite-tags.svg#icon-game" href="./${folder.replace('tags/', '')}">All<span>${Object.keys(games).length}</span></a></li>`;
     for (const key in gameMap) {
-        if (key.includes('Y8') || ['1 player', 'Flash'].includes(key)) continue;
+        
         const id = toKebabCase(key);
         $tags = `${$tags}<li><a style="background-image: url(../icons/sprite-tags.svg#${iconMap[id] || id}" href="${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
     }
@@ -100,6 +100,7 @@ const extractGamesPerTag = () => {
     for (const key in games) {
         const { tags } = games[key];
         const processTag = tag => {
+            if (tag.includes('Y8') || ['1 player', 'Flash'].includes(tag)) return;
             gamesPerTag[tag] = gamesPerTag[tag] ? [...new Set([...gamesPerTag[tag], key])] : [key];
         };
         tags.forEach(processTag);

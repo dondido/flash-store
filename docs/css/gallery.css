@@ -251,6 +251,12 @@ main .input-search {
         }
     }
 }
+.nav-pagination {
+    display: none;
+}
+input:placeholder-shown ~ .nav-pagination {
+    display: block;
+}
 @view-transition {
     navigation: auto;
 }

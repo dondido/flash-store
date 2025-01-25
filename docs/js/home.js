@@ -49,14 +49,16 @@ const formatTitle = (title = '') => {
     const exludeWords = ['of', 'the', 'vs', 'in'];
     return cap(title.split('_').join(' ').replace(/\b\w+\b/g, m => exludeWords.includes(m) ? m : cap(m)));
 };
-const searchGames = ({ target: { value } }) => {
+const searchGames = (originalGallery) => ({ target: { value } }) => {
     const term = value.toLocaleLowerCase().split(' ').join('_');
     clearTimeout(searchTimer); 
     searchTimer = setTimeout(() => {
-        $gallery.innerHTML = gameTitles
-            .filter(gameTitle => gameTitle.includes(term))
-            .map(game => `<li><a href="./s/${game}/"><h2>${formatTitle(game)}</h2></a></li>`)
-            .join('');
+        $gallery.innerHTML = term
+            ? gameTitles
+                .filter(gameTitle => gameTitle.includes(term))
+                .map(game => `<li><a href="./s/${game}/"><h2>${formatTitle(game)}</h2></a></li>`)
+                .join('')
+            : originalGallery;
         attachObserver();
     }, 300);
 };
@@ -68,7 +70,7 @@ const fetchgameTitles = async () => {
     const response = await fetch(`${path}/search.csv`);
     const csv = await response.text();
     gameTitles = csv.split(' ');
-    window.search.oninput = searchGames;
+    window.search.oninput = searchGames($gallery.innerHTML);
 };
 const handleSlide = (dir) => {
   const slideWidth = $slider.scrollWidth / $slider.childElementCount;
