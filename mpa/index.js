@@ -91,7 +91,7 @@ const makeTags = (folder, gameMap = gamesPerTag) => {
     for (const key in gameMap) {
         
         const id = toKebabCase(key);
-        $tags = `${$tags}<li><a style="background-image: url(../icons/sprite-tags.svg#${iconMap[id] || id}" href="${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
+        $tags = `${$tags}<li><a style="background-image: url(../icons/sprite-tags.svg#${iconMap[id] || id}" href="./${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
     }
     return $tags;
 };
