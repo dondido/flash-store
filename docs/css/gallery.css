@@ -139,13 +139,17 @@ main .input-search {
         margin-left: 10px;
     }
     .tags {
-        overflow: hidden;
+        overflow-x: scroll;
         flex-wrap: nowrap;
         margin-inline: 16px;
         padding-inline: 12px;
         scroll-padding: 12px;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
+        scrollbar-width: none;
+        &::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
         li {
             scroll-snap-align: start;
         }

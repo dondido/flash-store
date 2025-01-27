@@ -1,0 +1,15 @@
+{
+    "name": "Zombie Racers Score Attack",
+    "description": "You must squash, smash, crash, hit and kill as many zombies as you can as you rally around the different settings in this crazy zombie killing rampage.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

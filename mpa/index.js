@@ -107,7 +107,7 @@ const extractGamesPerTag = () => {
     }
     gamesPerTag = sortObjectByKeys(gamesPerTag);
     topGamesPerTag = Object.fromEntries(
-        Object.entries(gamesPerTag).sort(([, a],[, b]) => b.length - a.length).slice(0, 8)
+        Object.entries(gamesPerTag).sort(([, a],[, b]) => b.length - a.length).slice(0, 6)
     );
 };
 const makePages = (games, order) => {
