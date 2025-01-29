@@ -190,6 +190,7 @@ ruffle-player {
 } */
 @media all and (display-mode: standalone) {
     .button-install,
+    .description ul,
     .button-rate {
         display: none
     }
@@ -287,7 +288,7 @@ main {
     max-width: 640px;
     color: gray;
 }
-main :where(h1, p, a span, .added-on) {
+main :where(h1, p, a, a span, .added-on) {
     mix-blend-mode: difference;
 }
 body:not(:target) main {
@@ -391,6 +392,28 @@ body:not(:target) main {
 }
 .button-rate:before {
     background-image: url(../icons/rate.svg);
+}
+.description ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    a {
+        display: block;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: currentColor;
+        border: 1px solid #bbb;
+        border-radius: 20px;
+        position: relative;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: 13px 7px;
+        text-indent: 24px;
+        width: max-content;
+    }
 }
 @view-transition {
     navigation: auto;

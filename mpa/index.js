@@ -3,7 +3,7 @@ const path = require('path');
 
 const GAMES_PER_PAGE = 100;
 const BUILD_PATH = path.join(__dirname, '../docs/');
-
+const iconMap = path.join(__dirname, '../utilities/icon-sprite-map.js');
 const directoryPath = path.join(__dirname, '../docs/s');
 const $templateIndex = fs.readFileSync('./templates/index.html', 'utf8');
 const $templateTags = fs.readFileSync('./templates/tags.html', 'utf8');
@@ -64,32 +64,10 @@ const makeGallery = (games, gameCount) => {
     }).join('');
     return `<ul class="gallery" data-count=${gameCount}>${$games}</ul>`;
 };
-const iconMap = {
-    '2-player': '2-players',
-    '3+-player': '3-players',
-    gun: 'guns',
-    trap: 'traps',
-    reflex: 'reflexion',
-    platform: 'platforms',
-    monster: 'monsters',
-    matching: 'icon-game',
-    guessing: 'icon-game',
-    zombie: 'zombies',
-    stunt: 'stunts',
-    block: 'blocks',
-    pixel: 'pixel-art',
-    word: 'words',
-    board: 'board-game',
-    clicking: 'clicker',
-    fairy: 'faerie',
-    mining: 'mine',
-    upgrade: 'purchase-equipment-upgrades',
-}
 const toKebabCase = tag => tag.toLowerCase().replace("'", '').split(' ').join('-');
 const makeTags = (folder, gameMap = gamesPerTag) => {
     let $tags = `<li><a style="background-image: url(./icons/sprite-tags.svg#icon-game" href="./${folder.replace('tags/', '')}">All<span>${Object.keys(games).length}</span></a></li>`;
     for (const key in gameMap) {
-        
         const id = toKebabCase(key);
         $tags = `${$tags}<li><a style="background-image: url(./icons/sprite-tags.svg#${iconMap[id] || id}" href="./${folder}${id}/">${key}<span>${gamesPerTag[key].length}</span></a></li>`;
     }

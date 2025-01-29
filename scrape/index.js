@@ -3,6 +3,7 @@ const axios = require('axios');
 const jsdom = require('jsdom');
 const es6Renderer = require('express-es6-template-engine');
 const sharp = require('sharp');
+const iconMap = require('../utilities/icon-sprite-map.js');
 const [url, force] = process.argv.slice(2);
 const { JSDOM } = jsdom;
 const headers = {
@@ -68,6 +69,15 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             fs.writeFileSync(`${path}/intrinsic.json`, intrinsicJson);
         });
 };
+const toKebabCase = tag => tag.toLowerCase().replace("'", '').split(' ').join('-');
+const makeTags = (tags) => {
+    let $tags = '';
+    for (const tag of tags) {
+        const id = toKebabCase(tag);
+        $tags = `${$tags}<li><a style="background-image: url(../../icons/sprite-tags.svg#${iconMap[id] || id})" href="../../tags/${id}/">${tag}</a></li>`;
+    }
+    return $tags;
+};
 const scrape = (target) => {
     const folder = target.split('/').pop();
     const path = `../docs/s/${folder}`;
@@ -84,7 +94,8 @@ const scrape = (target) => {
         }
         if (title && description && game && video && poster && fs.existsSync(`${path}/intrinsic.json`) && !force) {
             const locals = require(`${path}/intrinsic.json`);
-            saveString({ title, description, ...locals, addedOn: new Date().toDateString(locals.published).slice(4) }, 'index.html', path);
+            const tags = makeTags(locals.tags);
+            saveString({ title, description, ...locals, tags, addedOn: new Date().toDateString(locals.published).slice(4) }, 'index.html', path);
         }
         else {
             requestResources({ title, description, game, video, poster, folder, path });
