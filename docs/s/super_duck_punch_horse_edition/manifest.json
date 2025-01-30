@@ -1,0 +1,15 @@
+{
+    "name": "Super Duck Punch Horse Edition",
+    "description": "The video game we have all been waiting for: A duck beat em up arena game. Punch the heck out of the Super Duck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

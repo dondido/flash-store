@@ -1,0 +1,15 @@
+{
+    "name": "Catch a Duck",
+    "description": "Finding a way to catch a duck will be quite a challenge when you have to run away from hungry wolves, angry bears and crazy hunters shooting to everything that is moving. This amazing and yet simple puzzle game will be your new online survival kit boosted with lots of fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Crocodile Love Duck",
+    "description": "Small crocodile want to take a bath, but suddenly found the small duck disappeared. they are very good friends, quickly help him look for it!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -22,7 +22,7 @@ const savePage = (content, folder) => {
     const [, orderSuffixPath] = folder.split('/tags/')
     const orderBy = folder.match(/(\w+)\//gi)?.[0].replace('tags/', '') || '';
     if (orderSuffixPath) {
-        orderSuffix = `tags/${orderSuffixPath.split('/')[0]}`;
+        orderSuffix = `tags/${orderSuffixPath.split('/')[0]}/`;
     }
     const html = $templateIndex
         .replace('${games}', content)

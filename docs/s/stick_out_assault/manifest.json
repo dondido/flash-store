@@ -1,0 +1,15 @@
+{
+    "name": "Stick Out Assault",
+    "description": "A Shooting game for Stick Out fans.Upgrade your weapons after each level for more power. Check your health bar. Best of Luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

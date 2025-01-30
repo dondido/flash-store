@@ -1,0 +1,15 @@
+{
+    "name": "Gator Eat Duck",
+    "description": "The gator is hungry while taking a hot bath in the tub. It wants to eat a duck to feed its starving stomach.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
