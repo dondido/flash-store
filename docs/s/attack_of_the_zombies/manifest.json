@@ -1,0 +1,15 @@
+{
+    "name": "Attack of the Zombies",
+    "description": "Shoot the zombies in this sidescroller. You have a shotgun and machine gun. Don't let them eat you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

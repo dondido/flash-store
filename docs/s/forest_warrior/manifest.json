@@ -1,0 +1,15 @@
+{
+    "name": "Forest Warrior",
+    "description": "Dracula is up to no good of course. He has an evil plan of destroying every forest. Make your way out of the forest through lake and into his lair where you will put stop to all his madness once and for all.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

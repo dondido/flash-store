@@ -1,0 +1,15 @@
+{
+    "name": "Wrap Attack",
+    "description": "Some bad guy has captured Santa and all his gifts. But Tommy is going to save Christmas. It you hit the Z key, you turn bad toys good, and with the X key you create ice bridges.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

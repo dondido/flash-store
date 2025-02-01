@@ -1,0 +1,15 @@
+{
+    "name": "Mad Tanks",
+    "description": "Shoot enemy tanks as you move the blocks into position to pass each level. Grab powerups to help.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

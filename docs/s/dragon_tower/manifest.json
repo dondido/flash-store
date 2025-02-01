@@ -1,0 +1,15 @@
+{
+    "name": "Dragon Tower",
+    "description": "One magic warrior must fight the demons to unlock the treasure of hope. Pick up dropped demons to help you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,27 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
+            }
+        },
+        {
+            "type": "button",
+            "label": "J",
+            "mappings": [{ "key": "j", "code": "KeyJ" }]
+        },
+        {
+            "type": "button",
+            "label": "SH",
+            "mappings": [{ "key": "Shift", "code": "ShiftLeft" }]
+        }
+
+    ]
+}

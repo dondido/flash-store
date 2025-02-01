@@ -1,0 +1,15 @@
+{
+    "name": "Disaster Will Strike 2",
+    "description": "The power of destruction is in your hands! Create earthquakes, landslides, viruses and other crazy disasters to destroy all the eggs in each level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
