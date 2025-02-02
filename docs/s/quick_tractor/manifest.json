@@ -1,0 +1,15 @@
+{
+    "name": "Quick Tractor",
+    "description": "Card-Board- presents new arcade parking game. Rule the tractor, take up the box and transport it to the any marked quad. Do not touch other objects otherwise you will have to pass the level again.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

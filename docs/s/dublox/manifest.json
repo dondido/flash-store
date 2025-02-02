@@ -1,0 +1,15 @@
+{
+    "name": "DuBlox",
+    "description": "DuBlox is an addictive block rolling style game inspired by Bloxorz. The goal of this puzzle game is to roll the DuBlox from the green to the red tiles. Use arrow keys to move the blocks. Good Luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

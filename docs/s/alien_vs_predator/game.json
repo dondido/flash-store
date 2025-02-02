@@ -24,6 +24,5 @@
             "label": "D",
             "mappings": [{ "key": "d", "code": "KeyD" }]
         }
-    
     ]
 }

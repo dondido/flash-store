@@ -1,0 +1,15 @@
+{
+    "name": "The Brown Bear Adventures",
+    "description": "As food items become scarce, the brown bear’s territory increases. Within their home range, brown bears use a wide variety of habitats. Brown bears travel from alpine food sources to estuaries, to berry patches, to salmon spawning sites visiting each site when its particular food source is available.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

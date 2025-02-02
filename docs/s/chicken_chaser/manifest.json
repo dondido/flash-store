@@ -1,0 +1,15 @@
+{
+    "name": "Chicken Chaser",
+    "description": "The insidious anthropomorphic octopuses have abducted your chickens. Do you have what it takes to take them back and end the tentacled menace once and for all?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
