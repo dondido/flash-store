@@ -1,0 +1,15 @@
+{
+    "name": "Desert Jeep",
+    "description": "Drive your Jeep into the desert, and try to avoid the other cars, and the road holes. Take your opponents one by one and become the ultimate Desert Jeep racer.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

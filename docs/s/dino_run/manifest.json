@@ -1,0 +1,15 @@
+{
+    "name": "Dino Run: Marathon of Doom!",
+    "description": "𝘋𝘪𝘯𝘰 𝘙𝘶𝘯: 𝘔𝘢𝘳𝘢𝘵𝘩𝘰𝘯 𝘰𝘧 𝘋𝘰𝘰𝘮!  is a 2011 stand-alone title made by PixelJAM derivated from their 2008 original flash game  𝘋𝘪𝘯𝘰 𝘙𝘶𝘯. In this game, your dino must run the very long distance to save itself in the dino sanctuary.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

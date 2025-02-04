@@ -1,0 +1,14 @@
+{
+    "controls": [
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "code": "Space" }]
+        },
+        {
+            "type": "button",
+            "label": "R",
+            "mappings": [{ "key": "r", "code": "KeyR" }]
+        }
+    ]
+}

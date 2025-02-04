@@ -1,0 +1,15 @@
+{
+    "name": "Ultimate Arena Extreme",
+    "description": "Fight against the AI characters as you knock them out of the park. Earn enough knockouts to win.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

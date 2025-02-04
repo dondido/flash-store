@@ -1,0 +1,15 @@
+{
+    "name": "Dino Run : Enter Planet D",
+    "description": "Can you find paradise on Planet D? Find out in this new set of weird Dino Run challenges.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

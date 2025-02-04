@@ -1,0 +1,15 @@
+{
+    "name": "Alfa Force",
+    "description": "Warp to the Cyberworld and take on this evil computer virus before it’s too late!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

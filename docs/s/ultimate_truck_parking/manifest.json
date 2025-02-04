@@ -1,0 +1,15 @@
+{
+    "name": "Ultimate Truck Parking",
+    "description": "If you like squashing traffic cones, this is your chance to do it legally – in a semi! The goal in Ultimate Truck Parking is to navigate your big rig from its starting point, around pipes, boxes, vats of bubbling green acid, and other obstacles, and into a parking spot indicated by a blinking yellow rectangle. If you want to squash a couple traffic cones on the way, you’ll be fine, but crash too many times and you’ll be sent back to the beginning of the level. There are fifteen levels, and each time you pass one, you unlock the next.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
