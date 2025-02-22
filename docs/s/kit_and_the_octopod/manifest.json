@@ -1,0 +1,15 @@
+{
+    "name": "Kit and the Octopod",
+    "description": "Help your new found friend The Octopod rescue the girl of his dreams from the evil Bad Mood Bear!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

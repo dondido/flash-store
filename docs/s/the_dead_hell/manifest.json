@@ -1,0 +1,15 @@
+{
+    "name": "The Dead Hell",
+    "description": "In the single arena, slice incoming enemies. Jump over ones that need multiple attacks to kill.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

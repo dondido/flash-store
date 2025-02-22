@@ -1,0 +1,10 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "button",
+            "label": "SP",
+            "mappings": [{ "key": "(blank space)", "code": "Space" }]
+        }
+    ]
+}
