@@ -1,0 +1,15 @@
+{
+    "name": "Iron Man: Riot of the Machines",
+    "description": "Defeat the army of War Machines! A high quality Iron Man platformer with parkour elements.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

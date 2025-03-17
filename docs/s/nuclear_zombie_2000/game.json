@@ -1,0 +1,39 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "n": "KeyW",
+                "e": "KeyD",
+                "w": "KeyA",
+                "s": "KeyS"
+            }
+        },
+        {
+            "type": "button",
+            "label": "K",
+            "mappings": [{ "key": "k", "code": "KeyK" }]
+        },
+        {
+            "type": "button",
+            "label": "1",
+            "mappings": [{ "key": "1", "code": "Digit1" }]
+        },
+        {
+            "type": "button",
+            "label": "2",
+            "mappings": [{ "key": "2", "code": "Digit2" }]
+        },
+        {
+            "type": "button",
+            "label": "3",
+            "mappings": [{ "key": "3", "code": "Digit3" }]
+        },
+        {
+            "type": "button",
+            "label": "L",
+            "mappings": [{ "key": "l", "code": "KeyL" }]
+        }
+    ]
+}

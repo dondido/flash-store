@@ -1,0 +1,15 @@
+{
+    "name": "Nuclear Zombie 2000",
+    "description": "Save chicks, and shoot the zombies and grab new types of guns in this very short sidescroller.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

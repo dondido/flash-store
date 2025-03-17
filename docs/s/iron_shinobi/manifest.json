@@ -1,0 +1,15 @@
+{
+    "name": "Iron Shinobi",
+    "description": "Iron Shinobi combines elements of a side-scrolling fighting game with the story of a RPG adventure. Great artwork, numerous unique characters, fun fighting system, and addictive gameplay make this one of the best free flash fighting adventure games available. Unlike some other flash RPG's which utilize a turn-based fighting system, Iron Shinobi has a much more interactive, real-time fighting system.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

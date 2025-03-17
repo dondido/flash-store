@@ -1,0 +1,15 @@
+{
+    "name": "Iron Mountain",
+    "description": "When your car is broken into pieces, the bad robots imprisoned you in the Iron Mountain. Move the boxes, activate the devices, explode the bombs without getting hurt, collect keys and find the exit!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

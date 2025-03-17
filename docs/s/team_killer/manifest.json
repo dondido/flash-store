@@ -1,0 +1,15 @@
+{
+    "name": "Team Killer",
+    "description": "Team Killer is a action game where the main objective is to kill the enemy, obtaining weapons and ammunition to meet the objectives of this addictive game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

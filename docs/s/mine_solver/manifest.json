@@ -1,0 +1,15 @@
+{
+    "name": "Mine Solver",
+    "description": "A cute simple and addictive puzzle game in which you have to push all the jewels on the correct spots to finish the level. The game comes with 24 levels, and a easy skip option when you are stuck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
