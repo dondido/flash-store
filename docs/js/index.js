@@ -9,8 +9,6 @@ const $buttonPause = document.querySelector('.button-pause');
 const $buttonMute = document.querySelector('.button-mute');
 const $buttonFullscreen = document.querySelector('.button-fullscreen');
 const $controls = document.querySelector('.controls');
-const triggerKeydownEvent = event => window.dispatchEvent(new KeyboardEvent('keydown', event));
-const triggerKeyupEvent = event => window.dispatchEvent(new KeyboardEvent('keyup', event));
 const ruffle = window.RufflePlayer.newest();
 const player = ruffle.createPlayer();
 const gamePath = `${pathname}/game.swf`;
@@ -42,12 +40,10 @@ addEventListener('hashchange', handleHashChange);
 handleHashChange();
 fetch(gamePath);
 $buttonPause.addEventListener('click', () => {
-    $buttonPause.classList.contains('active') ? player.play() : player.pause();
-    $buttonPause.classList.toggle('active');
+    player[$buttonPause.classList.toggle('active') ? 'pause' : 'play']();
 });
 $buttonMute.addEventListener('click', () => {
-    player.volume = + $buttonMute.classList.contains('active');
-    $buttonMute.classList.toggle('active');
+    player.volume = +$buttonMute.classList.toggle('active');
 });
 if (navigator.standalone || isWebview || window.matchMedia('(display-mode: standalone)').matches) {
     $buttonFullscreen.remove();
@@ -60,24 +56,6 @@ if (navigator.standalone || isWebview || window.matchMedia('(display-mode: stand
             exitFullscreen();
         }
     });
-}
-if (scale || controls?.length) {
-    const sheet = new CSSStyleSheet();
-    sheet.replaceSync(`
-        canvas {
-            position: relative;
-        }
-        #container:before {
-            content: "";
-            position: fixed;
-            --rs: calc(1 / var(--s, 1));
-            width: calc(var(--rs) * 100vw);
-            height: calc(var(--rs) * 100vh);
-            left: calc(var(--rs) * -1 * 50vw + 50%);
-            top: 0;
-        }
-    `);
-    player.shadowRoot.adoptedStyleSheets.push(sheet);
 }
 if (isWebview) {
     document.body.classList.add('webview');
@@ -104,18 +82,18 @@ if (controls?.length) {
     const gamepad = Object.groupBy(controls, ({ type }) => type);
     gamepad.joystick?.forEach((control) => {
         const { mappings, dataset = { mode: 'fixed' } } = control;
-        const assignMapping = (direction) => {
+        const triggerKeyboardEvent = (keyState) => (direction) => {
             const code = mappings[direction];
-            return typeof code === 'string' ? { code } : code;
-        };
-        const mapKeydown = direction => triggerKeydownEvent(assignMapping(direction));
-        const mapKeyup = direction => triggerKeyupEvent(assignMapping(direction));
+            const event = typeof code === 'string' ? { code } : code;
+            player.focus();
+            window.dispatchEvent(new KeyboardEvent(keyState, event));
+        }
         const data = Object.entries(dataset).map(([key, value]) => `data-${key}=${value}`).join(' ');
         $controls.insertAdjacentHTML('beforeend', `<virtual-joystick ${data}></virtual-joystick>`);
         const $joystick = $controls.querySelector('virtual-joystick');
         const handleKeyEvents = () => {
-            $joystick.dataset.release.split('').forEach(mapKeyup);
-            $joystick.dataset.capture.split('').forEach(mapKeydown);
+            $joystick.dataset.release.split('').forEach(triggerKeyboardEvent('keyup'));
+            $joystick.dataset.capture.split('').forEach(triggerKeyboardEvent('keydown'));
         };
         $joystick.addEventListener('joystickdown', handleKeyEvents);
         $joystick.addEventListener('joystickmove', handleKeyEvents);
@@ -127,7 +105,7 @@ if (controls?.length) {
         $controls.append($gamepadButtons);
         for (const control of gamepad.button) {
             const Button = await import('./button.js');
-            Button.default(control, $gamepadButtons);
+            Button.default(control, $gamepadButtons, player);
         }
     }
     Promise

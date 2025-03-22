@@ -1,0 +1,15 @@
+{
+    "name": "Fire Starter",
+    "description": "This can happen: you start a fire and now you have to climb as fast as you can to save yourself. How far will you get?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

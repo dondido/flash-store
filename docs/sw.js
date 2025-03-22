@@ -1,31 +1,4 @@
 const CACHE_NAME = 'v1';
-const STATIC_CACHE_URLS = [];
-const cache = (request, response) => {
-    if (response.type === 'error' || response.type === 'opaque') {
-      return Promise.resolve(); // do not put in cache network errors
-    }
-  
-    return caches
-      .open(CACHE_NAME)
-      .then(cache => cache.put(request, response.clone()));
-};
-const normaliseRequest = (request) => {
-    if (request.headers.get('Range')) {
-        return new Request(request, {
-            headers: {
-              ...request.headers,
-              Range: null
-            }
-        })
-    }
-    return request;
-};
-self.addEventListener('install', event => {
-  console.log('Service Worker installing.');
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_CACHE_URLS))
-  );
-});
 
 self.addEventListener('fetch', event => {
     // Network-First Cache-Fallback Strategy
@@ -57,4 +30,8 @@ self.addEventListener('activate', event => {
                 )
             )
     );
+});
+
+self.addEventListener('install', () => {
+    self.skipWaiting(); // Activate worker immediately
 });

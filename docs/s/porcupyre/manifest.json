@@ -1,0 +1,15 @@
+{
+    "name": "Porcupyre",
+    "description": "Make this plucky porcupine's pyromaniac dreams come true..Click to strategically set fire to the platforms, fry up the members of the croc gang, and solve each puzzle in this physics game. Just be careful—don't let the flames touch the porcupines or you'll have to start over!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

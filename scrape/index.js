@@ -28,7 +28,7 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             const dom = new JSDOM(response.data);
             const $video = dom.window.document.querySelector('video');
             const $embed = new JSDOM(
-                dom.window.document.querySelector('.item-container').getAttribute('data-async-content')
+                dom.window.document.querySelector('.item-container').getAttribute('async_content')
             ).window.document.querySelector('embed');
             const addedOn = [...dom.window.document.querySelectorAll('.game-info__item')].at(-1).textContent.trim();
             const locals = {

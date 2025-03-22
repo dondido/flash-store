@@ -1,17 +1,19 @@
-const triggerKeydownEvent = e => window.dispatchEvent(new KeyboardEvent('keydown', e));
-const triggerKeyupEvent = e => window.dispatchEvent(new KeyboardEvent('keyup', e));
 const downs = [];
 const ups = [];
-export default ({ mappings, label }, $player) => {
+export default ({ mappings, label }, $gamepadButtons, player) => {
     let pointerId;
     const button = document.createElement('div');
+    const triggerKeyboardEvent = keyState => event => {
+        player.focus();
+        window.dispatchEvent(new KeyboardEvent(keyState, event));
+    };
     button.className = `button button-${label.toLowerCase()}`;
     button.textContent = label;
-    $player.appendChild(button);
+    $gamepadButtons.appendChild(button);
     const end = (event) => {
         if (pointerId === event.pointerId) {
             button.classList.remove('focus');
-            mappings.forEach(triggerKeyupEvent);
+            mappings.forEach(triggerKeyboardEvent('keyup'));
         }
     };
     const start = (event) => {
@@ -20,7 +22,7 @@ export default ({ mappings, label }, $player) => {
         if (clientX >= left && clientX <= right && clientY >= top && clientY <= bottom) {
             button.classList.add('focus');
             pointerId = event.pointerId;
-            mappings.forEach(triggerKeydownEvent);
+            mappings.forEach(triggerKeyboardEvent('keydown'));
             document.addEventListener('pointerup', end);
         }
     };
