@@ -1,0 +1,15 @@
+{
+    "name": "Smash Palace",
+    "description": "This isn't a simple racing game! This is probably the most brutal race in the world! Welcome to Smash Palace - a place where cool cars are being smashed without any compunction!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

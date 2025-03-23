@@ -84,7 +84,7 @@ if (controls?.length) {
         const { mappings, dataset = { mode: 'fixed' } } = control;
         const triggerKeyboardEvent = (keyState) => (direction) => {
             const code = mappings[direction];
-            const event = typeof code === 'string' ? { code } : code;
+            const event = typeof code === 'string' ? { code, key: code.replace('Key', '') } : code;
             player.focus();
             window.dispatchEvent(new KeyboardEvent(keyState, event));
         }

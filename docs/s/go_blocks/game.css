@@ -1,0 +1,4 @@
+.gamepad-buttons .button,
+virtual-joystick {
+    pointer-events: all;
+}
