@@ -1,0 +1,15 @@
+{
+    "name": "Jelly Adventure",
+    "description": "Play with the jelly boy in his adventure and help him get home. Collect all the diamonds on your way.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

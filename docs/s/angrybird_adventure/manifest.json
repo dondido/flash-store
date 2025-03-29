@@ -1,0 +1,15 @@
+{
+    "name": "Angrybird Adventure",
+    "description": "Drag mouse to cut rope, at the same time, collect as many as stars as you can.let watermelon fall down angrybird mouth.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

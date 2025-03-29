@@ -1,0 +1,15 @@
+{
+    "name": "Pyramid Adventures",
+    "description": "Your goal in this action game is to use the stun gun to slow down the senior mummies and throw ace-atomic grenades to turn them back into mine worker. Be careful, mineworkers can be re-mummified by other senior mummies!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,40 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "lock": "y",
+                "mode": "fixed"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "4",
+            "mappings": [{ "key": "4", "code": "Digit4" }]
+        },
+        {
+            "type": "button",
+            "label": "1",
+            "mappings": [{ "key": "1", "code": "Digit1" }]
+        },
+        {
+            "type": "button",
+            "label": "2",
+            "mappings": [{ "key": "2", "code": "Digit2" }]
+        },
+        {
+            "type": "button",
+            "label": "3",
+            "mappings": [{ "key": "3", "code": "Digit3" }]
+        },
+        {
+            "type": "button",
+            "label": "↑",
+            "mappings": [{ "key": "ArrowUp", "code": "ArrowUp" }]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Drago Adventure",
+    "description": "Harness the powers of the elements to discover this small dragons big strength! Drago is a colorful platform adventure flash game with many different challenges.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
