@@ -1,0 +1,15 @@
+{
+    "name": "Planet Platformer 2",
+    "description": "The world turns just for you, but you have many obstacles to overcome. Collect the stars to finish the level.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

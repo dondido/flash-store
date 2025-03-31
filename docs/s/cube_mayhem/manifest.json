@@ -1,0 +1,15 @@
+{
+    "name": "Cube Mayhem",
+    "description": "Cube Mayhem is a fancy and truly challenging maze puzzle game where you put various platforms into the screen to redirect your rolling cube!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

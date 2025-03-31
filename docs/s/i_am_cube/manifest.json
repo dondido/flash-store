@@ -1,0 +1,15 @@
+{
+    "name": "I Am Cube",
+    "description": "Fight stickmen as you wrestle pink ones, upper cut tall boy ones in the balls, &amp; falcon punch others",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

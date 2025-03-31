@@ -1,0 +1,15 @@
+{
+    "name": "Double-Edge",
+    "description": "1-2 player co-op with 2 unique players to select, bosses, upgrades and levels to fight.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
