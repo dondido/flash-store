@@ -5,6 +5,7 @@ export default ({ mappings, label }, $gamepadButtons, player) => {
     const button = document.createElement('div');
     const triggerKeyboardEvent = keyState => event => {
         player.focus();
+        console.log(1111111, keyState, event);
         window.dispatchEvent(new KeyboardEvent(keyState, event));
     };
     button.className = `button button-${label.toLowerCase()}`;

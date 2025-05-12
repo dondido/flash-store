@@ -85,6 +85,9 @@ main:has(#install:target) :not(.content, .content *, .game-menu, .game-menu .but
 #play:target .button {
     visibility: visible;
 }
+#play:target {
+    touch-action: none;
+}
 body:has(#install:target) {
     &:before {
         content: none;

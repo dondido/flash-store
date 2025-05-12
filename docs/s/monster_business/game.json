@@ -20,7 +20,7 @@
         {
             "type": "button",
             "label": "SP",
-            "mappings": [{ "key": "(blank space)", "code": "Space" }, { "key": "Enter", "code": "Enter", "keyCode": 13, "which": 13 }]
+            "mappings": [{ "key": " ", "code": "Space" }, { "key": "Enter", "code": "Enter", "keyCode": 13, "which": 13 }]
         }
     
     ]
