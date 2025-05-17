@@ -1,0 +1,15 @@
+{
+    "name": "Bubba's Rampage",
+    "description": "You are a bloodthirsty polar bear. Your goal is to eliminate all those hunters who want to exterminate your family.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Rage 1",
+    "description": "This is endless killing action! The first part to the amazing Rage series will blow your minds with great action from a stickman. This is the best stickman game ever! Have fun!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

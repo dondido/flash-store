@@ -1,0 +1,15 @@
+{
+    "name": "The Last Stick",
+    "description": "You are the last of your kin of Stickman Swrdsman, and you have to use your skills to defend the Kingdom from an horde of invading stickmen.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

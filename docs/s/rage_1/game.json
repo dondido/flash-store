@@ -1,0 +1,43 @@
+{
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "n": "ArrowUp",
+                "e": "ArrowRight",
+                "w": "ArrowLeft",
+                "s": "ArrowDown"
+            }
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "s", "code": "KeyS" }]
+        },
+        {
+            "type": "button",
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
+        },
+        {
+            "type": "button",
+            "label": "W",
+            "mappings": [{ "key": "w", "code": "KeyW" }]
+        },
+        {
+            "type": "button",
+            "label": "E",
+            "mappings": [{ "key": "e", "code": "KeyE" }]
+        },
+        {
+            "type": "button",
+            "label": "C",
+            "mappings": [{ "key": "c", "code": "KeyC" }]
+        }
+    ]
+}

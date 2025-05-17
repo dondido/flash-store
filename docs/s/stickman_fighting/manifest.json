@@ -1,0 +1,15 @@
+{
+    "name": "Stickman Fighting",
+    "description": "In the world of stickman, everyone must take the severe fighting test in their 18-year-old coming-of-age ceremony. Only those brave ones who can go through the severe test can be a real stickman hero. Let's follow the stickman fighting test now!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

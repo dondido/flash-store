@@ -1,0 +1,15 @@
+{
+    "name": "Ninjotic Mayhem",
+    "description": "Throw shirukens and slice enemies to pieces on your way to victory in this fast paced ninja fighting game. Defeat waves of zombies in various 2-storey locations. Ninjotic Mayhem features fluid gameplay, detailed animation and a motivating soundtrack.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

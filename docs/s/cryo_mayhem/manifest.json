@@ -1,0 +1,15 @@
+{
+    "name": "Cryo Mayhem",
+    "description": "Our hero has been frozen for centuries. When he finally waken up and broken free from his frozen cell he discovered that he was on an alien planet. Help our hero find a way out and avoid danger and survive through all 14 stages in his attempt to escape.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Metal Slug Rampage",
+    "description": "You're Marco and sick of being the Hero. Get in your Metal Slug and start killing innocents, soldiers and other good guys. Shoot lasers and shells.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
