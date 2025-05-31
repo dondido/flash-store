@@ -1,0 +1,15 @@
+{
+    "name": "Undeath or Dying",
+    "description": "Our home planet is under attack. Again our heroes been call to save man kind. Dead or Alive 2 is a flash action shooting game with a lot of enemy and multi weapons.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

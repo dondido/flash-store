@@ -1,0 +1,15 @@
+{
+    "name": "One Piece FG",
+    "description": "Fight against all your enemies in this action game One Piece.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

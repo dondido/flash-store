@@ -1,0 +1,15 @@
+{
+    "name": "Motorcycle Racer",
+    "description": "Drive in 3 different races in the least possible time and become the most famous motor race champion ever!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

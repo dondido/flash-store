@@ -1,0 +1,15 @@
+{
+    "name": "Ore Man",
+    "description": "In a post-apocalyptic future world ORE MAN fights for survival the only way he can, mining the underworld for diamonds and rubies and unleashing his thunder cannon on any that challenge his right to survival. Fun retro game based on Dig Dug and PacMan.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
