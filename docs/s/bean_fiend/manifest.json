@@ -1,0 +1,15 @@
+{
+    "name": "Bean Fiend",
+    "description": "In Bean Fiend, the water rises and you have to climb and collect beans for points. You fall in the water and you must get out on one breath of air. Stick around in the water too long and a big fish will come and eat you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

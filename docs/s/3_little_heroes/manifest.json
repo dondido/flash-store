@@ -1,0 +1,15 @@
+{
+    "name": "3 Little Heroes",
+    "description": "The lands have been swallowed by evil. Our 3 Little Heroes need to save them. Brawl your way through four cursed castles as a swordsman, bomber, or archer. Good luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

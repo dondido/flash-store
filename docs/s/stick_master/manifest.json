@@ -1,0 +1,15 @@
+{
+    "name": "Stick Master",
+    "description": "Be the stick master, show the world what skills you have locked away, this is more than just about winning its about pride",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

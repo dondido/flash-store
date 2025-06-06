@@ -1,0 +1,15 @@
+{
+    "name": "Aster Blaster",
+    "description": "When Nero the Hero tried to play a game of cat and mouse with some aliens - he lost big time. But will his wife, Aster Blaster, be able to save him with her laser-like eyes?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

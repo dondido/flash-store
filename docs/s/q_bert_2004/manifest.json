@@ -1,0 +1,15 @@
+{
+    "name": "Q*bert 2004",
+    "description": "Move Q*bert between the squares by jumping about avoiding the bad guys. Q*bert is a orange critter with a large nose. This game was one of the earliest puzle games and was largely successful on the apple.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Loot Heroes",
+    "description": "Loot Heroes is an action-packed hack-and-slash RPG where players take control of 14 unique heroes, each with their own abilities, to battle through dungeon-filled levels. Trapped in the depths of hell, these warriors must fight for survival, completing missions for the Lord of Darkness while facing hordes of rebellious demons.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
