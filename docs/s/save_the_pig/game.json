@@ -1,0 +1,28 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "joystick",
+            "mappings": {
+                "e": "ArrowRight",
+                "s": "ArrowDown",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "↑",
+            "mappings": [{ "key": "ArrowUp", "code": "ArrowUp" }]
+        },
+        {
+            "type": "button",
+            "label": "Q",
+            "mappings": [{ "key": "q", "code": "KeyQ" }]
+        },
+        {
+            "type": "button",
+            "label": "E",
+            "mappings": [{ "key": "e", "code": "KeyE" }]
+        }
+    ]
+}

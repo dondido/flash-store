@@ -1,0 +1,15 @@
+{
+    "name": "Super Mega Balance Party",
+    "description": "Balance enough shapes to win. Beware of shapes that have slippery characteristics.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

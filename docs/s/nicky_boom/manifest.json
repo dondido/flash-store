@@ -1,0 +1,15 @@
+{
+    "name": "Nicky Boom",
+    "description": "3 long levels of grabbing gems and other items as you throw and crush bugs around the levels.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

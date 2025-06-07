@@ -1,0 +1,36 @@
+{
+    "aspectRatio": "640/480",
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "lock": "y",
+                "mode": "fixed"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "w": "ArrowLeft"
+            }
+        },
+        {
+            "type": "button",
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
+        },
+        {
+            "type": "button",
+            "label": "S",
+            "mappings": [{ "key": "s", "code": "KeyS" }]
+        },
+        {
+            "type": "button",
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
+        },
+        {
+            "type": "button",
+            "label": "W",
+            "mappings": [{ "key": "w", "code": "KeyW" }]
+        }
+    ]
+}
