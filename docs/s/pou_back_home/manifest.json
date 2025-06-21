@@ -1,0 +1,15 @@
+{
+    "name": "Pou Back Home",
+    "description": "Go adventure with Mr.Pou in a strange forest! Help him overcome all difficulties, safe back home.Good luck!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

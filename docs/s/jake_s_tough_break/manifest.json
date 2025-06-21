@@ -1,0 +1,15 @@
+{
+    "name": "Jake's tough break",
+    "description": "The magic man has cursed Jake and now he's falling to pieces! In order to break the hex, Jake must use his removable limbs to find the Magic Man's hat and pull it together!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

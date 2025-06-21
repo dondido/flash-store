@@ -1,0 +1,15 @@
+{
+    "name": "Stack Bunnies",
+    "description": "Stack Bunnies is an action game about a bunny collecting weapons- all of which stack on top of each other- to murder a whole bunch of cave creatures with, all to gather enough firepower to destroy the cave keeper, whoever that may be.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

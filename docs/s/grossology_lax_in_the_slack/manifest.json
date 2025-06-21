@@ -1,0 +1,15 @@
+{
+    "name": "Grossology Lax in the Slack",
+    "description": "Trying to get that Poop Gun from the evil Lance Boil is no game. But then trying to subdue his goons wihout getting a little lax in the slacks can be even harder!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Tower Stack",
+    "description": "Build your tower as tall as possible, but don't drop the blocks!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Danny Phantom: Freak For All",
+    "description": "Freakshowm The evil, has escaped with the Reality Gauntlet. To maintain the world's sanity, this weapon of great power cannot remain in his freaky hands! Luckily he has not found all the gems to fully operate it, but it is only a matter of time before he does. Find the gems and stop Freakshow before he uses the Reality Gauntlet!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Snack Time Game",
+    "description": "Swap foods until you get the correct food above the animal that eats it.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

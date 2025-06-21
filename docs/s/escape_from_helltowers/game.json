@@ -21,7 +21,7 @@
         {
             "type": "button",
             "label": "EN",
-            "mappings": [{ "code": "Enter" }]
+            "mappings": [{ "key": "Enter", "code": "Enter" }]
         },
         {
             "type": "button",
