@@ -1,0 +1,15 @@
+{
+    "name": "Legend of Kalevala",
+    "description": "Welcome to the mysterious world of Kalevala. You awaken in a lush forest with no recollection of how you arrived. Take control of your alien body as you navigate the treacherous realm of Kalevala. Discover the secrets behind this new world as you unlock more of the story while exploring and fighting to survive.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

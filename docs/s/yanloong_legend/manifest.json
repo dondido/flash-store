@@ -1,0 +1,15 @@
+{
+    "name": "Yanloong Legend",
+    "description": "Sometimes the way of the sword is the only road to peace.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

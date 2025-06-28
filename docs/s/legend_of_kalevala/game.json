@@ -1,0 +1,25 @@
+{
+    "scale": 1,
+    "controls": [
+        {
+            "type": "joystick",
+            "dataset": {
+                "mode": "fixed"
+            },
+            "mappings": {
+                "e": "ArrowRight",
+                "s": "ArrowDown"
+            }
+        },
+        {
+            "type": "button",
+            "label": "X",
+            "mappings": [{ "key": "X", "code": "KeyX" }]
+        },
+        {
+            "type": "button",
+            "label": "C",
+            "mappings": [{ "key": "c", "code": "KeyC" }]
+        }
+    ]
+}

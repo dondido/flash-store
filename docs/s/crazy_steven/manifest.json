@@ -1,0 +1,15 @@
+{
+    "name": "Crazy Steven",
+    "description": "Chop off peoples heads, grab money, and dodge obstacles as you ride your donkey. Lots of blood.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

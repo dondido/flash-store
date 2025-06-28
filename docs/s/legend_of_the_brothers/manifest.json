@@ -1,0 +1,15 @@
+{
+    "name": "Legend of The Brothers",
+    "description": "This game is the legend of the brothers who are the best fighters. Try your best to help them kill all those enemies!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

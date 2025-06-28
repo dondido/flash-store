@@ -1,0 +1,15 @@
+{
+    "name": "Crazy Rabbit",
+    "description": "You're Robin Rabbit, and you believe Lock the rabbit boss is hogging all the carrots! Fight your way through the horrible hedgehogs, rebellious rabbits, and other enemies to reach the end of the course. Collect as many golden carrots as you can for maximum score. Take carrots from the rich...and share them with the poor!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

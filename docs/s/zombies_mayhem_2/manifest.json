@@ -1,0 +1,15 @@
+{
+    "name": "Zombies Mayhem 2",
+    "description": "Zombies are attacking!Fend them of with your trusty bow and arrow! if your not fast enough, its all over! if your too fast, you may shoot your friends instead!Survive for as long as possible and submit your score to the online scoreboard!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

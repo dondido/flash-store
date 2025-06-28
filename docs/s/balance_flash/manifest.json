@@ -1,0 +1,15 @@
+{
+    "name": "Balance Flash",
+    "description": "How long can you take to do a hand stand!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

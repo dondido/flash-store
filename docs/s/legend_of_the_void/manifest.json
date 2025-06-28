@@ -1,0 +1,15 @@
+{
+    "name": "Legend of the Void",
+    "description": "Battle your way through Calderia using tons of awesome weapons, armor, and artifacts!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

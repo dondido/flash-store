@@ -1,0 +1,15 @@
+{
+    "name": "Legend of Lost Love",
+    "description": "One day, half of the love was lost. Our hero tries to get her back in this platformer game. Try to help him to do it and fix the broken heart! Use the arrow keys or WASD to move. Don't hit any monsters, find your love.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
