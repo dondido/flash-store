@@ -33,17 +33,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #e0e0e0;
 }
-body:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    /* background-size: cover;
-    background-image: url('a.jpg');
-    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);  */
-}
 main {
     display: flex;
     justify-content: center;
@@ -51,17 +40,15 @@ main {
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 180px);
+    grid-template-columns: repeat(auto-fill, min(180px, calc(50% - 10px)));
     justify-content: space-evenly;
     margin: auto;
     grid-gap: 10px;
     width: 100%;
     max-width: 1024px;
     list-style: none;
-    padding: 20px 0;
-    li {
-        height: 168px;
-    }
+    padding: 20px 4px;
+    box-sizing: border-box;
     h2 {
         margin: 4px 6px 6px;
         font-size: 14px;
@@ -78,14 +65,13 @@ main {
         display: block;
         text-decoration: none;
         background-color: whitesmoke;
-        height: 100%;
         content-visibility: auto;
         box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
     }
 }
 video {
-    width: 180px;
-    height: 135px;
+    width: 100%;
+    aspect-ratio: 180 / 135;
 }
 main .input-search {
     width: 200px;
