@@ -1,0 +1,15 @@
+{
+    "name": "Bee Honey Hunt",
+    "description": "Love Puzzles? Then this game is for you..! Help the hungry bumble bee to reach his honey comb. Collect all the flowers to enable the honey pot before the time runs out. Grab the timer to increase the time limit. Complete all the interesting levels to win the game.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

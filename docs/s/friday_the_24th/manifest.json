@@ -1,0 +1,15 @@
+{
+    "name": "Friday the 24th",
+    "description": "Use Jason in his hockey mask and destroy happy elves with your massive bloody cleaver.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

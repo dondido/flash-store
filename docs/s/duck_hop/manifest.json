@@ -1,0 +1,15 @@
+{
+    "name": "Duck Hop",
+    "description": "Duck hop is a fun game where you play a baby duck. You can jump and hop and collect coins. There are beach balls and gnome friends! Watch out for slippery ice and penguin buddies! Collect coins and smash blocks! Don't fall in the duck pond!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
