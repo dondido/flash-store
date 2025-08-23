@@ -1,0 +1,15 @@
+{
+    "name": "Super Panda Hero",
+    "description": "One Day, A Gang Of Mysterious Triad, Captured The Super Panda Hero's Girlfriend. They Want To Threaten Super Panda Hero. Our Super Panda Hero Does Not Give In To Their Threats, Began To Wipe Out The Triads, And Rescue His Girlfriend.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

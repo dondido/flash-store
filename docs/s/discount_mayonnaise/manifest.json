@@ -1,0 +1,15 @@
+{
+    "name": "Discount Mayonnaise",
+    "description": "Go deeper and deeper into the caves of the killer worm! Buy new stuff, collect weapons and spill guts in this fast-paced shooter!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

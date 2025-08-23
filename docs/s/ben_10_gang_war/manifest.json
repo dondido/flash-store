@@ -1,0 +1,15 @@
+{
+    "name": "Ben 10 Gang War",
+    "description": "Help Ben 10 kill all bad guys on the street and destroy the gang and the boss of them.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

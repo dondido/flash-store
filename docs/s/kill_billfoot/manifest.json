@@ -1,0 +1,15 @@
+{
+    "name": "Kill Billfoot",
+    "description": "Bill, the resident Bigfoot needs killing. He has been scaring the kids wayyyy too much recently and for that he needs to be jabbed and stabbed to death with ur trusty spear. It is ur objective in this side-scrolling platformer of a game to go out into the wild and to track down Bill and to terminate his vile assistant monsters along the way. Give them a nice clean death at the end of ur spear.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
