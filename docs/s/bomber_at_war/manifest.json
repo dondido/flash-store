@@ -1,0 +1,15 @@
+{
+    "name": "Bomber at War",
+    "description": "Bomb enemy ships to the bottom of the see while dog-fighting enemy planes.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

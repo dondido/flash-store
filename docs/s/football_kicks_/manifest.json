@@ -1,0 +1,15 @@
+{
+    "name": "Football Kicks",
+    "description": "It's time for the big kick off! Score some stunning free kicks as you guide your favorite team to Euro 2012 glory!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

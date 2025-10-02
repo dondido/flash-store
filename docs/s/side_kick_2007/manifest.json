@@ -1,0 +1,15 @@
+{
+    "name": "Side Kick 2007",
+    "description": "Batman, Dr. Evil, Jay Leno, everybody has got a sidekick! Here's your Sidekick if you're a kicker dude!? Play soccer (football) against the comp or a friend.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

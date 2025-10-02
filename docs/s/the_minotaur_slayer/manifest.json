@@ -1,0 +1,15 @@
+{
+    "name": "The Minotaur Slayer",
+    "description": "Your village has been destroyed by a Minotaur. You are the most skillful fighter in the village and besides of the that you are the only one who left behind. Take your sword and shield and prepare yourself to slay minotaur.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
