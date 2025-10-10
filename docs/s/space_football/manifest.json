@@ -1,0 +1,15 @@
+{
+    "name": "Space Football",
+    "description": "Your goal in this particular game is to shoot on the goal precisely and score! But to be able to achieve that, you will have to select the angle and the velocity of the kick that will follow. So, to have influence on these two parameters, you need to know that the controls are place on the mouse.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

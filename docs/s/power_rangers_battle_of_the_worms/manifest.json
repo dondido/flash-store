@@ -1,0 +1,15 @@
+{
+    "name": "Power Rangers - Battle of the Worms",
+    "description": "Ride your fierce dragon and save the villagers from the attacking worms!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

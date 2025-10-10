@@ -1,0 +1,15 @@
+{
+    "name": "Dream Tower",
+    "description": "Bounce and bound your way to the top of a mystical dream tower.Make your way to the top of the tower, jumping on enemies to clear them out of the way! If you fall, some progress will be lost but you won't lose any life. Free your caged friends for extra points.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

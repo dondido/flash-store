@@ -1,0 +1,15 @@
+{
+    "name": "Space Station Jason",
+    "description": "Help Jason collect all his lost cargo in each of the 15 levels in the game. Each time you complete a level you will be rewarded with an employee badge. Later in the game you will encounter space mines and lasers to avoid, and robots to destroy. Be sure to at least play up to level 5 which was greatly inspired by the boulder levels in Crash Bandicoot.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

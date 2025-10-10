@@ -1,0 +1,15 @@
+{
+    "name": "Space Guy",
+    "description": "The astronaut meet some difficulties in getting into the spaceship. Let's think of some ways to push him into the spaceship  so that the rocket will start and bring him back to earth.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
