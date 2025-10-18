@@ -1,0 +1,15 @@
+{
+    "name": "Last Mars Tower",
+    "description": "Your Mission is to defend Planet Mars from human invaders; they are trying to overtake it. You have the last tower as a weapon to shoot enemies, protect it. Your robot will assist you by collecting resources.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

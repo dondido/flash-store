@@ -1,0 +1,15 @@
+{
+    "name": "Wolverine The Last Stand",
+    "description": "Play as Wolverine on your Last Stand, battle through waves of enemies, take down the bosses of each difficulty and power up Wolverine, earn achievements along the way!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
