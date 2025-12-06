@@ -1,0 +1,15 @@
+{
+    "name": "Pick & Dig",
+    "description": "Collect mining tools and use them to clear your way in this addicting platform puzzle game. Climb ladders, avoid enemies and dig your way to victory.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

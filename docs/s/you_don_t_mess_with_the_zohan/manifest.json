@@ -1,0 +1,15 @@
+{
+    "name": "You Don´t Mess With the Zohan!",
+    "description": "Zohan Kills Bad Hair Dead! Throw Combs, Snip with Scissors, and Own Face with a Feet Uppercut until those Follicle Fashion Flops are dazed! Then - Surprise Make-over! Just don´t let the bad hair touch you, or else you´ll run out of Silky Smooth! Mini Description: Kill Bad Hair with Flair!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

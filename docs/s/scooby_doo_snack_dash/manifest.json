@@ -1,0 +1,15 @@
+{
+    "name": "Scooby Doo Snack Dash",
+    "description": "Guide Scooby down the hill, pick up snacks and don't let the ghost catch you!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Doug: A Miner Inconvenien",
+    "description": "Press any key or the mouse button to dodge your way through a weird underground labyrinth.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

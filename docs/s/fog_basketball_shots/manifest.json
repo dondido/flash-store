@@ -1,0 +1,15 @@
+{
+    "name": "FOG Basketball Shots",
+    "description": "It's time to hit the court and shoot some hoops. The NBA is knocking on your door but your coach wants you to brush up on your skills. Show him you have what it takes to take on the big guys!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
