@@ -1,0 +1,15 @@
+{
+    "name": "Calabash Brothers forest great adventure",
+    "description": "Grandpa asked Calabash brothers to go to",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

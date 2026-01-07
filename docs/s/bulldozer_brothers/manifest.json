@@ -1,0 +1,15 @@
+{
+    "name": "Bulldozer Brothers",
+    "description": "Leave a cave before oxygen will end. Destroy blockages to clear a way.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
