@@ -3,7 +3,7 @@
         {
             "type": "button",
             "label": "SP",
-            "mappings": [{ "code": "ArrowUp" }, { "code": "ArrowDown" }]
+            "mappings": [{ "key": "ArrowUp", "code": "ArrowUp" }, { "key": "ArrowDown", "code": "ArrowDown" }]
         }
     ]
 }

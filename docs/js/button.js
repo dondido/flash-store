@@ -1,7 +1,14 @@
 const downs = [];
 const ups = [];
+const normaliseKey = ({ key, code }) => {
+    if (code && key === undefined) {
+        key = code.startsWith('Key') ? code.at(-1).toLowerCase() : code;
+    }
+    return { key, code: code || key };
+}
 export default ({ mappings, label }, $gamepadButtons, player) => {
     let pointerId;
+    const keys = mappings.map(normaliseKey)
     const button = document.createElement('div');
     const triggerKeyboardEvent = keyState => event => {
         player.focus();
@@ -13,7 +20,7 @@ export default ({ mappings, label }, $gamepadButtons, player) => {
     const end = (event) => {
         if (pointerId === event.pointerId) {
             button.classList.remove('focus');
-            mappings.forEach(triggerKeyboardEvent('keyup'));
+            keys.forEach(triggerKeyboardEvent('keyup'));
         }
     };
     const start = (event) => {
@@ -22,7 +29,7 @@ export default ({ mappings, label }, $gamepadButtons, player) => {
         if (clientX >= left && clientX <= right && clientY >= top && clientY <= bottom) {
             button.classList.add('focus');
             pointerId = event.pointerId;
-            mappings.forEach(triggerKeyboardEvent('keydown'));
+            keys.forEach(triggerKeyboardEvent('keydown'));
             document.addEventListener('pointerup', end);
         }
     };

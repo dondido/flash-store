@@ -11,8 +11,8 @@
         },
         {
             "type": "button",
-            "label": "A",
-            "mappings": [{ "key": "a", "code": "KeyA" }]
+            "label": "D",
+            "mappings": [{ "key": "d", "code": "KeyD" }]
         },
         {
             "type": "button",
@@ -21,8 +21,8 @@
         },
         {
             "type": "button",
-            "label": "D",
-            "mappings": [{ "key": "d", "code": "KeyD" }]
+            "label": "A",
+            "mappings": [{ "key": "a", "code": "KeyA" }]
         }
     ]
 }

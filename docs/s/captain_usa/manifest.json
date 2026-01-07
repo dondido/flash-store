@@ -1,0 +1,15 @@
+{
+    "name": "Captain USA",
+    "description": "Play as Captain USA and defeat the enemy by killing all of its soldiers through different levels. To accomplish this mission, you should stay alive against their massive attack as you have limited lives. Try to be very quick and shoot them on the spot before they kill you, also use grenades where necessary to destroy their tanks and other machines.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Captain America - Sentinel of Liberty",
+    "description": "Throw your shield &amp; punches as you grab items in the streets &amp; take down turrets &amp; enemies.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
