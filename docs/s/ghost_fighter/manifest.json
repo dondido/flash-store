@@ -1,0 +1,15 @@
+{
+    "name": "Ghost Fighter",
+    "description": "An action game where you have to help a brave boy fight the ghosts.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

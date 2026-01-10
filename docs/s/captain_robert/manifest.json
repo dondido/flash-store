@@ -1,0 +1,15 @@
+{
+    "name": "Captain Robert",
+    "description": "Control Robert as he explores a derelict, seemingly abandoned ship. Darkness and empty halls are everywhere. See if you can figure out the fate of the crew and if it's not too late to avoid a similar fate. Perhaps not everything is as it seems onboard here.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

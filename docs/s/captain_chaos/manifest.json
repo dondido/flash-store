@@ -1,0 +1,15 @@
+{
+    "name": "Captain Chaos",
+    "description": "Beat the other sailboat in this water race. To win, you need to avoid whirlwinds, sharks, and other problems.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

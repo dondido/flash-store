@@ -1,0 +1,15 @@
+{
+    "name": "Captain Fugly",
+    "description": "Play with captain Fugly and help him pass through the obstacles.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

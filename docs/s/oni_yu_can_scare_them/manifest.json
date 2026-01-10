@@ -1,0 +1,15 @@
+{
+    "name": "Oni Yu Can Scare Them",
+    "description": "Possess objects to scare game characters. Certain ones can detect you when you move &amp; can kill you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
