@@ -1,0 +1,15 @@
+{
+    "name": "Quantum Zombies",
+    "description": "In the not so distant future all hope is lost as a zombie outbreak has devastated the worlds population, extinguished all resources and destroyed any hope of recovery. Until a quirky yet brilliant professor develops a time machine with the hope of changing everything. As he prepares to make everything right an unfortunate accident sends one lone zombie into the past to change the future forever!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

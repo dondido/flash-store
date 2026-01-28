@@ -1,0 +1,15 @@
+{
+    "name": "Patih Araya",
+    "description": "Long time ago, when there were many strange creatures. There exist a super human with special ability to fight and bring peace to the human race from the evil creatures. The future of human all rest on this young brave hero. This young brave man known in the legend is called Patih Araya.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

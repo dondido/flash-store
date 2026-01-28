@@ -1,0 +1,15 @@
+{
+    "name": "Death Racers",
+    "description": "In this desolate future, all that is left to do is drive or die by the will of the racetrack.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
