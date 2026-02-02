@@ -1,0 +1,15 @@
+{
+    "name": "King Roll",
+    "description": "The Prince needs to reach his beloved Princess, but his way seems to be very dangerous. Moreover, he must collect the stars from the sky to present them to the Princess and to gain her favor. Will you help him on his difficult way?",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
