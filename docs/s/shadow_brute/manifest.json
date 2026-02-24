@@ -1,0 +1,15 @@
+{
+    "name": "Shadow Brute",
+    "description": "Remove heads from hulking enemies and soak the forest floor with the blood of the vanquished!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

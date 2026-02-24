@@ -1,0 +1,15 @@
+{
+    "name": "Save the Dummy",
+    "description": "Rescue this little ragdoll dummy out of the 30 physics based puzzle. Your dummy is tied, trapped and hung. Get him down or move him up to save him by removing RED blocks. Use any means to mercilessly get the dummy out of there.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

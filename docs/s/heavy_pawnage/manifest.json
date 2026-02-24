@@ -1,0 +1,15 @@
+{
+    "name": "Heavy Pawnage",
+    "description": "Blast enemy robots as you earn to upgrade and buy ammo. Make sure you're properly equipped.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

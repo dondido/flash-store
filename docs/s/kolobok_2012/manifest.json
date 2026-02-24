@@ -1,0 +1,15 @@
+{
+    "name": "Kolobok 2012",
+    "description": "Kolobok's adventures in 21st century forest.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
