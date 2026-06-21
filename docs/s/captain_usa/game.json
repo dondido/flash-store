@@ -5,8 +5,7 @@
             "mappings": {
                 "n": "ArrowUp",
                 "e": "ArrowRight",
-                "w": "ArrowLeft",
-                "s": "ArrowDown"
+                "w": "ArrowLeft"
             }
         },
         {
