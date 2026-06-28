@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const GAMES_PER_PAGE = 100;
+const GAMES_PER_PAGE = 60;
 const BUILD_PATH = path.join(__dirname, '../docs/');
 
 const directoryPath = path.join(__dirname, '../docs/s');

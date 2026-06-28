@@ -1,2 +1,1 @@
-
-    
+import './gamepad-page-handler.js';

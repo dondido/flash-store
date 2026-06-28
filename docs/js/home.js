@@ -1,7 +1,16 @@
+import './gamepad-page-handler.js';
+
 let activeVideo = null;
 let gameTitles = '';
 let searchTimer;
-let $gallery = document.querySelector('.gallery');
+const $gallery = document.querySelector('.gallery');
+const $search = document.getElementById('search');
+const $slider = document.querySelector('.tags');
+const [$buttonPrev, $buttonNext] = $slider.parentElement.querySelectorAll('button');
+const $tabs = Array.from(document.querySelectorAll('.sort-by a'));
+const matchGameOrdering = $a => location.pathname.slice(1).replace('flash-store/', '')
+    .startsWith($a.getAttribute('href').split('/')[1]);
+const $currentTab = $tabs.find(matchGameOrdering) || $tabs[0];
 const disablePreview = () => {
     activeVideo?.load();
     activeVideo = null;
@@ -41,17 +50,18 @@ const lazyVideoObserver = new IntersectionObserver((entries) => {
 });
 const applyObserver = lazyVideo => lazyVideoObserver.observe(lazyVideo);
 const attachObserver = () => $gallery.querySelectorAll('a').forEach(applyObserver);
-const matchGameOrdering = $a => location.pathname.slice(1).replace('flash-store/', '')
-    .startsWith($a.getAttribute('href').split('/')[1]);
-const $currentTab = Array.from(document.querySelectorAll('.sort-by a')).find(matchGameOrdering) || document.querySelector('.sort-by a');
 const cap = str => `${str[0].toUpperCase()}${str.slice(1)}`;
 const formatTitle = (title = '') => {
     const exludeWords = ['of', 'the', 'vs', 'in'];
     return cap(title.split('_').join(' ').replace(/\b\w+\b/g, m => exludeWords.includes(m) ? m : cap(m)));
 };
+const handleSlide = (dir) => {
+  const slideWidth = $slider.scrollWidth / $slider.childElementCount;
+  $slider.scrollLeft += slideWidth * dir;
+};
 const searchGames = (originalGallery) => ({ target: { value } }) => {
     const term = value.toLocaleLowerCase().split(' ').join('_');
-    clearTimeout(searchTimer); 
+    clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
         $gallery.innerHTML = term
             ? gameTitles
@@ -63,25 +73,33 @@ const searchGames = (originalGallery) => ({ target: { value } }) => {
     }, 300);
 };
 const fetchgameTitles = async () => {
-    window.search.onfocus = null;
+    $search.onfocus = null;
     const path = location.pathname === '/' || location.pathname === '/flash-store/'
         ? `${location.pathname}views/`
         : location.pathname;
     const response = await fetch(`${path}/search.csv`);
     const csv = await response.text();
     gameTitles = csv.split(' ');
-    window.search.oninput = searchGames($gallery.innerHTML);
+    $search.oninput = searchGames($gallery.innerHTML);
 };
-const handleSlide = (dir) => {
-  const slideWidth = $slider.scrollWidth / $slider.childElementCount;
-  $slider.scrollLeft += slideWidth * dir;
-};
-const $slider = document.querySelector('.tags');
-const [$buttonPrev, $buttonNext] = $slider.parentElement.querySelectorAll('button');
-$buttonPrev.onclick = () => handleSlide(-1);
-$buttonNext.onclick = () => handleSlide(1);
+
 document.addEventListener('pointermove', move);
 document.addEventListener('DOMContentLoaded', attachObserver);
-window.search.placeholder = `Search ${$gallery.dataset.count} games`;
-window.search.onfocus = fetchgameTitles;
+$search.placeholder = `Search ${$gallery.dataset.count} games`;
+$search.onfocus = fetchgameTitles;
 $currentTab.className = 'current';
+$buttonPrev.onclick = () => handleSlide(-1);
+$buttonNext.onclick = () => handleSlide(1);
+
+/* initGamepadHandler(document.body, {
+    button: [],
+    joystick: [{
+        mappings: {
+            n: 'ArrowUp',
+            s: 'ArrowDown',
+            w: 'ArrowLeft',
+            e: 'ArrowRight',
+        }
+    }]
+});
+ */

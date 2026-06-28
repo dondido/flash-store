@@ -80,9 +80,31 @@ if (controls?.length) {
         currentTarget.classList.toggle('hide-gamepad');
     }
     const gamepad = Object.groupBy(controls, ({ type }) => type);
+    const triggerKeyboardEvent = (keyState) => (direction) => {
+        const joystickControl = gamepad.joystick?.[0];
+        const code = joystickControl?.mappings?.[direction];
+        if (!code) return;
+        const event = typeof code === 'string' ? { code, key: code.replace('Key', '') } : code;
+        player.focus();
+        window.dispatchEvent(new KeyboardEvent(keyState, event));
+    };
+    
+    // Native Gamepad API support - lazy load on connection
+    let gamepadCleanup = null;
+    let initGamepadHandler = null;
+    
+    // Listen for gamepad connection
+    window.addEventListener('gamepadconnected', async (event) => {
+        initGamepadHandler ||= (await import('./gamepad-handler.js')).initGamepadHandler;
+        gamepadCleanup = initGamepadHandler(event, player, gamepad);
+    });
+    
+    // Cleanup on disconnection of all gamepads
+    window.addEventListener('gamepaddisconnected', gamepadCleanup);
+    
     gamepad.joystick?.forEach((control) => {
         const { mappings, dataset = { mode: 'fixed' } } = control;
-        const triggerKeyboardEvent = (keyState) => (direction) => {
+        const triggerJoystickKeyboardEvent = (keyState) => (direction) => {
             const code = mappings[direction];
             const event = typeof code === 'string' ? { code, key: code.replace('Key', '') } : code;
             player.focus();
@@ -92,8 +114,8 @@ if (controls?.length) {
         $controls.insertAdjacentHTML('beforeend', `<virtual-joystick ${data}></virtual-joystick>`);
         const $joystick = $controls.querySelector('virtual-joystick');
         const handleKeyEvents = () => {
-            $joystick.dataset.release.split('').forEach(triggerKeyboardEvent('keyup'));
-            $joystick.dataset.capture.split('').forEach(triggerKeyboardEvent('keydown'));
+            $joystick.dataset.release.split('').forEach(triggerJoystickKeyboardEvent('keyup'));
+            $joystick.dataset.capture.split('').forEach(triggerJoystickKeyboardEvent('keydown'));
         };
         $joystick.addEventListener('joystickdown', handleKeyEvents);
         $joystick.addEventListener('joystickmove', handleKeyEvents);
