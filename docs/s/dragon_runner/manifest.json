@@ -1,6 +1,6 @@
 {
     "name": "Dragon Runner",
-    "description": "Game details",
+    "description": "Can you make a run to the dark castle and free the captured beautiful princess? The road to the castle is full of great danger. Even the mighty evil dragon lord himself, is hunting you!",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

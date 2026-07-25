@@ -1,6 +1,6 @@
 {
     "name": "Race 60",
-    "description": "Game details",
+    "description": "A 60 second car race skill game! Drive your car as fast as possible for big points while avoiding other cars.",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

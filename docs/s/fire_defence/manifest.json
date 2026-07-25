@@ -1,6 +1,6 @@
 {
     "name": "Fire Defence",
-    "description": "Game details",
+    "description": "Defend your base from furiously approaching enemy tanks. You got turrets that are upgradable in damage power, shooting radius, and fire..",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

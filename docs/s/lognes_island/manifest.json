@@ -1,6 +1,6 @@
 {
     "name": "Lognes Island",
-    "description": "Game details",
+    "description": "Lognes Island is an action platformer that let you explore an island full of ducks, turtles, bugs & banana-throwing gorilla.",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

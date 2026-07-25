@@ -1,6 +1,6 @@
 {
     "name": "Playing With Fire 3",
-    "description": "Game details",
+    "description": "An awesome take on the old skool Bomberman! Guide your character around the maze placing bombs and picking up extra items. Try to take out all your opponents before they take you!",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

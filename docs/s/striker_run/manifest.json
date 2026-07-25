@@ -1,6 +1,6 @@
 {
     "name": "Striker Run",
-    "description": "Game details",
+    "description": "In this game you're a soccer player who runs towards the opponent's goal. Defenders will try to stop you. You need to avoid them. When you get close to the goal you'll need to shoot.",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

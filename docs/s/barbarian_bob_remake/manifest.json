@@ -1,6 +1,6 @@
 {
     "name": "Barbarian Bob Remake",
-    "description": "Game details",
+    "description": "Barbarian Bob gets a remake with new graphics. Use your sword to cut down your foes!",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

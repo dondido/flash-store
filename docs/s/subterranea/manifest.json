@@ -1,6 +1,6 @@
 {
     "name": "Subterranea",
-    "description": "Game details",
+    "description": "Guide the interpid explorer through the caves retrieving the treatures and avoiding the guardians.",
     "start_url": "./",
     "scope": ".",
     "lang": "en-US",

@@ -34,7 +34,7 @@ const requestResources = ({ title, description, game, video, poster, folder, pat
             const locals = {
                 addedOn,
                 title: title || dom.window.document.querySelector('h1').textContent,
-                description: description || dom.window.document.querySelector('h2').textContent,
+                description: description || dom.window.document.querySelector('.game-description__answer').textContent,
                 w: $embed.width,
                 h: $embed.height,
             };
