@@ -1,0 +1,15 @@
+{
+    "name": "Anti Terrorist Rush 2",
+    "description": "Upgrade your hero, look for new weapons and equipment. All items, pistols, body armor are combined with each other to form more powerful copies. Find all collection of items and beat the terrorists. Special weapons will help your hero. Have a good game!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

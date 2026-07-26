@@ -1,0 +1,15 @@
+{
+    "name": "God Of Armor",
+    "description": "This game is like a lengend about God Of Armor. Fight bravely and skillfully to win the final sucess!",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

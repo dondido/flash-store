@@ -1,0 +1,15 @@
+{
+    "name": "Space Marine",
+    "description": "A space themed arena shooter where your goal is to defend against endless aliens attacking you. Survive as long as you can, upgrade your guns and armor, defeat bosses and much more! The fate of the universe is depending on you.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

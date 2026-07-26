@@ -1,0 +1,15 @@
+{
+    "name": "Armor Hero Defend Homeland",
+    "description": "This is a game of Armor Hero series. In this game, the brave Armor Hero need to shoot invaders to defend homeland.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}

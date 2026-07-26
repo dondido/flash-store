@@ -1,0 +1,15 @@
+{
+    "name": "Krashs Adventure",
+    "description": "Find parts for your crashed ship in this black and white sidescroller. Slice and jump on spiders.",
+    "start_url": "./",
+    "scope": ".",
+    "lang": "en-US",
+    "icons": [
+        {
+          "src": "./icon.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        }
+    ],
+    "display": "fullscreen"
+}
