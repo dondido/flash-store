@@ -67,7 +67,36 @@ main {
         background-color: whitesmoke;
         content-visibility: auto;
         box-shadow: 3px 3px 5px rgba(90, 90, 90, 0.5), -3px -3px 5px rgba(255, 255, 255, 0.5);
+        &:has(> h2:first-child){
+            &:before {
+                content: '';
+                display: block;
+                background-color: white;
+                aspect-ratio: 180 / 135;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                inset: 0;
+                margin: 50px auto;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                
+                /* The track (light gray) and the spinning indicator (blue) */
+                border: 2px solid white;
+                border-top: 2px solid #3498db;
+                
+                /* The animation */
+                animation: spin 1s linear infinite;
+            }
+        }
     }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 video {
     width: 100%;

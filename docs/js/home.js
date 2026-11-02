@@ -38,6 +38,7 @@ const lazyVideoObserver = new IntersectionObserver((entries) => {
         if (isIntersecting) {
             const { href } = target;
             const video = document.createElement('video');
+            video.preload = 'none';
             video.disableremoteplayback = true;
             video.loop = true;
             video.poster = `${href}poster.jpg`;
@@ -90,16 +91,3 @@ $search.onfocus = fetchgameTitles;
 $currentTab.className = 'current';
 $buttonPrev.onclick = () => handleSlide(-1);
 $buttonNext.onclick = () => handleSlide(1);
-
-/* initGamepadHandler(document.body, {
-    button: [],
-    joystick: [{
-        mappings: {
-            n: 'ArrowUp',
-            s: 'ArrowDown',
-            w: 'ArrowLeft',
-            e: 'ArrowRight',
-        }
-    }]
-});
- */
